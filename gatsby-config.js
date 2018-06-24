@@ -2,7 +2,6 @@ const languages = require('./src/data/languages');
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
     languages
   },
   plugins: [
@@ -14,5 +13,15 @@ module.exports = {
         langKeyDefault: languages.defaultLangKey,
         useLangKeyLayout: true
       }
-    }],
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options:{
+        name: 'img',
+        path: `${__dirname}/src/assets/`,
+      }
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+  ],
 }
