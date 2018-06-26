@@ -14,7 +14,7 @@ const IndexPage = () => (
     >
         <title>4éme édition “JUNGLE” 16 - 22 avril</title>
     </Helmet>
-    <h1>Le PISC Paris International Salsa Congress</h1>
+    <h1 style="text-align:center;">Le PISC <br/>Paris International Salsa Congress</h1>
     <p>
       Le Paris International Salsa Congress, c&#39;est plus de 2000 danseurs
       passionnés et généreux venant des quatre coins de la planète pour se
@@ -33,7 +33,7 @@ const IndexPage = () => (
       Professionnel, Accueillant, Réjouissant, Innovant et Somptueux.
     </p>
 
-    <h2>En 2019, l&#39;édition du PISC est « JUNGLE »</h2>
+    <h2 style="text-align:center;">L&#39;édition du PISC 2019 vous amène dans la « JUNGLE »</h2>
     <p>
       Nous sommes si nombreux et chacun si différents. Chaque individu a sa
       propre identité : un patrimoine, un caractère, une histoire, une culture,
@@ -45,9 +45,9 @@ const IndexPage = () => (
       différents ont tous une place et un rôle dans le règne animal.
     </p>
     <p>
-      Nous souhaitons cette année que le Pisc soit à l&#39;image de cette jungle
+      Nous souhaitons cette année que le PISC soit à l&#39;image de cette jungle
       ! Réveillons l&#39;instinct primaire qui sommeille en nous... et qui se
-      révèle sur la piste de danse au son des musiques salsa, Bachata ou Kizomba
+      révèle sur la piste de danse au son des musiques Salsa, Bachata ou Kizomba
       !
     </p>
 
