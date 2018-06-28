@@ -35,42 +35,42 @@ const IndexPage = () => (
     </h1>
 
     <p>
-      The Paris International Salsa Congress, it’s more than 2000 passionnate
-      and generous dancers coming from all over the world to gather and share
-      their Love of the Latin dances such as salsa, bachata and kizomba !
+      The Paris International Congress brings together over 2000 generous and 
+      passionate dancers coming from all around the world to share through salsa, 
+      bachata and kizomba and enjoy this wonderful capital.
     </p>
     <p>
-      The PISC is also the opportunity to visit the most beautiful city of the
-      world. Pre-parties are organized the 3 nights before the congress so that
-      our friends who come to discover the charming french capital can also
-      benefit salsa party in Paris and meet other PISCers !
+      The PISC is also the opportunity to visit the most beautiful city in the world. 
+      Pre-parties are organized for the three days preceding the congress so that our 
+      international friends coming to enjoy the charms of the French capital can get to 
+      know each other and benefit from memorable dance evenings.
     </p>
     <p>
-      We would like to make the PISC, a salsa congress just like PARIS :
-      Professionnal, Amusing, Responsive, Innovating and Somptuous.
+      Our wish is for the PISC to capture and reflect the image of PARIS: 
+      Professionnal, Amusing, Responsive, Innovating and Sumptuous.
+
     </p>
 
     <h2 style={{ textAlign: "center", color: "#006158" }}>
-      In 2019, the PISC edition is « JUNGLE »
+      The 2019 edition of the PISC is « JUNGLE »
     </h2>
     <p>
-      We are so many and each so different. Each individual has his own
-      identity: a heritage, a character, a story, a culture, a physical, a style
-      of dress, in short attributes that make him unique.
+      We are numerous and highly diverse. Each person has their own identity shaped 
+      by their heritage, personality, story, culture, style and physique, all of 
+      which make him/her unique.
     </p>
     <p>
-      We like to see this diversity as a jungle, where its so different animals
-      all have a place and a role in the animal kingdom.
+      We would like to witness this diversity as we would for animals in a jungle, 
+      each with its own behaviour, place, role and interest in the animal kingdom.
     </p>
     <p>
-      We wish this year that the PISC is like this jungle! Let&#39;s wake up to
-      the primary instinct that lies dormant in us ... and which is revealed on
-      the dance floor to the sound of Salsa, Bachata or Kizomba music!
+      We wish to reproduce this jungle by awakening the primary instinct dormant 
+      in all of us ... that reveals itself on the dance floor when a salsa, bachata 
+      or kizomba is heard!
     </p>
     <p>
-      If like us, you want to explore these differences, reveal your true nature
-      and let go, come and venture into our jungle around a common passion:
-      dance!
+      If, like us, you wish to cultivate these differences and let go, come experience 
+      the jungle through our shared passion: dance !
     </p>
     <div style={{ textAlign: "center", marginTop: "3.45rem" }}>
       <a
