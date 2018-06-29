@@ -7,7 +7,8 @@ import imgCover02 from "../assets/bg-yamulee-02.jpg";
 const Cover = props => (
   <div
     style={{
-      // background: "#006158",
+      // backgroundColor: "#006158",
+      backgroundColor: "rgba(0, 97, 88, 0.6)",
       // marginTop: "-1.45rem",
       marginBottom: "1.45rem",
       height: "100vh",
@@ -16,11 +17,9 @@ const Cover = props => (
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
       backgroundPosition: "center center",
-      position: "relative",
+      position: "relative"
     }}
-  >
-    
-  </div>
+  />
 );
 
 export default Cover;
