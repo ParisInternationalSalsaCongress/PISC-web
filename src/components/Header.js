@@ -5,7 +5,6 @@ import Logo from "../assets/PISC2019-Jungle-logo.svg";
 const Header = props => (
   <div
     style={{
-      // background: "#006158",
       marginBottom: "1.45rem",
       position: "absolute",
       top: "32vh",
@@ -33,7 +32,7 @@ const Header = props => (
           <img
             src={Logo}
             alt={"Paris International Salsa Congress 2019"}
-            style={{ width: "80%", userSelect: "none", maxWidth: "500px" }}
+            style={{ width: "auto", userSelect: "none", maxWidth: "600px", maxHeight: '60vh' }}
           />
         </Link>
       </h1>
