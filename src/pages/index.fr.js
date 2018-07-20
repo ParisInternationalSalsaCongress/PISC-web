@@ -19,7 +19,8 @@ const IndexPage = () => (
         },
         {
           property: "og:title",
-          content: "4éme édition “JUNGLE” 16 - 22 avril | Paris International Salsa Congress 2019"
+          content:
+            "4éme édition “JUNGLE” 16 - 22 avril | Paris International Salsa Congress 2019"
         },
         {
           name: "keywords",
@@ -90,6 +91,20 @@ const IndexPage = () => (
       >
         Achetez votre PASS
       </a>
+    </div>
+    <div style={{ textAlign: "center", marginTop: "3.45rem" }}>
+      <h2 style={{ textAlign: "center", color: "#006158" }}>
+        Liste d'artistes (non exhaustive)
+      </h2>
+      <p>
+        Groupo Alafia | Jessica Quiles | Rodrigo Cortazar y Bersy Cortez | Karel
+        Flores | Alegria | Griselle Ponce
+        <br /> Eddie Torres & Eddie Torres JR | Adolfo Indacochea and Latin Soul
+        Dancers<br />
+        Wilmer & Maria | Pedrito & Giusy | Yusimi Moya Rodriguez <br />
+        Talal & Edyta | Terry & Cécile | Yamulee | Adrián y Anita | Mitsue &
+        Monica | Karen & Ricardo | Alex & Desiree | Ernesto & Denisse 
+      </p>
     </div>
   </div>
 );
