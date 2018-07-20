@@ -21,7 +21,7 @@ const Header = props => (
         padding: "0.45rem 1.0875rem"
       }}
     >
-      <h1 style={{ margin: 0, textAlign: "center" }}>
+      <h1 style={{ margin: 0, textAlign: "center", userSelect: "none" }}>
         <Link
           to="/"
           style={{
@@ -32,7 +32,7 @@ const Header = props => (
         >
           <img
             src={Logo}
-            alt={"PISC 2019 new logo"}
+            alt={"Paris International Salsa Congress 2019"}
             style={{ width: "80%", userSelect: "none", maxWidth: "500px" }}
           />
         </Link>

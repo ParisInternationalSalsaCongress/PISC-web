@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Cover from "../components/Cover";
+import { CoverSlider } from "../components/Cover";
 import Helmet from "react-helmet";
 import { getCurrentLangKey, getLangs, getUrlForLang } from "ptz-i18n";
 import { IntlProvider } from "react-intl";
@@ -29,12 +29,20 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
           <html lang={langKey} />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://parissalsacongress.com" />
-          <meta
-            property="og:image"
-            content={ScreenTemp}
-          />
+          <meta property="og:image" content={ScreenTemp} />
 
           <link rel="canonical" href="https://parissalsacongress.com" />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            charset="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
 
           {langs.map(locale => (
             <link
@@ -46,10 +54,11 @@ const TemplateWrapper = ({ children, data, location, i18nMessages }) => {
           ))}
         </Helmet>
         <Header langs={langsMenu} />
-        <Cover />
+        <CoverSlider />
         <div
           style={{
-            margin: "0 auto",
+            // marginTop: "3.45rem"
+            margin: "3.45rem auto 0",
             maxWidth: 1200,
             padding: "0px 1.0875rem 4.45rem",
             paddingTop: 0
