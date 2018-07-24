@@ -77,7 +77,7 @@ const IndexPage = () => (
     <div style={{ textAlign: "center", marginTop: "3.45rem" }}>
       <a
         style={{
-          background: "#006158",
+          background: "#fe5b0b",
           fontSize: "22px",
           color: "white",
           textDecoration: "none",
@@ -100,7 +100,7 @@ const IndexPage = () => (
         Dancers<br />
         Wilmer & Maria | Pedrito & Giusy | Yusimi Moya Rodriguez <br />
         Talal & Edyta | Terry & Cécile | Yamulee | Adrián y Anita | Mitsue &
-        Monica | Karen & Ricardo | Alex & Desiree | Ernesto & Denisse 
+        Monica | Karen & Ricardo | Alex & Desiree | Ernesto & Denisse
       </p>
     </div>
   </div>

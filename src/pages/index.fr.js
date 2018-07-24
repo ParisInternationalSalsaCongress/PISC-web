@@ -80,7 +80,7 @@ const IndexPage = () => (
     <div style={{ textAlign: "center", marginTop: "3.45rem" }}>
       <a
         style={{
-          background: "#006158",
+          background: "#fe5b0b",
           fontSize: "22px",
           color: "white",
           textDecoration: "none",

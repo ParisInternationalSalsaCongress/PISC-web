@@ -7,16 +7,18 @@ const Header = props => (
     style={{
       marginBottom: "1.45rem",
       position: "absolute",
-      top: "32vh",
+      top: "18vh",
       left: 0,
+      userSelect: "none",
       width: "100%",
-      zIndex: 2
+      zIndex: 1,
     }}
   >
     <div
       style={{
         margin: "0 auto",
         maxWidth: 1200,
+        userSelect: "none",
         padding: "0.45rem 1.0875rem"
       }}
     >
@@ -25,6 +27,7 @@ const Header = props => (
           to="/"
           style={{
             color: "white",
+            userSelect: "none",
             textDecoration: "none",
             filter: "drop-shadow(8px 8px 12px #006158)"
           }}
