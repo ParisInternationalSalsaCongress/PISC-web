@@ -99,7 +99,7 @@ const IndexPage = () => (
       <p>
         MAMBO // Eddie Torres "Mambo King" & Eddie Torres Jr / Yamulee / Rodrigo
         & Bersy / Karel Flores / Alegria / Griselle Ponce / Adolfo Indacochea
-        and Latin Soul Dancer / Talal & Edyta / Terry & Cécile / / Adrián y
+        and Latin Soul Dancer / Talal & Edyta / Terry & Cécile / Adrián y
         Anita / Mitsue & Monica / Karen & Ricardo / Jose Diaz & Nerea / Leon
         Rose Project / Aude M. / Latin Passion Group / <em>NOUVEAU</em> // Ernesto &
         Denisse / Groupo Alafia / Jessica Quiles /

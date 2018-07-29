@@ -96,7 +96,7 @@ const IndexPage = () => (
       <p>
         MAMBO // Eddie Torres "Mambo King" & Eddie Torres Jr / Yamulee / Rodrigo &
         Bersy / Karel Flores / Alegria / Griselle Ponce / Adolfo Indacochea and
-        Latin Soul Dancer / Talal & Edyta / Terry & Cécile / / Adrián y Anita /
+        Latin Soul Dancer / Talal & Edyta / Terry & Cécile / Adrián y Anita /
         Mitsue & Monica / Karen & Ricardo / Jose Diaz & Nerea / Leon Rose
         Project / Aude M. / Latin Passion Group / <em>NEW</em> // Ernesto & Denisse /
         Groupo Alafia / Jessica Quiles /
@@ -120,20 +120,6 @@ const IndexPage = () => (
         Steve Starmambo / Marty DPone /
       </p>
     </div>
-    {/* <div style={{ textAlign: "center", marginTop: "3.45rem" }}>
-      <h2 style={{ textAlign: "center", color: "#006158" }}>
-        Artists list (not limited)
-      </h2>
-      <p>
-        Groupo Alafia | Jessica Quiles | Rodrigo Cortazar y Bersy Cortez | Karel
-        Flores | Alegria | Griselle Ponce
-        <br /> Eddie Torres & Eddie Torres JR | Adolfo Indacochea and Latin Soul
-        Dancers<br />
-        Wilmer & Maria | Pedrito & Giusy | Yusimi Moya Rodriguez <br />
-        Talal & Edyta | Terry & Cécile | Yamulee | Adrián y Anita | Mitsue &
-        Monica | Karen & Ricardo | Alex & Desiree | Ernesto & Denisse
-      </p>
-    </div> */}
   </div>
 );
 
