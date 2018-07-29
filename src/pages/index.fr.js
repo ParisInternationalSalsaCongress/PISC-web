@@ -93,17 +93,35 @@ const IndexPage = () => (
       </a>
     </div>
     <div style={{ textAlign: "center", marginTop: "3.45rem" }}>
-      <h2 style={{ textAlign: "center", color: "#006158" }}>
-        Liste d'artistes (non exhaustive)
+      <h2 style={{ textAlign: "center", color: "#006158" }} lang="en">
+        LINE UP
       </h2>
       <p>
-        Groupo Alafia | Jessica Quiles | Rodrigo Cortazar y Bersy Cortez | Karel
-        Flores | Alegria | Griselle Ponce
-        <br /> Eddie Torres & Eddie Torres JR | Adolfo Indacochea and Latin Soul
-        Dancers<br />
-        Wilmer & Maria | Pedrito & Giusy | Yusimi Moya Rodriguez <br />
-        Talal & Edyta | Terry & Cécile | Yamulee | Adrián y Anita | Mitsue &
-        Monica | Karen & Ricardo | Alex & Desiree | Ernesto & Denisse 
+        MAMBO // Eddie Torres "Mambo King" & Eddie Torres Jr / Yamulee / Rodrigo
+        & Bersy / Karel Flores / Alegria / Griselle Ponce / Adolfo Indacochea
+        and Latin Soul Dancer / Talal & Edyta / Terry & Cécile / / Adrián y
+        Anita / Mitsue & Monica / Karen & Ricardo / Jose Diaz & Nerea / Leon
+        Rose Project / Aude M. / Latin Passion Group / <em>NOUVEAU</em> // Ernesto &
+        Denisse / Groupo Alafia / Jessica Quiles /
+      </p>
+      <p>
+        CUBAN // Pedrito & Giusy / Elegua / <em>NOUVEAU</em> // Wilmer & Maria /
+        Yusimi Moya Rodriguez /
+      </p>
+      <p>
+        BACHATA // Alex & Desiree / <em>NOUVEAU</em> // Marco & Sarah / Korke &
+        Judith /
+      </p>
+      <p>KIZOMBA // George & Laura /</p>
+      <p>
+        DJ'S MAMBO // Dj Gabriel / Dj Willy "Viper" / Dj Mulato / Dj Cycy / Dj
+        Phil & Madj / Dj 69 / Dj Loic / Dj Asmadi / Dj Vincent // CUBAN // Dj
+        Didi // BACHATA // Dj Latino Boy // KIZOMBA // Dj Hugo Boss /{" "}
+        <em>NOUVEAU</em> // Dj Madiss /
+      </p>
+      <p>
+        PHOTO // Valentin Behringer / Alfil Régis / Luka Kivela // VIDEO //
+        Steve Starmambo / Marty DPone /
       </p>
     </div>
   </div>

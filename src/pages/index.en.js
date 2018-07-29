@@ -91,6 +91,37 @@ const IndexPage = () => (
     </div>
     <div style={{ textAlign: "center", marginTop: "3.45rem" }}>
       <h2 style={{ textAlign: "center", color: "#006158" }}>
+        LINE UP
+      </h2>
+      <p>
+        MAMBO // Eddie Torres "Mambo King" & Eddie Torres Jr / Yamulee / Rodrigo &
+        Bersy / Karel Flores / Alegria / Griselle Ponce / Adolfo Indacochea and
+        Latin Soul Dancer / Talal & Edyta / Terry & Cécile / / Adrián y Anita /
+        Mitsue & Monica / Karen & Ricardo / Jose Diaz & Nerea / Leon Rose
+        Project / Aude M. / Latin Passion Group / <em>NEW</em> // Ernesto & Denisse /
+        Groupo Alafia / Jessica Quiles /
+      </p>
+      <p>
+        CUBAN // Pedrito & Giusy / Elegua / <em>NEW</em> // Wilmer & Maria / Yusimi Moya
+        Rodriguez /
+      </p>
+      <p>
+        BACHATA // Alex & Desiree / <em>NEW</em> // Marco & Sarah / Korke & Judith /
+      </p>
+      <p>KIZOMBA // George & Laura /</p>
+      <p>
+        DJ'S MAMBO // Dj Gabriel / Dj Willy "Viper" / Dj Mulato / Dj Cycy / Dj
+        Phil & Madj / Dj 69 / Dj Loic / Dj Asmadi / Dj Vincent // CUBAN // Dj
+        Didi // BACHATA // Dj Latino Boy // KIZOMBA // Dj Hugo Boss / <em>NEW</em> // Dj
+        Madiss /
+      </p>
+      <p>
+        PHOTO // Valentin Behringer / Alfil Régis / Luka Kivela // VIDEO //
+        Steve Starmambo / Marty DPone /
+      </p>
+    </div>
+    {/* <div style={{ textAlign: "center", marginTop: "3.45rem" }}>
+      <h2 style={{ textAlign: "center", color: "#006158" }}>
         Artists list (not limited)
       </h2>
       <p>
@@ -102,7 +133,7 @@ const IndexPage = () => (
         Talal & Edyta | Terry & Cécile | Yamulee | Adrián y Anita | Mitsue &
         Monica | Karen & Ricardo | Alex & Desiree | Ernesto & Denisse
       </p>
-    </div>
+    </div> */}
   </div>
 );
 
