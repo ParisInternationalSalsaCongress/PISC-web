@@ -110,7 +110,7 @@ const IndexPage = () => (
       </p>
       <p>KIZOMBA // George & Laura /</p>
       <p>
-        DJ'S MAMBO // Dj Gabriel / Dj Willy "Viper" / Dj Mulato / Dj Cycy / Dj
+        DJ'S MAMBO // Dj Gabriel / Dj Mulato / Dj Cycy / Dj
         Phil & Madj / Dj 69 / Dj Loic / Dj Asmadi / Dj Vincent // CUBAN // Dj
         Didi // BACHATA // Dj Latino Boy // KIZOMBA // Dj Hugo Boss / <em>NEW</em> // Dj
         Madiss /
