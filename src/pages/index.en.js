@@ -98,7 +98,7 @@ const IndexPage = () => (
         Bersy / Karel Flores / Alegria / Griselle Ponce / Adolfo Indacochea and
         Latin Soul Dancer / Talal & Edyta / Terry & Cécile / Adrián y Anita /
         Mitsue & Monica / Karen & Ricardo / Jose Diaz & Nerea / Leon Rose
-        Project / Aude M. / Latin Passion Group / <em>NEW</em> // Ernesto & Denisse /
+        Project / Aude M. / Latin Passion Group / Shelina's Team / <em>NEW</em> // Ernesto & Denisse /
         Groupo Alafia / Jessica Quiles /
       </p>
       <p>
