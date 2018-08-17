@@ -109,14 +109,14 @@ const IndexPage = () => (
         Yusimi Moya Rodriguez /
       </p>
       <p>
-        BACHATA // Alex & Desiree / <em>NOUVEAU</em> // Marco & Sarah / Korke &
+        BACHATA // <em>NOUVEAU</em> // Marco & Sarah / Korke &
         Judith /
       </p>
       <p>KIZOMBA // George & Laura /</p>
       <p>
         DJ'S MAMBO // Dj Gabriel / Dj Mulato / Dj Cycy / Dj
         Phil & Madj / Dj 69 / Dj Loic / Dj Asmadi / Dj Vincent // CUBAN // Dj
-        Didi // BACHATA // Dj Latino Boy // KIZOMBA // Dj Hugo Boss /{" "}
+        Didi // BACHATA // Dj Latino Boy // KIZOMBA // Dj Hugo Boss /
         <em>NOUVEAU</em> // Dj Madiss /
       </p>
       <p>

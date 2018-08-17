@@ -106,7 +106,7 @@ const IndexPage = () => (
         Rodriguez /
       </p>
       <p>
-        BACHATA // Alex & Desiree / <em>NEW</em> // Marco & Sarah / Korke & Judith /
+        BACHATA // <em>NEW</em> // Marco & Sarah / Korke & Judith /
       </p>
       <p>KIZOMBA // George & Laura /</p>
       <p>
