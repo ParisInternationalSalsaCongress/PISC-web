@@ -1,8 +1,8 @@
 {
   "name": "gatsby-starter-default-intl",
-  "description": "Gatsby default starter with intl",
+  "description": "Paris International Salsa Congress website powered by Gatsby",
   "version": "1.0.0",
-  "author": "Daewoong Moon <wiziple@gmail.com>",
+  "author": "Stephane Coué",
   "dependencies": {
     "browser-lang": "0.0.1",
     "gatsby": "^1.9.247",
@@ -24,9 +24,5 @@
   },
   "devDependencies": {
     "prettier": "^1.12.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wiziple/gatsby-starter-default-intl"
   }
 }
