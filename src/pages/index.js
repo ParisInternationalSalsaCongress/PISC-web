@@ -1,44 +1,23 @@
-import React from 'react';
-import graphql from 'graphql';
-import { getUserLangKey } from 'ptz-i18n';
-import { withPrefix } from "gatsby-link";
+import React from 'react'
+import Layout from '../components/layout'
+import { FormattedMessage } from 'react-intl'
+import { withIntl, Link } from '../i18n'
 
-class RedirectIndex extends React.PureComponent {
-  constructor(args) {
-    super(args);
+const IndexPage = () => (
+  <Layout>
+    <h1>
+      <FormattedMessage id="hello" />
+    </h1>
+    <p>
+      <FormattedMessage id="welcome" />
+    </p>
+    <p>
+      <FormattedMessage id="build" />
+    </p>
+    <Link to="/page-2/">
+      <FormattedMessage id="gopage2" />
+    </Link>
+  </Layout>
+)
 
-    // Skip build, Browsers only
-    if (typeof window !== 'undefined') {
-      const { langs, defaultLangKey } = args.data.site.siteMetadata.languages;
-      const langKey = getUserLangKey(langs, defaultLangKey);
-      const homeUrl = withPrefix(`/${langKey}/`);
-
-      // I don`t think this is the best solution
-      // I would like to use Gatsby Redirects like: 
-      // https://github.com/gatsbyjs/gatsby/tree/master/examples/using-redirects
-      // But Gatsby Redirects are static, they need to be specified at build time,
-      // This redirect is dynamic, It needs to know the user browser language.
-      // Any ideias? Join the issue: https://github.com/angeloocana/gatsby-starter-default-i18n/issues/4
-      window.___history.replace(homeUrl);
-    }
-  }
-
-  render() {
-    return (<div />);
-  }
-}
-
-export default RedirectIndex;
-
-export const pageQuery = graphql`
-  query IndexQuery {    
-    site{
-      siteMetadata{
-        languages {
-          defaultLangKey
-          langs
-        }
-      }
-    }
-  }
-`;
+export default withIntl(IndexPage)

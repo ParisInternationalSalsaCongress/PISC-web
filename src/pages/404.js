@@ -1,13 +1,10 @@
-import React from "react";
-import { FormattedMessage } from "react-intl";
-import Link from "gatsby-link";
+import React from 'react'
 
 const NotFoundPage = () => (
   <div>
-    <FormattedMessage id="notFound" tagName="h1" />
-    <FormattedMessage id="notFound_desc" tagName="p" />
-    <Link to="/">Back home</Link>
+    <h1>NOT FOUND</h1>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
   </div>
-);
+)
 
-export default NotFoundPage;
+export default NotFoundPage
