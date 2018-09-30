@@ -1,15 +1,24 @@
 import React from 'react'
 import Img from 'gatsby-image';
+import { css } from 'emotion';
 
 import { Link } from '../i18n'
 import Language from './language'
 
+const color = 'darkgreen'
+const headerStyle = css`
+      background-color: hotpink;
+      transition: 0.5s ease-in;
+      position: relative;
+      height: 50vh;
+      &:hover {
+        background-color: ${color};
+      }
+    `
+
 const Header = ({ siteTitle, data }) => (
   <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
+    className={headerStyle}
   >
     <div
       style={{

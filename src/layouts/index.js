@@ -1,5 +1,7 @@
 import React from 'react'
-import './index.css'
+import { injectGlobal } from 'emotion'
+import globalStyle from './globalStyle';
+
 
 const DefaultLayout = ({ children }) => <div>{children()}</div>
 

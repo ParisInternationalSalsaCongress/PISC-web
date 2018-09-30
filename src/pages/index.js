@@ -45,7 +45,13 @@ export const query = graphql`
       }
     }
     background: imageSharp(id: { regex: "/bg/" }) {
-      sizes(maxWidth: 1240) {
+      sizes(
+        maxWidth: 1240,
+        duotone: {
+          highlight: "#38b719",
+          shadow: "#192550"
+        }
+      ) {
         ... GatsbyImageSharpSizes
       }
     }
