@@ -1,10 +1,17 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import Layout from '../components/layout'
+import { withIntl, Link } from '../i18n'
+import { injectIntl } from 'react-intl'
 
 const NotFoundPage = () => (
-  <div>
+  <Layout>
     <h1>NOT FOUND</h1>
+    <p>
+      <FormattedMessage id="ops" />
+    </p>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+  </Layout>
 )
 
-export default NotFoundPage
+export default injectIntl(NotFoundPage)

@@ -1,8 +1,10 @@
 import React from 'react'
+import Img from 'gatsby-image';
+
 import { Link } from '../i18n'
 import Language from './language'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, data }) => (
   <div
     style={{
       background: 'rebeccapurple',
@@ -31,6 +33,7 @@ const Header = ({ siteTitle }) => (
         <Language />
       </div>
     </div>
+    <Img alt="Big picture" style={{postion: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} sizes={data.background.sizes} />
   </div>
 )
 

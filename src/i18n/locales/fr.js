@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Gatsby Français',
   hello: 'Salut les gens',
+  ops: 'ops on a un problème',
   welcome: 'Bienvenu sur un Gatsby-Site.',
   gopage2: 'Allez à la page 2',
   build: 'Maintenant allez construire une merveille.',

@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Gatsby English',
   hello: 'Hi people',
+  ops: 'ops something aint right',
   welcome: 'Welcome to your new Gatsby site.',
   gopage2: 'Go to page 2',
   build: 'Now go build something great.',
