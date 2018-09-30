@@ -16,15 +16,10 @@ const IndexPage = ({ data }) => (
         paddingTop: 0,
       }}
     >
-      <p>
-        <FormattedMessage id="welcome" />
-      </p>
       <Img sizes={data.background.sizes} />
-      <p>
-        <FormattedMessage id="build" />
-      </p>
+   
       <Link to="/page-2/">
-        <FormattedMessage id="gopage2" />
+        <span>page 2</span>
       </Link>
     </div>
   </Layout>

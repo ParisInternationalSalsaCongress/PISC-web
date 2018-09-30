@@ -6,10 +6,9 @@ import Layout from '../components/layout';
 const SecondPage = () => (
   <Layout>
     <p>
-      <FormattedMessage id="welcome2" />
+      Page 2
     </p>
     <Link to="/">
-      <FormattedMessage id="goback" />
     </Link>
   </Layout>
 );
