@@ -1,46 +1,32 @@
 import React from 'react';
-import Layout from '../components/layout';
-import Header from '../components/header';
-import { FormattedMessage } from 'react-intl';
-import Img from 'gatsby-image';
-import { withIntl, Link } from '../i18n';
+import { Link } from 'gatsby';
+import { Trans, withI18n } from '@lingui/react';
 
-const IndexPage = ({ data }) => (
+import Layout from '../components/layout';
+
+const IndexPage = ({ i18n }) => (
   <Layout>
-    <Header data={data} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      <Img sizes={data.background.sizes} />
-   
-      <Link to="/page-2/">
-        <span>page 2</span>
+    <h1>
+      <Trans>Hi people</Trans>
+    </h1>
+    <p>
+      <Trans>Welcome to your new Gatsby site.</Trans>
+    </p>
+    <p>
+      <Trans>Now go build something great.</Trans>
+    </p>
+    <Link to={i18n.t`/page-2`}>
+      <Trans>Go to page 2</Trans>
+    </Link>
+    <div>
+      <Link to="/en/">
+        <Trans>English</Trans>
+      </Link>
+      <Link style={{ marginLeft: 20 }} to="/fr/">
+        <Trans>French</Trans>
       </Link>
     </div>
   </Layout>
 );
 
-export default withIntl(IndexPage);
-
-export const query = graphql`
-  query SiteMeta {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    background: imageSharp(id: { regex: "/bg/" }) {
-      sizes(
-        maxWidth: 1240
-        duotone: { highlight: "#38b719", shadow: "#192550" }
-      ) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-  }
-`;
+export default withI18n()(IndexPage);

@@ -1,18 +1,13 @@
 import React from 'react';
-import Img from 'gatsby-image';
-import { css } from 'emotion';
+import { Link } from 'gatsby';
 
-import { Link } from '../i18n';
-import { PRIMARY_COLOR } from '../hepers/vars';
-
-const headerStyle = css`
-  background-color: ${'#02B176'};
-  transition: 0.5s ease-in;
-  position: relative;
-`;
-
-const Header = ({ siteTitle, data }) => (
-  <div className={headerStyle}>
+const Header = ({ siteTitle }) => (
+  <div
+    style={{
+      background: 'rebeccapurple',
+      marginBottom: '1.45rem',
+    }}
+  >
     <div
       style={{
         margin: '0 auto',
@@ -20,7 +15,7 @@ const Header = ({ siteTitle, data }) => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0, display: 'inline-block' }}>
+      <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -28,24 +23,10 @@ const Header = ({ siteTitle, data }) => (
             textDecoration: 'none',
           }}
         >
-          {'PISC'}
+          {siteTitle}
         </Link>
       </h1>
-      {/* <div style={{ float: 'right' }}>
-        <Language />
-      </div> */}
     </div>
-    {/* <Img
-      alt="Big picture"
-      style={{
-        postion: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-      }}
-      sizes={data.background.sizes}
-    /> */}
   </div>
 );
 

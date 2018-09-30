@@ -1,0 +1,15 @@
+{
+  "/": "/",
+  "/page-2": "/page-2",
+  "french": "Français",
+  "English": "Anglais",
+  "Go back to the homepage": "Retour à l'acueil",
+  "Go to page 2": "Aller à la page 2",
+  "Hi from the second page": "Salut de la deuxième page",
+  "Hi people": "Salut les gens",
+  "NOT FOUND": "PAS TROUVER",
+  "Now go build something great.": "Maintenant construit un truc de dingue.",
+  "Welcome to page 2": "Bienvenue sur la page 2",
+  "Welcome to your new Gatsby site.": "Bienvenue sur ton nouveau site Gatsby.",
+  "You just hit a route that doesn't exist... the sadness.": "Vous etes arrivé null part... la tristesse."
+}

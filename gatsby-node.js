@@ -1,43 +1,54 @@
-const path = require('path')
-const { languages } = require('./src/i18n/locales')
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
 
-exports.onCreatePage = ({ page, boundActionCreators }) => {
-  const { createPage, deletePage } = boundActionCreators
+// You can delete this file if you're not using it
 
-  if (page.path.includes('404')) {
-    return Promise.resolve()
-  }
+const { languages, defaultLanguage } = require('./src/i18n-config');
 
-  return new Promise(resolve => {
-    const redirect = path.resolve('src/i18n/redirect.js')
-    const redirectPage = {
-      ...page,
-      component: redirect,
-      context: {
-        languages,
-        locale: '',
-        routed: false,
-        redirectPage: page.path,
-      },
-    }
-    deletePage(page)
-    createPage(redirectPage)
+exports.onCreateBabelConfig = props => {
+  const { actions } = props;
 
-    languages.forEach(({ value }) => {
-      const localePage = {
-        ...page,
+  actions.setBabelPlugin({
+    name: '@babel/plugin-proposal-class-properties',
+  });
+
+  actions.setBabelPlugin({
+    name: '@babel/plugin-proposal-object-rest-spread',
+  });
+
+  actions.setBabelPlugin({
+    name: '@babel/plugin-syntax-dynamic-import',
+  });
+
+  actions.setBabelPreset({
+    name: '@lingui/babel-preset-react',
+  });
+};
+
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage, deletePage } = actions;
+
+  return new Promise((resolve, reject) => {
+    deletePage(page);
+    languages.map(language => {
+      const newPage = Object.assign({}, page, {
         originalPath: page.path,
-        path: `/${value}${page.path}`,
+        path: '/' + language + page.path,
         context: {
-          languages,
-          locale: value,
-          routed: true,
-          originalPath: page.path,
+          lang: language,
         },
-      }
-      createPage(localePage)
-    })
+      });
 
-    resolve()
-  })
-}
+      createPage(newPage);
+      if (language === defaultLanguage) {
+        newPage.path = page.path;
+        createPage(newPage);
+      }
+    });
+
+    resolve();
+  });
+};
