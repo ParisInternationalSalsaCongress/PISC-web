@@ -1,4 +1,4 @@
-import { injectGlobal } from 'emotion'
+import { injectGlobal } from 'emotion';
 
 import { TEXT_COLOR } from '../hepers/vars';
 
@@ -629,6 +629,6 @@ const GlobalStyle = injectGlobal`
   }
 
 
-`
+`;
 
 export default GlobalStyle;

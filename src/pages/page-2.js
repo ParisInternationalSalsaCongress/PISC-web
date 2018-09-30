@@ -1,13 +1,10 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
-import { withIntl, Link } from '../i18n'
-import Layout from '../components/layout'
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { withIntl, Link } from '../i18n';
+import Layout from '../components/layout';
 
 const SecondPage = () => (
   <Layout>
-    <h1>
-      <FormattedMessage id="hello" />
-    </h1>
     <p>
       <FormattedMessage id="welcome2" />
     </p>
@@ -15,6 +12,6 @@ const SecondPage = () => (
       <FormattedMessage id="goback" />
     </Link>
   </Layout>
-)
+);
 
-export default withIntl(SecondPage)
+export default withIntl(SecondPage);

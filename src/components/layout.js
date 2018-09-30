@@ -1,7 +1,7 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { injectIntl } from 'react-intl'
-import Header from './header'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { injectIntl } from 'react-intl';
+import Footer from './footer';
 
 const Layout = ({ children, intl }) => (
   <div>
@@ -11,13 +11,14 @@ const Layout = ({ children, intl }) => (
         { name: 'description', content: intl.formatMessage({ id: 'welcome' }) },
         {
           name: 'keywords',
-          content: 'gatsby, i18n, react-intl, multi language, localization',
+          content:
+            'Paris, Salsa, Congress, festival, jungle, bachata, kizomba, hyatt paris',
         },
       ]}
     />
     {children}
-    <footer>footer ici</footer>
+    <Footer />
   </div>
-)
+);
 
-export default injectIntl(Layout)
+export default injectIntl(Layout);

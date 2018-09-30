@@ -3,7 +3,7 @@
 const localeData = [
   ...require('react-intl/locale-data/en'),
   ...require('react-intl/locale-data/fr'),
-]
+];
 
 module.exports = {
   localeData,
@@ -11,4 +11,4 @@ module.exports = {
     { value: 'en', text: 'English' },
     { value: 'fr', text: 'Français' },
   ],
-}
+};

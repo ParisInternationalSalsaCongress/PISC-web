@@ -1,15 +1,13 @@
-import React from 'react'
-import Layout from '../components/layout'
-import Header from '../components/header'
-import { FormattedMessage } from 'react-intl'
+import React from 'react';
+import Layout from '../components/layout';
+import Header from '../components/header';
+import { FormattedMessage } from 'react-intl';
 import Img from 'gatsby-image';
-import { withIntl, Link } from '../i18n'
+import { withIntl, Link } from '../i18n';
 
-
-const IndexPage = ({ data, intl}) => (
+const IndexPage = ({ data }) => (
   <Layout>
-  
-    <Header siteTitle={'TOTO le retour'} data={data} />
+    <Header data={data} />
     <div
       style={{
         margin: '0 auto',
@@ -18,9 +16,6 @@ const IndexPage = ({ data, intl}) => (
         paddingTop: 0,
       }}
     >
-      <h1>
-        <FormattedMessage id="hello" />
-      </h1>
       <p>
         <FormattedMessage id="welcome" />
       </p>
@@ -33,27 +28,24 @@ const IndexPage = ({ data, intl}) => (
       </Link>
     </div>
   </Layout>
-)
+);
 
-export default withIntl(IndexPage)
+export default withIntl(IndexPage);
 
 export const query = graphql`
   query SiteMeta {
     site {
       siteMetadata {
-        title,
+        title
       }
     }
     background: imageSharp(id: { regex: "/bg/" }) {
       sizes(
-        maxWidth: 1240,
-        duotone: {
-          highlight: "#38b719",
-          shadow: "#192550"
-        }
+        maxWidth: 1240
+        duotone: { highlight: "#38b719", shadow: "#192550" }
       ) {
-        ... GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes
       }
     }
   }
-`
+`;

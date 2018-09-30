@@ -1,19 +1,17 @@
-import React from 'react'
-import { injectGlobal } from 'emotion'
+import React from 'react';
+
 import globalStyle from './globalStyle';
 
+const DefaultLayout = ({ children }) => <div>{children()}</div>;
 
-const DefaultLayout = ({ children }) => <div>{children()}</div>
+export default DefaultLayout;
 
-export default DefaultLayout
-
-
-export const query = graphql`
-  query BG {
-    background: imageSharp(id: { regex: "/bg/" }) {
-      sizes(maxWidth: 1240) {
-        ... GatsbyImageSharpSizes
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query BG {
+//     background: imageSharp(id: { regex: "/bg/" }) {
+//       sizes(maxWidth: 1240) {
+//         ...GatsbyImageSharpSizes
+//       }
+//     }
+//   }
+// `;

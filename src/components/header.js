@@ -1,25 +1,18 @@
-import React from 'react'
+import React from 'react';
 import Img from 'gatsby-image';
 import { css } from 'emotion';
 
-import { Link } from '../i18n'
-import Language from './language'
+import { Link } from '../i18n';
+import { PRIMARY_COLOR } from '../hepers/vars';
 
-const color = 'darkgreen'
 const headerStyle = css`
-      background-color: hotpink;
-      transition: 0.5s ease-in;
-      position: relative;
-      height: 50vh;
-      &:hover {
-        background-color: ${color};
-      }
-    `
+  background-color: ${'#02B176'};
+  transition: 0.5s ease-in;
+  position: relative;
+`;
 
 const Header = ({ siteTitle, data }) => (
-  <div
-    className={headerStyle}
-  >
+  <div className={headerStyle}>
     <div
       style={{
         margin: '0 auto',
@@ -35,15 +28,25 @@ const Header = ({ siteTitle, data }) => (
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          {'PISC'}
         </Link>
       </h1>
-      <div style={{ float: 'right' }}>
+      {/* <div style={{ float: 'right' }}>
         <Language />
-      </div>
+      </div> */}
     </div>
-    <Img alt="Big picture" style={{postion: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} sizes={data.background.sizes} />
+    {/* <Img
+      alt="Big picture"
+      style={{
+        postion: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+      }}
+      sizes={data.background.sizes}
+    /> */}
   </div>
-)
+);
 
-export default Header
+export default Header;
