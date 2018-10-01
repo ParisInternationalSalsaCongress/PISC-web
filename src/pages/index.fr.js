@@ -105,7 +105,7 @@ const IndexPage = () => (
         Denisse / Groupo Alafia / Jessica Quiles /
       </p>
       <p>
-        CUBAN // Pedrito & Giusy / Elegua / <em>NOUVEAU</em> // Wilmer & Maria /
+        CUBAN // Alberto Valdes /  Pedrito & Giusy / Elegua / <em>NOUVEAU</em> // Wilmer & Maria /
         Yusimi Moya Rodriguez /
       </p>
       <p>
