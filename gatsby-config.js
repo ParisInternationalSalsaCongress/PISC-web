@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Paris International Salsa Congress website',
+    title: 'Paris International Salsa Congress 2019',
   },
   plugins: [
     {

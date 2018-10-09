@@ -18,7 +18,7 @@ import { FOOTER_BG, SNOW_COLOR, QUINARY_COLOR, DARK } from '../utils/vars';
 
 
 const footerStyle = css`
-  background-color: ${QUINARY_COLOR};
+  background-color: ${FOOTER_BG};
   padding: 1.45rem 1.0875rem;
   position: relative;
 `;
@@ -60,7 +60,11 @@ const PromoterYoshy = css`
 const worldMap = css`
   width: 16px;
   height: 16px;
-  margin-right: .45rem;
+`;
+const languageWrapper = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const languageLink = css`
   display: inline-flex;
@@ -68,6 +72,7 @@ const languageLink = css`
   margin-left: .45rem;
   text-decoration: none;
   color: ${DARK};
+  margin-left: .45rem;
   transition: 0.35s ease-in;
   &:hover {
     opacity: 0.6;
@@ -92,6 +97,7 @@ const Footer = ({ i18n}) => (
       </h4>
       <a
         href="//www.facebook.com/ParisSalsaC"
+        rel="noreferrer"
         target="_blank"
         className={socialBtn}
       >
@@ -99,6 +105,7 @@ const Footer = ({ i18n}) => (
       </a>
       <a
         href="//www.facebook.com/groups/451496571707555/"
+        rel="noreferrer"
         target="_blank"
         className={socialBtn}
       >
@@ -106,6 +113,7 @@ const Footer = ({ i18n}) => (
       </a>
       <a
         href="//www.instagram.com/parissalsacongress/"
+        rel="noreferrer"
         target="_blank"
         className={socialBtn}
       >
@@ -113,6 +121,7 @@ const Footer = ({ i18n}) => (
       </a>
       <a
         href="//www.youtube.com/channel/UCbEW-8_ltbYXaE4Q4xQMBtw/"
+        rel="noreferrer"
         target="_blank"
         className={socialBtn}
       >
@@ -122,10 +131,22 @@ const Footer = ({ i18n}) => (
 
     <section className={copyrightSection}>
       <span>&copy; Paris International Salsa Congress {new Date().getFullYear()}</span>
-      <Link className={languageLink} to="/fr/">
+      <div className={languageWrapper}>
         <WorldMap className={worldMap} />
-        <Trans>French</Trans>
-      </Link>
+        {
+          i18n.language === 'en' ? (
+            <Link className={languageLink} to="/fr/">
+              <Trans>French</Trans>
+            </Link>
+          ) : (
+            <Link className={languageLink} to="/en/">
+              <Trans>English</Trans>
+            </Link>
+          )
+        }
+        
+        
+      </div>
     </section>
   </footer>
 );

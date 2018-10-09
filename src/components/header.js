@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const Header = ({ siteTitle }) => (
+import { FOOTER_BG, SNOW_COLOR, QUINARY_COLOR, DARK } from '../utils/vars';
+
+const Header = () => (
   <div
     style={{
       background: 'rebeccapurple',
@@ -23,7 +25,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: 'none',
           }}
         >
-          {siteTitle}
+          pisc
         </Link>
       </h1>
     </div>

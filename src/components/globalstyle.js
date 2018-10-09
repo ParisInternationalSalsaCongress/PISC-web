@@ -1,6 +1,6 @@
 import { injectGlobal } from 'emotion';
 
-import { TEXT_COLOR } from '../utils/vars';
+import { TEXT_COLOR, SANS_SERIF_FONTS, SNOW_COLOR } from '../utils/vars';
 
 const GlobalStyle = injectGlobal`
   html {
@@ -203,10 +203,11 @@ const GlobalStyle = injectGlobal`
   }
   body {
     color: ${TEXT_COLOR};
-    font-family: georgia, serif;
+    font-family: ${SANS_SERIF_FONTS};
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
+    background-color: ${SNOW_COLOR};
     -moz-font-feature-settings: "kern", "liga", "clig", "calt";
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -233,8 +234,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;
@@ -250,8 +250,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
@@ -267,8 +266,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
@@ -284,8 +282,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1rem;
@@ -301,8 +298,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.85028rem;
@@ -318,8 +314,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.78405rem;

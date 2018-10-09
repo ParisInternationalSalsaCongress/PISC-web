@@ -21,25 +21,17 @@ const Layout = ({ children, data }) => (
     render={data => (
       <>
         <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
+          defaultTitle={data.site.siteMetadata.title}
+          titleTemplate="%s | Paris International Salsa Congress 2019"
         >
-          <html lang="en" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://parissalsacongress.com" />
+          {/* <meta property="og:image" content={ScreenTemp} /> */}
+
+          <link rel="canonical" href="https://parissalsacongress.com" />
+          
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        {/* <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        > */}
-          {children}
-        {/* </div> */}
+        {children}
         <Footer />
       </>
     )}
