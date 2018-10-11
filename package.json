@@ -1,33 +1,65 @@
 {
-  "name": "gatsby-starter-default-i18n",
-  "description": "Paris International Salsa Congress website powered by Gatsby",
-  "version": "1.0.0",
-  "author": "Steph.io",
+  "name": "gatsby-v2-jslingui",
+  "description": "Gatsby v2 with jslingui",
+  "version": "1.2.0",
+  "author": "Stephane Coué",
   "dependencies": {
-    "gatsby": "^1.9.63",
-    "gatsby-link": "^1.6.21",
-    "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-i18n": "^0.3.3",
-    "gatsby-plugin-react-helmet": "^1.0.5",
-    "gatsby-plugin-styled-components": "^2.0.11",
-    "intl": "^1.2.5",
-    "react-intl": "^2.4.0",
-    "react-slick": "^0.23.1",
-    "styled-components": "^3.3.3"
+    "@babel/plugin-proposal-class-properties": "^7.0.0-rc.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-rc.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-rc.2",
+    "@babel/preset-react": "^7.0.0-rc.2",
+    "@lingui/core": "^2.4.2",
+    "@lingui/react": "^2.4.2",
+    "emotion": "^9.2.12",
+    "emotion-server": "^9.2.12",
+    "gatsby": "next",
+    "gatsby-image": "next",
+    "gatsby-plugin-emotion": "^2.0.5",
+    "gatsby-plugin-google-analytics": "^2.0.6",
+    "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-netlify": "^2.0.1",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "gatsby-plugin-sharp": "^2.0.5",
+    "gatsby-source-filesystem": "^2.0.1",
+    "gatsby-transformer-sharp": "^2.1.3",
+    "polished": "^2.2.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-emotion": "^9.2.12",
+    "react-helmet": "^5.2.0",
+    "react-portal-tooltip": "^2.4.0"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
-    "start": "gatsby develop",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write '**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "add-locale": "lingui add-locale",
+    "extract": "lingui extract",
+    "compile": "lingui compile --strict"
   },
   "devDependencies": {
-    "prettier": "^1.7.4"
+    "@lingui/babel-preset-react": "^2.4.2",
+    "@lingui/cli": "^2.4.2",
+    "prettier": "^1.14.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "lingui": {
+    "fallbackLocale": "en",
+    "sourceLocale": "en",
+    "localeDir": "src/locales",
+    "srcPathDirs": [
+      "src"
+    ],
+    "format": "minimal"
   }
 }

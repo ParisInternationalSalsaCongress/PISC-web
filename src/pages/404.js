@@ -1,13 +1,17 @@
-import React from "react";
-import { FormattedMessage } from "react-intl";
-import Link from "gatsby-link";
+import React from 'react';
+import { Trans } from '@lingui/react';
+
+import Layout from '../components/layout';
 
 const NotFoundPage = () => (
-  <div>
-    <FormattedMessage id="notFound" tagName="h1" />
-    <FormattedMessage id="notFound_desc" tagName="p" />
-    <Link to="/">Back home</Link>
-  </div>
+  <Layout>
+    <h1>
+      <Trans>NOT FOUND</Trans>
+    </h1>
+    <p>
+      <Trans>You just hit a route that doesn&#39;t exist... the sadness.</Trans>
+    </p>
+  </Layout>
 );
 
 export default NotFoundPage;
