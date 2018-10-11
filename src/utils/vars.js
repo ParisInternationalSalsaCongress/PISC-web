@@ -14,7 +14,8 @@ export const DARK = 'hsla(0, 0%, 0%, 0.8)';
 export const SNOW_COLOR = QUATERNARY_COLOR;
 
 export const GREEN_COLOR = PRIMARY_COLOR;
-export const GREEN_LIGHT = '#35cc35cf';
+export const GREEN_LIGHT = '#35CC35Cf';
+
 
 export const BODY_BG_COLOR = '';
 

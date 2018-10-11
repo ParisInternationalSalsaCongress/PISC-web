@@ -23,11 +23,7 @@ const footerStyle = css`
   position: relative;
 `;
 const copyrightSection = css`
-  display: flex;
-  flew-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.45rem;
+  // padding: 0.45rem;
 `;
 const socialBtn = css`
   display: inline-block;
@@ -62,14 +58,14 @@ const worldMap = css`
   height: 16px;
 `;
 const languageWrapper = css`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 `;
+
 const languageLink = css`
   display: inline-flex;
   align-items: center;
-  margin-left: .45rem;
   text-decoration: none;
   color: ${DARK};
   margin-left: .45rem;
@@ -128,9 +124,11 @@ const Footer = ({ i18n}) => (
         <Youtube className={socialIcon} />
       </a>
     </section>
-
-    <section className={copyrightSection}>
-      <span>&copy; Paris International Salsa Congress {new Date().getFullYear()}</span>
+    <section
+      className={css`
+        margin-bottom: 0.45rem;
+      `}
+    >
       <div className={languageWrapper}>
         <WorldMap className={worldMap} />
         {
@@ -139,14 +137,15 @@ const Footer = ({ i18n}) => (
               <Trans>French</Trans>
             </Link>
           ) : (
-            <Link className={languageLink} to="/en/">
-              <Trans>English</Trans>
-            </Link>
-          )
+              <Link className={languageLink} to="/en/">
+                <Trans>English</Trans>
+              </Link>
+            )
         }
-        
-        
       </div>
+    </section>
+    <section className={copyrightSection}>
+      <span>&copy; &nbsp;&nbsp;Paris International Salsa Congress {new Date().getFullYear()}</span>
     </section>
   </footer>
 );
