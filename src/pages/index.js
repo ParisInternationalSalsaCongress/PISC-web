@@ -42,13 +42,13 @@ const secondaryBtn = css`
   transition: .300s ease-in;
   background-color: ${SECONDARY_COLOR};
   font-size: 1.3rem;
-  padding: .4rem;
+  padding: .8rem;
   border-radius: 4px;
   text-decoration: none;
   text-align: center;
 
   &:hover {
-    background-color: ${lighten(.2, SECONDARY_COLOR)};
+    background-color: ${lighten(.1, SECONDARY_COLOR)};
   }
   
 `
@@ -77,6 +77,18 @@ const piscLogo = css`
   max-width: 500px;
   transform: translateX(-50%)
 `;
+
+const bookBtnWrapper = css`
+  text-align: center;
+  margin: 1.45rem 0;
+
+  .${secondaryBtn} {
+    display: block;
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+`
 
 const IndexPage = ({ i18n, data }) => (
 
@@ -143,8 +155,12 @@ const IndexPage = ({ i18n, data }) => (
           </em>
         </strong>
       </p>
+      <div className={bookBtnWrapper}>
+        <a className={secondaryBtn} href="https://www.billetweb.fr/pisc-2019">
+          <Trans>buy your pass</Trans>
+        </a>
+      </div>
     </div>
-    {/* <Img fluid={data.imageTwo.childImageSharp.fluid} style={{height: '100vh'}} /> */}
    
   </Layout>
 );
