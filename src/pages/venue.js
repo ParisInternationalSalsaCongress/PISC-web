@@ -5,6 +5,7 @@ import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
+import { StatefulToolTip } from "react-portal-tooltip"
 
 import { PISC, PISC_TOWER, LocationMarket } from '../utils/svg';
 
@@ -76,6 +77,11 @@ const title = css`
   font-weight: 500;
 `;
 
+const subTitle = css`
+  color: ${PRIMARY_COLOR};
+  font-weight: 500;
+`;
+
 const secondaryBtn = css`
   display: inline-block;
   color: white;
@@ -91,9 +97,69 @@ const secondaryBtn = css`
   &:hover {
     background-color: ${lighten(.1, SECONDARY_COLOR)};
   }
+
+  &[disabled] {
+    opacity: .6;
+    &:hover {
+      background-color: ${SECONDARY_COLOR};
+    }
+  }
   
 `
 
+const bookBtnWrapper = css`
+  text-align: center;
+  margin: 1.45rem 0;
+
+  .${secondaryBtn} {
+    display: block;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+      width: initial;
+    }
+  }
+`
+
+const mapSection = css`
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+`;
+const mapSection_Map = css`
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+
+`;
+const mapSection_Text = css`
+
+  @media (min-width: 768px) {
+    margin-left: 2rem;
+  }
+
+`;
+
+let styleTooltips = {
+  style: {
+    background: 'rgba(0,0,0,.8)',
+    padding: 10,
+    color:'white',
+    boxShadow: '4px 4px 2px rgba(0,0,0,.5)',
+    zIndex: 6,
+  },
+  arrowStyle: {
+    color: 'rgba(0,0,0,.8)',
+    borderColor: false,
+    zIndex: 6,
+  }
+};
 
 
 const VenuePage = ({ i18n, data }) => (
@@ -118,33 +184,59 @@ const VenuePage = ({ i18n, data }) => (
       <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
     </header>
     <div className={container}>
-      <h2 className={title}>
+      <h3 className={title}>
         <Trans>Hyat_page_subtitle_1</Trans>
-      </h2>
+      </h3>
       <p>
         <Trans>Hyat_page_text_1</Trans>
       </p>
       <p>
         <Trans>Hyat_page_text_2</Trans>
       </p>
-      <Img fluid={data.image01.childImageSharp.fluid} className={caption} />
       <p>
         <Trans>Hyat_page_text_3</Trans>
       </p>
       <p>
         <Trans>Hyat_page_text_4</Trans>
       </p>
-      <a className={secondaryBtn} href="https://www.billetweb.fr/pisc-2019">
-        <Trans>book your room</Trans>
-      </a>
-      <p>
-        <a href="https://goo.gl/maps/MaM6WKFFtXU2" className={locationLink}>
-          <LocationMarket className={locationMaker} />
-            3, place du général KOENIG 
-            75017 Paris, France 
-        </a><br />
-        RER - Métro Neuilly Porte Maillot
-      </p>
+      <div className={bookBtnWrapper}>
+
+        <StatefulToolTip
+          useHover={false}
+          position={'top'}
+          arrow="center"
+          style={styleTooltips}
+          parent={
+            <button disabled className={secondaryBtn}>
+              <Trans>book your room</Trans>
+            </button>
+          }
+        >
+          <Trans>Not available</Trans>
+        </StatefulToolTip>
+
+      </div>
+      <h2 className={subTitle}>
+        <Trans>adress</Trans>
+      </h2>
+      <div className={mapSection}>
+        <div className={mapSection_Map}>
+          <a href="https://goo.gl/maps/MaM6WKFFtXU2" target="_blank" className={locationLink}>
+            <Img fluid={data.image01.childImageSharp.fluid} className={caption} />
+          </a>
+        </div>
+        <p className={mapSection_Text}>
+          <strong>
+            <Trans>Hyat_page_title</Trans>
+          </strong> <br />
+          <a href="https://goo.gl/maps/MaM6WKFFtXU2" target="_blank" className={locationLink}>
+            <LocationMarket className={locationMaker} />
+              3, place du général KOENIG 
+              75017 Paris, France 
+          </a><br />
+          RER - Métro Neuilly Porte Maillot
+        </p>
+      </div>
     </div>
     
   </Layout>
@@ -170,7 +262,7 @@ export const hyattQuery = graphql`
     image00: file(relativePath: {eq: "hyatt/hyatt-00.jpg"}) {
       ...hyattImage
     }
-    image01: file(relativePath: {eq: "hyatt/hyatt-01.jpg"}) {
+    image01: file(relativePath: {eq: "hyatt/hyatt-map.jpg"}) {
       ...hyattImage
     }
 

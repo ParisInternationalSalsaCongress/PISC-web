@@ -35,14 +35,17 @@ const navStyle = css`
   border-bottom: 1px solid ${PRIMARY_COLOR};
 
 `;
+
 const navLink = css`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   border: none;
   background-color: transparent;
   margin: 0;
-  padding: 0;
+  padding: 0 0.45rem;
   outline: 0;
-  align-items: center;
   height: inherit;
   color: white;
   transition: .300s ease-in;
@@ -52,11 +55,24 @@ const navLink = css`
   text-align: center;
   position: relative;
   cursor: pointer;
+
   &:hover  {
     color: ${DARK};
-    
+  }
+
+  @media (min-width: 768px) {
+   flex-direction: row;
+  }
+
+`;
+
+const navLinkSpan = css`
+  font-size: 1rem;
+  @media (min-width: 768px) {
+   font-size: inherit;
   }
 `;
+
 const subNavList = css`
   color: white;
   list-style: none;
@@ -67,17 +83,18 @@ const subNavList = css`
   width: 100%;
   display: none;
   background-color: ${rgba(PRIMARY_COLOR, .8)};
+  transition: .300s ease-in;
 
   .${navLink}:hover & {
     display: block;
   }
 
-  transition: .300s ease-in;
   &:hover {
     color: ${DARK};
     background-color: ${GREEN_LIGHT};
   }
 `;
+
 const subNavListLink = css`
   display: block;
   color: white;
@@ -86,7 +103,7 @@ const subNavListLink = css`
   font-family: ${SANS_SERIF_FONTS};
   text-align: center;
   // font-size: 1.3rem;
-  padding: 0.2rem 0;
+  padding: 0.45rem;
   text-decoration: none;
   &:hover {
     color: ${DARK};
@@ -138,12 +155,18 @@ const NavBar = ({i18n}) => (
     <button
       className={navLink}
     >
-      <Trans>preparties_date</Trans>
+      <Trans>preparties</Trans>
+      <span className={navLinkSpan}>
+        <Trans>preparties_date</Trans>
+      </span>
     </button>
     <button
       className={navLink}
     >
-      <Trans>congress_date</Trans>
+      <Trans>congress</Trans>
+      <span className={navLinkSpan}>
+        <Trans>congress_date</Trans>
+      </span>
       <ul className={subNavList}>
         <li>
           <Link
