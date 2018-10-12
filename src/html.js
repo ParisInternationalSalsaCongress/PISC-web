@@ -26,7 +26,6 @@ export default class HTML extends React.Component {
           <div className="fb-customerchat"
             page_id="844122412313700"
             minimized="true"
-            theme_color="#35CC35Cf"
           />
           
 
@@ -50,7 +49,6 @@ export default class HTML extends React.Component {
                 js.src = "https://connect.facebook.net/en_US/sdk.js";
                 fjs.parentNode.insertBefore(js, fjs);
               }(document, 'script', 'facebook-jssdk'));
-
               `,
             }}
           /> 
