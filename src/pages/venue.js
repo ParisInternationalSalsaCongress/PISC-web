@@ -104,7 +104,7 @@ const secondaryBtn = css`
       background-color: ${SECONDARY_COLOR};
     }
   }
-  
+
 `
 
 const bookBtnWrapper = css`
@@ -180,7 +180,7 @@ const VenuePage = ({ i18n, data }) => (
         <h1>
           <Trans>Hyat_page_title</Trans>
         </h1>
-      </div> 
+      </div>
       <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
     </header>
     <div className={container}>
@@ -221,7 +221,7 @@ const VenuePage = ({ i18n, data }) => (
       </h2>
       <div className={mapSection}>
         <div className={mapSection_Map}>
-          <a href="https://goo.gl/maps/MaM6WKFFtXU2" target="_blank" className={locationLink}>
+          <a href="https://goo.gl/maps/MaM6WKFFtXU2" target="_blank" rel="noopener noreferrer" className={locationLink}>
             <Img fluid={data.image01.childImageSharp.fluid} className={caption} />
           </a>
         </div>
@@ -229,16 +229,16 @@ const VenuePage = ({ i18n, data }) => (
           <strong>
             <Trans>Hyat_page_title</Trans>
           </strong> <br />
-          <a href="https://goo.gl/maps/MaM6WKFFtXU2" target="_blank" className={locationLink}>
+          <a href="https://goo.gl/maps/MaM6WKFFtXU2" target="_blank" rel="noopener noreferrer" className={locationLink}>
             <LocationMarket className={locationMaker} />
-              3, place du général KOENIG 
-              75017 Paris, France 
+              3, place du général KOENIG
+              75017 Paris, France
           </a><br />
           RER - Métro Neuilly Porte Maillot
         </p>
       </div>
     </div>
-    
+
   </Layout>
 );
 

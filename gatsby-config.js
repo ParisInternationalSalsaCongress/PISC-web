@@ -25,8 +25,8 @@ module.exports = {
         name: 'Paris-International-Salsa-Congress',
         short_name: 'PISC',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#029161',
+        theme_color: '#029161',
         display: 'minimal-ui',
         icon: 'src/images/pisc-icon.png', // This path is relative to the root of the site.
       },

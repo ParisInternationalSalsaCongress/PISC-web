@@ -50,7 +50,7 @@ const secondaryBtn = css`
   &:hover {
     background-color: ${lighten(.1, SECONDARY_COLOR)};
   }
-  
+
 `
 
 const isTablet = css`
@@ -69,13 +69,19 @@ const title = css`
 
 const piscLogo = css`
   position: absolute;
-  top: 38%;
+  top: 30%;
   left: 50%;
   fill: white;
-  width: 60vw;
+  width: 80vw;
   height: auto;
-  max-width: 500px;
-  transform: translateX(-50%)
+  max-width: 800px;
+  transform: translateX(-50%);
+  filter: drop-shadow(4px 4px 8px ${PRIMARY_COLOR});
+  @media (orientation: landscape) {
+    width: auto;
+    height: 70vh;
+    top: 20vh;
+  }
 `;
 
 const bookBtnWrapper = css`
@@ -120,13 +126,11 @@ const IndexPage = ({ i18n, data }) => (
     </header>
     <div
       className={container}
-    > 
-   
-        {/* <Img fluid={data.imageOne.childImageSharp.fluid} style={{height: '100vh'}} /> */}
-       <h1 className={title}>
+    >
+      <h1 className={title}>
         <Trans>Pisc_page_title_1</Trans><br />
         <Trans>Pisc_page_title_2</Trans>
-      </h1> 
+      </h1>
       <p>
         <Trans>Pisc_page_text_1</Trans>
       </p>
@@ -161,7 +165,7 @@ const IndexPage = ({ i18n, data }) => (
         </a>
       </div>
     </div>
-   
+
   </Layout>
 );
 

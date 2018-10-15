@@ -1,6 +1,7 @@
 {
   "/": "/",
   "/venue": "/venue",
+  "/lineup": "/lineup",
   "English": "English",
   "French": "French",
   "4th edition": "4th edition “JUNGLE” 16 - 22 april",
@@ -9,6 +10,7 @@
   "congress": "Congress",
   "congress_date": "19-21 april",
   "the venue": "The venue",
+  "lineup": "Lineup",
   "buy your pass": "Buy your Pass",
   "book your room": "Book your room in the Hyatt",
   "adress": "The adress",
