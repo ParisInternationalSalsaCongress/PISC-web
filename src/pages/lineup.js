@@ -212,6 +212,11 @@ const Lineup = ({ i18n, data }) => (
           imageData: data.imageAdrianAninata.childImageSharp.fluid,
         },
         {
+          caption: 'Jessica Quiles',
+          imageData: data.imageJessica.childImageSharp.fluid,
+          new: true,
+        },
+        {
           caption: 'Léon Rose project',
           imageData: data.imageLeonRoseProject.childImageSharp.fluid,
         },
@@ -237,12 +242,37 @@ const Lineup = ({ i18n, data }) => (
           imageData: data.imageErnestoDenisse.childImageSharp.fluid,
           new: true,
         },
+      ]} />
+
+      <GridList buttonText='Cuba' dataList={[
         {
-          caption: 'Jessica Quiles',
-          imageData: data.imageJessica.childImageSharp.fluid,
+          caption: 'Alberto Valdes',
+          imageData: data.imageAlberto.childImageSharp.fluid,
+        },
+        {
+          caption: 'Pedrito y Giusy',
+          imageData: data.imagePedrito.childImageSharp.fluid,
+        },
+        {
+          caption: 'Yusimi Moya Rodriguez',
+          imageData: data.imageYusimiMoyaRodriguez.childImageSharp.fluid,
           new: true,
         },
+        {
+          caption: 'Elegua',
+          imageData: data.imageElenaThierry.childImageSharp.fluid,
+        },
+      ]} />
 
+      <GridList expanded buttonText='Bachata' dataList={[
+        {
+          caption: 'Marco & Sarah',
+          imageData: data.imageAlberto.childImageSharp.fluid,
+        },
+        {
+          caption: 'Korke y Judith',
+          imageData: data.imagePedrito.childImageSharp.fluid,
+        },
       ]} />
 
       <h2 className={title}>
@@ -344,6 +374,19 @@ export const lineupQuery = graphql`
       ...lineupImage
     }
     imageLatinPassionGroup: file(relativePath: {eq: "artists/mambo/LatinPassionGroup.jpg"}) {
+      ...lineupImage
+    }
+
+    imageAlberto: file(relativePath: {eq: "artists/cuba/Alberto.jpg"}) {
+      ...lineupImage
+    }
+    imagePedrito: file(relativePath: {eq: "artists/cuba/Pedrito.jpg"}) {
+      ...lineupImage
+    }
+    imageYusimiMoyaRodriguez: file(relativePath: {eq: "artists/cuba/YusimiMoyaRodriguez.jpg"}) {
+      ...lineupImage
+    }
+    imageElenaThierry: file(relativePath: {eq: "artists/cuba/ElenaThierry.jpg"}) {
       ...lineupImage
     }
 
