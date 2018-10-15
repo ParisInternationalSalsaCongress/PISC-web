@@ -264,14 +264,22 @@ const Lineup = ({ i18n, data }) => (
         },
       ]} />
 
-      <GridList expanded buttonText='Bachata' dataList={[
+      <GridList buttonText='Bachata' dataList={[
         {
           caption: 'Marco & Sarah',
-          imageData: data.imageAlberto.childImageSharp.fluid,
+          imageData: data.imageMarcoSarah.childImageSharp.fluid,
         },
         {
           caption: 'Korke y Judith',
-          imageData: data.imagePedrito.childImageSharp.fluid,
+          imageData: data.imageKorkeJudith.childImageSharp.fluid,
+        },
+      ]} />
+
+
+      <GridList buttonText='Kizomba' dataList={[
+        {
+          caption: 'George & Laura',
+          imageData: data.imageGeorgeLaura.childImageSharp.fluid,
         },
       ]} />
 
@@ -387,6 +395,15 @@ export const lineupQuery = graphql`
       ...lineupImage
     }
     imageElenaThierry: file(relativePath: {eq: "artists/cuba/ElenaThierry.jpg"}) {
+      ...lineupImage
+    }
+    imageKorkeJudith: file(relativePath: {eq: "artists/bachata/Korke&Judith.jpg"}) {
+      ...lineupImage
+    }
+    imageMarcoSarah: file(relativePath: {eq: "artists/bachata/Marco&Sarah.jpg"}) {
+      ...lineupImage
+    }
+    imageGeorgeLaura: file(relativePath: {eq: "artists/kizomba/George&Laura.jpg"}) {
       ...lineupImage
     }
 
