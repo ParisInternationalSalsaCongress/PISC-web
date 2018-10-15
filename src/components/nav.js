@@ -11,7 +11,6 @@ import { SECONDARY_COLOR, PRIMARY_COLOR, GREEN_LIGHT, DARK, SANS_SERIF_FONTS } f
 
 const PiscLogo = css`
   fill: white;
-  width: auto;
   height: 60px;
   transition: .300s ease-in;
   &:hover {
@@ -70,6 +69,7 @@ const navLinkSpan = css`
   font-size: 1rem;
   @media (min-width: 768px) {
    font-size: inherit;
+   margin-left: .45rem;
   }
 `;
 
@@ -89,9 +89,13 @@ const subNavList = css`
     display: block;
   }
 
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
   &:hover {
     color: ${DARK};
-    background-color: ${GREEN_LIGHT};
   }
 `;
 
@@ -103,10 +107,11 @@ const subNavListLink = css`
   font-family: ${SANS_SERIF_FONTS};
   text-align: center;
   // font-size: 1.3rem;
-  padding: 0.45rem;
+  padding: .8rem 0.45rem;
   text-decoration: none;
   &:hover {
     color: ${DARK};
+    background-color: ${GREEN_LIGHT};
   }
 `;
 
@@ -125,7 +130,7 @@ const secondaryBtn = css`
   &:hover {
     background-color: ${lighten(.1, SECONDARY_COLOR)};
   }
-  
+
 `
 
 const isTablet = css`
@@ -168,6 +173,14 @@ const NavBar = ({i18n}) => (
         <Trans>congress_date</Trans>
       </span>
       <ul className={subNavList}>
+        <li>
+          <Link
+            to={i18n.t`/lineup`}
+            className={subNavListLink}
+          >
+            <Trans>lineup</Trans>
+          </Link>
+        </li>
         <li>
           <Link
             to={i18n.t`/venue`}

@@ -27,12 +27,11 @@ export default class HTML extends React.Component {
             page_id="844122412313700"
             minimized="true"
           />
-          
 
           <script
             dangerouslySetInnerHTML={{
               __html: `
-            
+
               window.fbAsyncInit = function() {
                 FB.init({
                   appId            : '325069808046154',
@@ -51,7 +50,7 @@ export default class HTML extends React.Component {
               }(document, 'script', 'facebook-jssdk'));
               `,
             }}
-          /> 
+          />
 
 
         </body>
