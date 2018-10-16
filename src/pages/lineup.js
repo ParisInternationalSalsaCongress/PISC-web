@@ -129,7 +129,7 @@ const Lineup = ({ i18n, data }) => (
   <Layout>
     <Helmet
       meta={[
-        { name: 'description', content: i18n.t`Hyat_page_text_3` },
+         { name: 'description', content: i18n.t`Hyat_page_text_3` },
       ]}
     >
       <html lang={i18n.language} />
@@ -229,6 +229,11 @@ const Lineup = ({ i18n, data }) => (
           imageData: data.imageLatinPassionGroup.childImageSharp.fluid,
         },
         {
+          caption: 'Alicia Velasco',
+          imageData: data.imageAliciaVelasco.childImageSharp.fluid,
+          new: true,
+        },
+        {
           caption: 'Jose Diaz & Nerea',
           imageData: data.imageJoseDiazNerea.childImageSharp.fluid,
         },
@@ -236,6 +241,7 @@ const Lineup = ({ i18n, data }) => (
           caption: 'Groupo Alafia',
           imageData: data.imageGrupoAlafia.childImageSharp.fluid,
           new: true,
+          highlight: true,
         },
         {
           caption: 'Ernesto & Denisse',
@@ -287,9 +293,86 @@ const Lineup = ({ i18n, data }) => (
         DJ
       </h2>
 
+      <GridList buttonText='Mambo' dataList={[
+        {
+          caption: 'DJ Gabriel',
+          imageData: data.imageGabriel.childImageSharp.fluid,
+        },
+        {
+          caption: 'DJ Mulato',
+          imageData: data.imageMulato.childImageSharp.fluid,
+        },
+        {
+          caption: 'DJ Cycy',
+          imageData: data.imageCycy.childImageSharp.fluid,
+        },
+        {
+          caption: 'DJ Loic',
+          imageData: data.imageLoic.childImageSharp.fluid,
+        },
+        {
+          caption: 'DJ Phil',
+          imageData: data.imagePhil.childImageSharp.fluid,
+        },
+        {
+          caption: 'DJ Madj',
+          imageData: data.imageMadj.childImageSharp.fluid,
+        },
+         {
+          caption: 'DJ 69',
+          imageData: data.imageDj69.childImageSharp.fluid,
+        },
+        {
+          caption: 'DJ Asmadi',
+          imageData: data.imageAsmadi.childImageSharp.fluid,
+        },
+        {
+          caption: 'DJ Vincent',
+          imageData: data.imageVincent.childImageSharp.fluid,
+        },
+      ]} />
+
+     <GridList buttonText='Cuba' dataList={[
+        {
+          caption: 'DJ Didi',
+          imageData: data.imageDJdidi.childImageSharp.fluid,
+        },
+      ]} />
+
+     <GridList buttonText='Bachata' dataList={[
+        {
+          caption: 'DJ Latino Boy',
+          imageData: data.imageLatinoBoy.childImageSharp.fluid,
+        },
+      ]} />
+
+      <GridList buttonText='Kizomba' dataList={[
+        {
+          caption: 'DJ Hugo Boss',
+          imageData: data.imageDJHugoBoss.childImageSharp.fluid,
+        },
+        {
+          caption: 'DJ Madiss',
+          imageData: data.imageDJMadiss.childImageSharp.fluid,
+          new: true,
+        },
+      ]} />
+
       <h2 className={title}>
         MULTIMEDIA
       </h2>
+
+
+      <GridList buttonText='Video' dataList={[
+        {
+          caption: 'Steve Starmambo',
+          imageData: data.imageSteveStarmambo.childImageSharp.fluid,
+        },
+        {
+          caption: 'Marty DPone',
+          imageData: data.imageMartyDPone.childImageSharp.fluid,
+        },
+      ]} />
 
 
     </div>
@@ -384,7 +467,9 @@ export const lineupQuery = graphql`
     imageLatinPassionGroup: file(relativePath: {eq: "artists/mambo/LatinPassionGroup.jpg"}) {
       ...lineupImage
     }
-
+    imageAliciaVelasco: file(relativePath: {eq: "artists/mambo/AliciaVelasco.jpg"}) {
+      ...lineupImage
+    }
     imageAlberto: file(relativePath: {eq: "artists/cuba/Alberto.jpg"}) {
       ...lineupImage
     }
@@ -404,6 +489,51 @@ export const lineupQuery = graphql`
       ...lineupImage
     }
     imageGeorgeLaura: file(relativePath: {eq: "artists/kizomba/George&Laura.jpg"}) {
+      ...lineupImage
+    }
+    imageDJHugoBoss: file(relativePath: {eq: "DJs/kizomba/HugoBoss.jpg"}) {
+      ...lineupImage
+    }
+    imageDJMadiss: file(relativePath: {eq: "DJs/kizomba/Madiss.jpg"}) {
+      ...lineupImage
+    }
+    imageDJdidi: file(relativePath: {eq: "DJs/cuba/Didi.jpg"}) {
+      ...lineupImage
+    }
+    imageLatinoBoy: file(relativePath: {eq: "DJs/bachata/LatinoBoy.jpg"}) {
+      ...lineupImage
+    }
+    imageGabriel: file(relativePath: {eq: "DJs/mambo/Gabriel.jpg"}) {
+      ...lineupImage
+    }
+    imageMulato: file(relativePath: {eq: "DJs/mambo/Mulato.jpg"}) {
+      ...lineupImage
+    }
+    imagePhil: file(relativePath: {eq: "DJs/mambo/Phil.jpg"}) {
+      ...lineupImage
+    }
+    imageCycy: file(relativePath: {eq: "DJs/mambo/Cycy.jpg"}) {
+      ...lineupImage
+    }
+    imageMadj: file(relativePath: {eq: "DJs/mambo/Madj.jpg"}) {
+      ...lineupImage
+    }
+    imageDj69: file(relativePath: {eq: "DJs/mambo/Dj69.jpg"}) {
+      ...lineupImage
+    }
+    imageAsmadi: file(relativePath: {eq: "DJs/mambo/Asmadi.jpg"}) {
+      ...lineupImage
+    }
+    imageLoic: file(relativePath: {eq: "DJs/mambo/Loic.jpg"}) {
+      ...lineupImage
+    }
+    imageVincent: file(relativePath: {eq: "DJs/mambo/Vincent.jpg"}) {
+      ...lineupImage
+    }
+    imageSteveStarmambo: file(relativePath: {eq: "multimedia/video/SteveStarmambo.jpg"}) {
+      ...lineupImage
+    }
+    imageMartyDPone: file(relativePath: {eq: "multimedia/video/MartyDPone.jpg"}) {
       ...lineupImage
     }
 
