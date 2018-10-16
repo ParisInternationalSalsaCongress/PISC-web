@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Paris-International-Salsa-Congress',
+        name: 'Paris International Salsa Congress',
         short_name: 'PISC',
         start_url: '/',
         background_color: '#029161',
