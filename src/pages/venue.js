@@ -5,7 +5,6 @@ import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
-import { StatefulToolTip } from "react-portal-tooltip"
 
 import { PISC, PISC_TOWER, LocationMarket } from '../utils/svg';
 
@@ -201,19 +200,9 @@ const VenuePage = ({ i18n, data }) => (
       </p>
       <div className={bookBtnWrapper}>
 
-        <StatefulToolTip
-          useHover={false}
-          position={'top'}
-          arrow="center"
-          style={styleTooltips}
-          parent={
-            <button disabled className={secondaryBtn}>
-              <Trans>book your room</Trans>
-            </button>
-          }
-        >
-          <Trans>Not available</Trans>
-        </StatefulToolTip>
+        <a href="https://book.passkey.com/go/PISC2019JUNGLE" target="_blank" rel="noopener noreferrer" className={secondaryBtn}>
+          <Trans>book your room</Trans>
+        </a>
 
       </div>
       <h2 className={subTitle}>
