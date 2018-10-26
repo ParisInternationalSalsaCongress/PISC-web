@@ -178,14 +178,14 @@ const Lineup = ({ i18n, data }) => (
           imageData: data.imageTalalEdyta.childImageSharp.fluid,
         },
         {
+          caption: 'Rodrigo & Bersy',
+          imageData: data.imageRodrigoBersy.childImageSharp.fluid,
+        },
+        {
           caption: 'Adolfo Indacochea and his Latin Soul Dancers',
           imageData: data.imageAdolfoLD.childImageSharp.fluid,
           new: true,
           highlight: true,
-        },
-        {
-          caption: 'Rodrigo & Bersy',
-          imageData: data.imageRodrigoBersy.childImageSharp.fluid,
         },
         {
           caption: 'Shelina \'s Team',
@@ -202,19 +202,11 @@ const Lineup = ({ i18n, data }) => (
         {
           caption: 'Kareen & Ricardo',
           imageData: data.imageKarenRicardo.childImageSharp.fluid,
+          highlight: true,
         },
         {
           caption: 'Yamulee',
           imageData: data.imageYamulee.childImageSharp.fluid,
-        },
-        {
-          caption: 'Adrián y Anita',
-          imageData: data.imageAdrianAninata.childImageSharp.fluid,
-        },
-        {
-          caption: 'Jessica Quiles',
-          imageData: data.imageJessica.childImageSharp.fluid,
-          new: true,
         },
         {
           caption: 'Léon Rose project',
@@ -229,24 +221,36 @@ const Lineup = ({ i18n, data }) => (
           imageData: data.imageLatinPassionGroup.childImageSharp.fluid,
         },
         {
-          caption: 'Alicia Velasco',
-          imageData: data.imageAliciaVelasco.childImageSharp.fluid,
+          caption: 'Jessica Quiles',
+          imageData: data.imageJessica.childImageSharp.fluid,
           new: true,
+
         },
         {
-          caption: 'Jose Diaz & Nerea',
-          imageData: data.imageJoseDiazNerea.childImageSharp.fluid,
+          caption: 'Adrián y Anita',
+          imageData: data.imageAdrianAninata.childImageSharp.fluid,
+          highlight: true,
         },
         {
           caption: 'Groupo Alafia',
           imageData: data.imageGrupoAlafia.childImageSharp.fluid,
           new: true,
-          highlight: true,
+        },
+
+        {
+          caption: 'Alicia Velasco',
+          imageData: data.imageAliciaVelasco.childImageSharp.fluid,
+          new: true,
         },
         {
           caption: 'Ernesto & Denisse',
           imageData: data.imageErnestoDenisse.childImageSharp.fluid,
           new: true,
+        },
+        {
+          caption: 'Jose Diaz & Nerea',
+          imageData: data.imageJoseDiazNerea.childImageSharp.fluid,
+          highlight: true,
         },
       ]} />
 

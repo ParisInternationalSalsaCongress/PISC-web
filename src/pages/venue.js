@@ -206,7 +206,7 @@ const VenuePage = ({ i18n, data }) => (
 
       </div>
       <h2 className={subTitle}>
-        <Trans>adress</Trans>
+        <Trans>address</Trans>
       </h2>
       <div className={mapSection}>
         <div className={mapSection_Map}>

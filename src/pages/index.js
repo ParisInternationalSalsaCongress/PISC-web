@@ -5,6 +5,7 @@ import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
+import ReactPlayer from 'react-player'
 
 import { PISC, PISC_TOWER } from '../utils/svg';
 
@@ -22,7 +23,7 @@ const header = css`
 const container = css`
   margin: 0 auto;
   max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
+  padding: 0px 1.0875rem 3.45rem;
   padding-top: 0;
   position: relative;
 `;
@@ -86,7 +87,7 @@ const piscLogo = css`
 
 const bookBtnWrapper = css`
   text-align: center;
-  margin: 1.45rem 0;
+  margin: 2.45rem 0;
 
   .${secondaryBtn} {
     display: block;
@@ -95,6 +96,18 @@ const bookBtnWrapper = css`
     }
   }
 `
+
+const videoPlayerWrapper = css`
+  position: relative;
+  padding-top: 56.25%
+`
+const videoPlayer = css`
+  position: absolute;
+  top: 0;
+  left: 0;
+`
+
+
 
 const IndexPage = ({ i18n, data }) => (
 
@@ -164,6 +177,23 @@ const IndexPage = ({ i18n, data }) => (
           <Trans>buy your pass</Trans>
         </a>
       </div>
+
+      <div className={videoPlayerWrapper}>
+        <ReactPlayer
+          url='https://www.youtube.com/watch?v=b99YXIYY070'
+          controls
+          className={videoPlayer}
+          width='100%'
+          height='100%'
+          config={{
+            youtube: {
+              playerVars: { showinfo: 0, modestbranding: 1 }
+            }
+          }}
+        />
+      </div>
+
+
     </div>
 
   </Layout>
