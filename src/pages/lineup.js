@@ -254,7 +254,7 @@ const Lineup = ({ i18n, data }) => (
         },
       ]} />
 
-      <GridList buttonText='Cuba' dataList={[
+      <GridList expanded buttonText='Cuba' dataList={[
         {
           caption: 'Alberto Valdes',
           imageData: data.imageAlberto.childImageSharp.fluid,
@@ -274,7 +274,7 @@ const Lineup = ({ i18n, data }) => (
         },
       ]} />
 
-      <GridList buttonText='Bachata' dataList={[
+      <GridList expanded buttonText='Bachata' dataList={[
         {
           caption: 'Marco & Sarah',
           imageData: data.imageMarcoSarah.childImageSharp.fluid,
@@ -286,10 +286,14 @@ const Lineup = ({ i18n, data }) => (
       ]} />
 
 
-      <GridList buttonText='Kizomba' dataList={[
+      <GridList expanded buttonText='Kizomba' dataList={[
         {
           caption: 'George & Laura',
           imageData: data.imageGeorgeLaura.childImageSharp.fluid,
+        },
+        {
+          caption: 'Nuno & Nagyla',
+          imageData: data.imageNunoNagyla.childImageSharp.fluid,
         },
       ]} />
 
@@ -297,7 +301,7 @@ const Lineup = ({ i18n, data }) => (
         DJ
       </h2>
 
-      <GridList buttonText='Mambo' dataList={[
+      <GridList expanded buttonText='Mambo' dataList={[
         {
           caption: 'DJ Gabriel',
           imageData: data.imageGabriel.childImageSharp.fluid,
@@ -336,21 +340,21 @@ const Lineup = ({ i18n, data }) => (
         },
       ]} />
 
-     <GridList buttonText='Cuba' dataList={[
+      <GridList expanded buttonText='Cuba' dataList={[
         {
           caption: 'DJ Didi',
           imageData: data.imageDJdidi.childImageSharp.fluid,
         },
       ]} />
 
-     <GridList buttonText='Bachata' dataList={[
+      <GridList expanded buttonText='Bachata' dataList={[
         {
           caption: 'DJ Latino Boy',
           imageData: data.imageLatinoBoy.childImageSharp.fluid,
         },
       ]} />
 
-      <GridList buttonText='Kizomba' dataList={[
+      <GridList expanded buttonText='Kizomba' dataList={[
         {
           caption: 'DJ Hugo Boss',
           imageData: data.imageDJHugoBoss.childImageSharp.fluid,
@@ -367,7 +371,7 @@ const Lineup = ({ i18n, data }) => (
       </h2>
 
 
-      <GridList buttonText='Video' dataList={[
+      <GridList expanded buttonText='Video' dataList={[
         {
           caption: 'Steve Starmambo',
           imageData: data.imageSteveStarmambo.childImageSharp.fluid,
@@ -493,6 +497,9 @@ export const lineupQuery = graphql`
       ...lineupImage
     }
     imageGeorgeLaura: file(relativePath: {eq: "artists/kizomba/George&Laura.jpg"}) {
+      ...lineupImage
+    }
+    imageNunoNagyla: file(relativePath: {eq: "artists/kizomba/Nuno&Nagyla.jpg"}) {
       ...lineupImage
     }
     imageDJHugoBoss: file(relativePath: {eq: "DJs/kizomba/HugoBoss.jpg"}) {

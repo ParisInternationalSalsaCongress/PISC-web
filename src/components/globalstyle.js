@@ -234,7 +234,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    
+
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;
@@ -250,7 +250,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    
+
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
@@ -266,7 +266,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    
+
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
@@ -282,7 +282,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    
+
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1rem;
@@ -298,7 +298,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    
+
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.85028rem;
@@ -314,7 +314,7 @@ const GlobalStyle = injectGlobal`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    
+
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.78405rem;

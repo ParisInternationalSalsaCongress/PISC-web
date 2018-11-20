@@ -99,7 +99,8 @@ const bookBtnWrapper = css`
 
 const videoPlayerWrapper = css`
   position: relative;
-  padding-top: 56.25%
+  padding-top: 56.25%;
+  margin: 1.45rem 0 3.45rem;
 `
 const videoPlayer = css`
   position: absolute;
@@ -153,6 +154,20 @@ const IndexPage = ({ i18n, data }) => (
       <p>
         <Trans>Pisc_page_text_3</Trans>
       </p>
+      <div className={videoPlayerWrapper}>
+        <ReactPlayer
+          url='https://www.youtube.com/watch?v=b99YXIYY070'
+          controls
+          className={videoPlayer}
+          width='100%'
+          height='100%'
+          config={{
+            youtube: {
+              playerVars: { showinfo: 0, modestbranding: 1 }
+            }
+          }}
+        />
+      </div>
       <blockquote className={title}>
         <Trans>Pisc_page_quote</Trans>
       </blockquote>
@@ -177,22 +192,6 @@ const IndexPage = ({ i18n, data }) => (
           <Trans>buy your pass</Trans>
         </a>
       </div>
-
-      <div className={videoPlayerWrapper}>
-        <ReactPlayer
-          url='https://www.youtube.com/watch?v=b99YXIYY070'
-          controls
-          className={videoPlayer}
-          width='100%'
-          height='100%'
-          config={{
-            youtube: {
-              playerVars: { showinfo: 0, modestbranding: 1 }
-            }
-          }}
-        />
-      </div>
-
 
     </div>
 
