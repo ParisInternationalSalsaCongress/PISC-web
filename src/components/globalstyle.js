@@ -1,6 +1,6 @@
 import { injectGlobal } from 'emotion';
 
-import { TEXT_COLOR, SANS_SERIF_FONTS, TERTIARY_COLOR } from '../utils/vars';
+import { TEXT_COLOR, SANS_SERIF_FONTS, SNOW_COLOR } from '../utils/vars';
 
 const GlobalStyle = injectGlobal`
   html {
@@ -207,7 +207,7 @@ const GlobalStyle = injectGlobal`
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
-    background-color: ${TERTIARY_COLOR};
+    background-color: ${SNOW_COLOR};
     -moz-font-feature-settings: "kern", "liga", "clig", "calt";
     -ms-font-feature-settings: "kern", "liga", "clig", "calt";
     -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
