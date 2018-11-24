@@ -164,6 +164,17 @@ const NavBar = ({i18n}) => (
       <span className={navLinkSpan}>
         <Trans>preparties_date</Trans>
       </span>
+      <ul className={subNavList}>
+        <li>
+          <Link
+            to={i18n.t`/16-april`}
+            className={subNavListLink}
+          >
+            <Trans>Tuesday 16th april</Trans>
+          </Link>
+        </li>
+
+      </ul>
     </button>
     <button
       className={navLink}
