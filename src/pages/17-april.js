@@ -205,10 +205,10 @@ export const SalsoundImage = graphql`
 export const SalsoundQuery = graphql`
   query {
     image00: file(relativePath: {eq: "preparties/salsound/salsound00.jpg"}) {
-      ...hyattImage
+      ...SalsoundImage
     }
     image01: file(relativePath: {eq: "preparties/salsound/salsound01.jpg"}) {
-      ...hyattImage
+      ...SalsoundImage
     }
   }
 

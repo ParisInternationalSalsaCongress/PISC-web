@@ -204,7 +204,7 @@ export const SevenSpiritImage = graphql`
 export const SevenSpiritQuery = graphql`
   query {
     image00: file(relativePath: {eq: "preparties/7spirit/7spirit00.jpg"}) {
-      ...hyattImage
+      ...SevenSpiritImage
     }
 
 

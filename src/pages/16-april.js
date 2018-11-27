@@ -185,7 +185,7 @@ const AguaPage = ({ i18n, data }) => (
           </span>
         </div>
       </div>
-      <Img fluid={data.image02.childImageSharp.fluid} className={cover} />
+      <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
     </header>
   </Layout>
 );
@@ -193,26 +193,26 @@ const AguaPage = ({ i18n, data }) => (
 export default withI18n()(AguaPage);
 
 export const AguaImage = graphql`
-fragment AguaImage on File {
-  childImageSharp {
-    fluid(maxWidth: 2000) {
-      ...GatsbyImageSharpFluid
+  fragment AguaImage on File {
+    childImageSharp {
+      fluid(maxWidth: 2000) {
+        ...GatsbyImageSharpFluid
+      }
     }
   }
-}
 `;
 
 
 export const AguaQuery = graphql`
   query {
     image00: file(relativePath: {eq: "preparties/agua/agua00.jpg"}) {
-      ...hyattImage
+      ...AguaImage
     }
     image01: file(relativePath: {eq: "preparties/agua/agua01.jpg"}) {
-      ...hyattImage
+      ...AguaImage
     }
     image02: file(relativePath: {eq: "preparties/agua/agua02.jpg"}) {
-      ...hyattImage
+      ...AguaImage
     }
 
   }
