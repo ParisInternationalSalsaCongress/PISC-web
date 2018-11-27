@@ -52,7 +52,6 @@ const banner = css`
   padding: 0.45rem 1.0875rem 3.45rem;
   padding-top: 30vh;
   overflow-y: auto;
-
   @media (min-width: 768px) {
     padding-top: 50vh;
   }
@@ -147,16 +146,16 @@ const bookBtnWrapper = css`
   }
 `
 
-const AguaPage = ({ i18n, data }) => (
+const SevenSpiritPage = ({ i18n, data }) => (
   <Layout>
     <Helmet
       meta={[
-        { name: 'description', content: i18n.t`agua_slogan` + ' ' + i18n.t`agua_text`},
+        { name: 'description', content: i18n.t`7spirit_text` },
       ]}
     >
       <html lang={i18n.language} />
       <title>
-        {i18n.t`preparty Agua`}
+        {i18n.t`preparty Seven Spirit`}
       </title>
     </Helmet>
     <header className={header}>
@@ -164,56 +163,50 @@ const AguaPage = ({ i18n, data }) => (
       <div className={banner}>
         <div className={bannerInner}>
           <h1>
-            <Trans>Tuesday Preparty Agua</Trans>
+            <Trans>Thursday Preparty Seven Spirit</Trans>
           </h1>
           <p>
-            <Trans>agua_slogan</Trans> <br />
-            <Trans>agua_text</Trans>
+            <Trans>7spirit_text</Trans>
           </p>
-          <a href="https://goo.gl/maps/bRTXyHga8hK2" target="_blank" rel="noopener noreferrer" className={locationLink}>
+          <a href="https://goo.gl/maps/44LgDuUQD8T2" target="_blank" rel="noopener noreferrer" className={locationLink}>
             <LocationMarket className={locationMaker} />
             &nbsp;
-          <Trans>Boat</Trans> Concorde Atlantique. <br />
-            <Trans>Face to the</Trans> 23 Quai Anatole France,<br />
-            75007 Paris M•Assemblée National
-        </a>
+            Seven Spirit <br />
+            7, rue de sainte Hélène <br />
+            75013 Paris M•Porte d’italie/Maison blanche
+          </a>
           <span>
-            <Trans>Enter</Trans>: 12euros
-        </span>
+            <Trans>Enter</Trans>: 15euros
+          </span>
           <span>
-            21h / 2h
+            21h / 4h
           </span>
         </div>
       </div>
-      <Img fluid={data.image02.childImageSharp.fluid} className={cover} />
+      <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
     </header>
   </Layout>
 );
 
-export default withI18n()(AguaPage);
+export default withI18n()(SevenSpiritPage);
 
-export const AguaImage = graphql`
-fragment AguaImage on File {
-  childImageSharp {
-    fluid(maxWidth: 2000) {
-      ...GatsbyImageSharpFluid
+export const SevenSpiritImage = graphql`
+  fragment SevenSpiritImage on File {
+    childImageSharp {
+      fluid(maxWidth: 2000) {
+        ...GatsbyImageSharpFluid
+      }
     }
   }
-}
 `;
 
 
-export const AguaQuery = graphql`
+export const SevenSpiritQuery = graphql`
   query {
-    image00: file(relativePath: {eq: "preparties/agua/agua00.jpg"}) {
+    image00: file(relativePath: {eq: "preparties/7spirit/7spirit00.jpg"}) {
       ...hyattImage
     }
-    image01: file(relativePath: {eq: "preparties/agua/agua01.jpg"}) {
-      ...hyattImage
-    }
-    image02: file(relativePath: {eq: "preparties/agua/agua02.jpg"}) {
-      ...hyattImage
-    }
+
 
   }
 

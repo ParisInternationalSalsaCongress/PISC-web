@@ -173,6 +173,22 @@ const NavBar = ({i18n}) => (
             <Trans>Tuesday 16th april</Trans>
           </Link>
         </li>
+        <li>
+          <Link
+            to={i18n.t`/17-april`}
+            className={subNavListLink}
+          >
+            <Trans>Wednesday 17th april</Trans>
+          </Link>
+        </li>
+        <li>
+          <Link
+            to={i18n.t`/18-april`}
+            className={subNavListLink}
+          >
+            <Trans>Thursday 18th april</Trans>
+          </Link>
+        </li>
 
       </ul>
     </button>
