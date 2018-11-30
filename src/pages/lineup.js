@@ -69,10 +69,6 @@ const title = css`
   font-weight: 500;
 `;
 
-const subTitle = css`
-  color: ${PRIMARY_COLOR};
-  font-weight: 500;
-`;
 
 const secondaryBtn = css`
   display: inline-block;
@@ -102,25 +98,6 @@ const secondaryBtn = css`
   }
 
 `
-
-const GridPics = css`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(250px, auto);
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  grid-auto-flow: dense;
-  margin-bottom: 1.45rem;
-}
-  li {
-    margin: 0;
-    padding: 0;
-  }
-`;
 
 
 const Lineup = ({ i18n, data }) => (
@@ -354,6 +331,10 @@ const Lineup = ({ i18n, data }) => (
           caption: 'DJ Latino Boy',
           imageData: data.imageLatinoBoy.childImageSharp.fluid,
         },
+        {
+          caption: 'DJ El Hombre',
+          imageData: data.imageElHombre.childImageSharp.fluid,
+        },
       ]} />
 
       <GridList expanded buttonText='Kizomba' dataList={[
@@ -514,6 +495,9 @@ export const lineupQuery = graphql`
       ...lineupImage
     }
     imageLatinoBoy: file(relativePath: {eq: "DJs/bachata/LatinoBoy.jpg"}) {
+      ...lineupImage
+    }
+    imageElHombre: file(relativePath: {eq: "DJs/bachata/ElHombre.jpg"}) {
       ...lineupImage
     }
     imageGabriel: file(relativePath: {eq: "DJs/mambo/Gabriel.jpg"}) {
