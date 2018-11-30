@@ -8,7 +8,7 @@ import { rgba, lighten, tint } from 'polished';
 
 import { LocationMarket } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR, SNOW_COLOR, DARK } from '../utils/vars';
+import { SECONDARY_COLOR, SNOW_COLOR, DARK } from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';
@@ -17,18 +17,6 @@ const header = css`
   padding-top: 0;
   position: relative;
   overflow: hidden;
-`;
-
-const container = css`
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0;
-  position: relative;
-`;
-
-const caption = css`
-  margin: 0.45rem 0 1.45rem;
 `;
 
 const cover = css`
@@ -95,17 +83,6 @@ const locationLink = css`
   }
 `
 
-const title = css`
-  color: ${PRIMARY_COLOR};
-  text-align: center;
-  font-weight: 500;
-`;
-
-const subTitle = css`
-  color: ${PRIMARY_COLOR};
-  font-weight: 500;
-`;
-
 const secondaryBtn = css`
   display: inline-block;
   color: white;
@@ -129,21 +106,6 @@ const secondaryBtn = css`
     }
   }
 
-`
-
-const bookBtnWrapper = css`
-  text-align: center;
-  margin: 1.45rem 0;
-
-  .${secondaryBtn} {
-    display: block;
-    width: 100%;
-
-    @media (min-width: 768px) {
-      display: inline-block;
-      width: initial;
-    }
-  }
 `
 
 const SalsoundPage = ({ i18n, data }) => (
@@ -184,7 +146,7 @@ const SalsoundPage = ({ i18n, data }) => (
           </span>
         </div>
       </div>
-      <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
+      <Img fluid={data.imageSalsound02.childImageSharp.fluid} className={cover} />
     </header>
   </Layout>
 );
@@ -204,10 +166,13 @@ export const SalsoundImage = graphql`
 
 export const SalsoundQuery = graphql`
   query {
-    image00: file(relativePath: {eq: "preparties/salsound/salsound00.jpg"}) {
+    imageSalsound00: file(relativePath: {eq: "preparties/salsound/salsound00.jpg"}) {
       ...SalsoundImage
     }
-    image01: file(relativePath: {eq: "preparties/salsound/salsound01.jpg"}) {
+    imageSalsound01: file(relativePath: {eq: "preparties/salsound/salsound01.jpg"}) {
+      ...SalsoundImage
+    }
+    imageSalsound02: file(relativePath: {eq: "preparties/salsound/salsound02.jpg"}) {
       ...SalsoundImage
     }
   }

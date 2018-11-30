@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import { Link } from 'gatsby';
 import Img from "gatsby-image";
 import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
-import { StatefulToolTip } from "react-portal-tooltip"
+import { withI18n } from '@lingui/react';
 
-import { PISC, PISC_TOWER, LocationMarket } from '../utils/svg';
-
-import { SECONDARY_COLOR, PRIMARY_COLOR, SNOW_COLOR, TERTIARY_COLOR, QUINARY_COLOR, DARK, SANS_SERIF_FONTS } from '../utils/vars';
+import { SECONDARY_COLOR, QUINARY_COLOR } from '../utils/vars';
 
 
 
@@ -122,34 +119,26 @@ class GridList extends Component {
 
   render() {
 
-    const { buttonText, dataList } = this.props;
+    const { i18n, buttonText, dataList } = this.props;
 
     return(
       <section>
         <button
           onClick={this.handleExpanded}
-          className={BtnSection}>
-          {buttonText}
+          className={BtnSection}
+          title={this.state.expanded ? i18n.t`see less` : i18n.t`see more`}
+        >
+          {buttonText} {this.state.expanded ? '-' : '+'}
         </button>
 
         {
           this.state.expanded && (
             <ul className={GridPics}>
-
               {
                 dataList.map((item, index) => (
                   <GridListItem key={index} item={item} />
                 ))
               }
-
-              {/* <li style={{ maxHeight: 300 }}>
-                <figure>
-                  <Img fluid={data.imageRodrigoBersy.childImageSharp.fluid} />
-                  <figcaption>
-                    Rodrigo & berci
-                  </figcaption>
-                </figure>
-              </li> */}
             </ul>
           )
         }
@@ -185,4 +174,4 @@ const GridListItem = ({item}) => (
 );
 
 
-export default GridList;
+export default withI18n()(GridList);

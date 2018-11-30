@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from "gatsby-image";
 import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
 
-import { PISC, PISC_TOWER, LocationMarket } from '../utils/svg';
+import { LocationMarket } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR, SNOW_COLOR, TERTIARY_COLOR, DARK, SANS_SERIF_FONTS } from '../utils/vars';
+import { SECONDARY_COLOR, PRIMARY_COLOR, TERTIARY_COLOR, DARK } from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';

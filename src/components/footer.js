@@ -11,9 +11,11 @@ import {
   MouazeProd,
   YoshiProd,
   WorldMap,
+  Phone,
+  Envelope,
 } from '../utils/svg';
 
-import { FOOTER_BG, SNOW_COLOR, QUINARY_COLOR, DARK } from '../utils/vars';
+import { FOOTER_BG, DARK } from '../utils/vars';
 
 
 
@@ -21,6 +23,10 @@ const footerStyle = css`
   background-color: ${FOOTER_BG};
   padding: 1.45rem 1.0875rem;
   position: relative;
+`;
+const row = css`
+  display: flex;
+  flex-wrap: wrap;
 `;
 const copyrightSection = css`
   // padding: 0.45rem;
@@ -33,7 +39,7 @@ const socialIcon = css`
   fill: ${DARK};
   width: 42px;
   height: 42px;
-  transition: 0.35s ease-in;
+  transition: 0.30s ease-in;
   &:hover {
     opacity: 0.6;
   }
@@ -79,51 +85,84 @@ const Footer = ({ i18n}) => (
   <footer className={footerStyle}>
     <MouazeProd className={`${PromoterIcon} ${PromoterMouaze}`} />
     <YoshiProd className={`${PromoterIcon} ${PromoterYoshy}`} />
-    <section
-      className={css`
-        margin-bottom: 0.45rem;
-      `}
-    >
-      <h4
+    <div className={row}>
+      <section
         className={css`
-          color: ${DARK};
+          margin-bottom: 0.45rem;
+          margin-right: 3.0875rem
         `}
       >
-        {i18n.t`Follow us`}
-      </h4>
-      <a
-        href="//www.facebook.com/ParisSalsaC"
-        rel="noreferrer"
-        target="_blank"
-        className={socialBtn}
+        <h4
+          className={css`
+            color: ${DARK};
+          `}
+        >
+          {i18n.t`Follow us`}
+        </h4>
+        <a
+          href="//www.facebook.com/ParisSalsaC"
+          rel="noreferrer"
+          target="_blank"
+          className={socialBtn}
+        >
+          <Facebook className={socialIcon} />
+        </a>
+        <a
+          href="//www.facebook.com/groups/451496571707555/"
+          rel="noreferrer"
+          target="_blank"
+          className={socialBtn}
+        >
+          <FacebookGroup className={socialIcon} />
+        </a>
+        <a
+          href="//www.instagram.com/parissalsacongress/"
+          rel="noreferrer"
+          target="_blank"
+          className={socialBtn}
+        >
+          <Instagram className={socialIcon} />
+        </a>
+        <a
+          href="//www.youtube.com/channel/UCbEW-8_ltbYXaE4Q4xQMBtw/"
+          rel="noreferrer"
+          target="_blank"
+          className={socialBtn}
+        >
+          <Youtube className={socialIcon} />
+        </a>
+      </section>
+      <section
+        className={css`
+          margin-bottom: 0.45rem;
+        `}
       >
-        <Facebook className={socialIcon} />
-      </a>
-      <a
-        href="//www.facebook.com/groups/451496571707555/"
-        rel="noreferrer"
-        target="_blank"
-        className={socialBtn}
-      >
-        <FacebookGroup className={socialIcon} />
-      </a>
-      <a
-        href="//www.instagram.com/parissalsacongress/"
-        rel="noreferrer"
-        target="_blank"
-        className={socialBtn}
-      >
-        <Instagram className={socialIcon} />
-      </a>
-      <a
-        href="//www.youtube.com/channel/UCbEW-8_ltbYXaE4Q4xQMBtw/"
-        rel="noreferrer"
-        target="_blank"
-        className={socialBtn}
-      >
-        <Youtube className={socialIcon} />
-      </a>
-    </section>
+        <h4
+          className={css`
+            color: ${DARK};
+          `}
+        >
+          {i18n.t`Contact us`}
+        </h4>
+        <a
+          href="mailto:pisc@mouaze.com"
+          rel="noreferrer"
+          target="_blank"
+          className={socialBtn}
+        >
+          <Envelope className={socialIcon} />
+        </a>
+        <a
+          href="tel:+33614091946"
+          rel="noreferrer"
+          target="_blank"
+          className={socialBtn}
+        >
+          <Phone className={socialIcon} />
+        </a>
+      </section>
+    </div>
+
     <section
       className={css`
         margin-bottom: 0.45rem;
@@ -145,7 +184,7 @@ const Footer = ({ i18n}) => (
       </div>
     </section>
     <section className={copyrightSection}>
-      <span>&copy; &nbsp;&nbsp;Paris International Salsa Congress {new Date().getFullYear()}</span>
+      <span>&copy; &nbsp;Paris International Salsa Congress {new Date().getFullYear()}</span>
     </section>
   </footer>
 );

@@ -1,15 +1,13 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from "gatsby-image";
 import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
-import { StatefulToolTip } from "react-portal-tooltip"
 
-import { PISC, PISC_TOWER, LocationMarket } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR, SNOW_COLOR, TERTIARY_COLOR, DARK, SANS_SERIF_FONTS } from '../utils/vars';
+import { SECONDARY_COLOR, PRIMARY_COLOR } from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';
@@ -71,10 +69,6 @@ const title = css`
   font-weight: 500;
 `;
 
-const subTitle = css`
-  color: ${PRIMARY_COLOR};
-  font-weight: 500;
-`;
 
 const secondaryBtn = css`
   display: inline-block;
@@ -104,25 +98,6 @@ const secondaryBtn = css`
   }
 
 `
-
-const GridPics = css`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(250px, auto);
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  grid-auto-flow: dense;
-  margin-bottom: 1.45rem;
-}
-  li {
-    margin: 0;
-    padding: 0;
-  }
-`;
 
 
 const Lineup = ({ i18n, data }) => (
@@ -319,6 +294,10 @@ const Lineup = ({ i18n, data }) => (
           imageData: data.imageLoic.childImageSharp.fluid,
         },
         {
+          caption: 'DJ Ajad',
+          imageData: data.imageDjAjad.childImageSharp.fluid,
+        },
+        {
           caption: 'DJ Phil',
           imageData: data.imagePhil.childImageSharp.fluid,
         },
@@ -351,6 +330,10 @@ const Lineup = ({ i18n, data }) => (
         {
           caption: 'DJ Latino Boy',
           imageData: data.imageLatinoBoy.childImageSharp.fluid,
+        },
+        {
+          caption: 'DJ El Hombre',
+          imageData: data.imageElHombre.childImageSharp.fluid,
         },
       ]} />
 
@@ -514,6 +497,9 @@ export const lineupQuery = graphql`
     imageLatinoBoy: file(relativePath: {eq: "DJs/bachata/LatinoBoy.jpg"}) {
       ...lineupImage
     }
+    imageElHombre: file(relativePath: {eq: "DJs/bachata/ElHombre.jpg"}) {
+      ...lineupImage
+    }
     imageGabriel: file(relativePath: {eq: "DJs/mambo/Gabriel.jpg"}) {
       ...lineupImage
     }
@@ -527,6 +513,9 @@ export const lineupQuery = graphql`
       ...lineupImage
     }
     imageMadj: file(relativePath: {eq: "DJs/mambo/Madj.jpg"}) {
+      ...lineupImage
+    }
+    imageDjAjad: file(relativePath: {eq: "DJs/mambo/DjAjad.jpg"}) {
       ...lineupImage
     }
     imageDj69: file(relativePath: {eq: "DJs/mambo/Dj69.jpg"}) {

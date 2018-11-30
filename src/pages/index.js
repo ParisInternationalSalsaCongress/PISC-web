@@ -7,9 +7,9 @@ import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
 import ReactPlayer from 'react-player'
 
-import { PISC, PISC_TOWER } from '../utils/svg';
+import { PISC } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR, SNOW_COLOR, GREEN_LIGHT, DARK, SANS_SERIF_FONTS } from '../utils/vars';
+import { SECONDARY_COLOR, PRIMARY_COLOR } from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';

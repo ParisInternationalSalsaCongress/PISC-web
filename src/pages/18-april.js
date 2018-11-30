@@ -8,7 +8,7 @@ import { rgba, lighten, tint } from 'polished';
 
 import { LocationMarket } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR, SNOW_COLOR, DARK } from '../utils/vars';
+import { SECONDARY_COLOR, SNOW_COLOR, DARK } from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';
@@ -95,17 +95,6 @@ const locationLink = css`
   }
 `
 
-const title = css`
-  color: ${PRIMARY_COLOR};
-  text-align: center;
-  font-weight: 500;
-`;
-
-const subTitle = css`
-  color: ${PRIMARY_COLOR};
-  font-weight: 500;
-`;
-
 const secondaryBtn = css`
   display: inline-block;
   color: white;
@@ -131,20 +120,6 @@ const secondaryBtn = css`
 
 `
 
-const bookBtnWrapper = css`
-  text-align: center;
-  margin: 1.45rem 0;
-
-  .${secondaryBtn} {
-    display: block;
-    width: 100%;
-
-    @media (min-width: 768px) {
-      display: inline-block;
-      width: initial;
-    }
-  }
-`
 
 const SevenSpiritPage = ({ i18n, data }) => (
   <Layout>
@@ -183,7 +158,7 @@ const SevenSpiritPage = ({ i18n, data }) => (
           </span>
         </div>
       </div>
-      <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
+      <Img fluid={data.image7spirit00.childImageSharp.fluid} className={cover} />
     </header>
   </Layout>
 );
@@ -203,7 +178,7 @@ export const SevenSpiritImage = graphql`
 
 export const SevenSpiritQuery = graphql`
   query {
-    image00: file(relativePath: {eq: "preparties/7spirit/7spirit00.jpg"}) {
+    image7spirit00: file(relativePath: {eq: "preparties/7spirit/7spirit00.jpg"}) {
       ...SevenSpiritImage
     }
 
