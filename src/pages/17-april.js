@@ -184,7 +184,7 @@ const SalsoundPage = ({ i18n, data }) => (
           </span>
         </div>
       </div>
-      <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
+      <Img fluid={data.imageSalsound02.childImageSharp.fluid} className={cover} />
     </header>
   </Layout>
 );
@@ -204,10 +204,13 @@ export const SalsoundImage = graphql`
 
 export const SalsoundQuery = graphql`
   query {
-    image00: file(relativePath: {eq: "preparties/salsound/salsound00.jpg"}) {
+    imageSalsound00: file(relativePath: {eq: "preparties/salsound/salsound00.jpg"}) {
       ...SalsoundImage
     }
-    image01: file(relativePath: {eq: "preparties/salsound/salsound01.jpg"}) {
+    imageSalsound01: file(relativePath: {eq: "preparties/salsound/salsound01.jpg"}) {
+      ...SalsoundImage
+    }
+    imageSalsound02: file(relativePath: {eq: "preparties/salsound/salsound02.jpg"}) {
       ...SalsoundImage
     }
   }

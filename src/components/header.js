@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { FOOTER_BG, SNOW_COLOR, QUINARY_COLOR, DARK } from '../utils/vars';
-
 const Header = () => (
   <div
     style={{

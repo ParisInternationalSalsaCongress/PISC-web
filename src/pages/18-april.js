@@ -183,7 +183,7 @@ const SevenSpiritPage = ({ i18n, data }) => (
           </span>
         </div>
       </div>
-      <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
+      <Img fluid={data.image7spirit00.childImageSharp.fluid} className={cover} />
     </header>
   </Layout>
 );
@@ -203,7 +203,7 @@ export const SevenSpiritImage = graphql`
 
 export const SevenSpiritQuery = graphql`
   query {
-    image00: file(relativePath: {eq: "preparties/7spirit/7spirit00.jpg"}) {
+    image7spirit00: file(relativePath: {eq: "preparties/7spirit/7spirit00.jpg"}) {
       ...SevenSpiritImage
     }
 

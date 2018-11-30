@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import Header from './header';
 import Footer from './footer';
+
 import GlobalStyle from './globalstyle';
 
 
@@ -32,6 +32,7 @@ const Layout = ({ children, data }) => (
           <meta property="og:video:type" content="video/mp4" />
           <meta property="og:video:width" content="1920" />
           <meta property="og:video:height" content="1080" />
+          <meta name="format-detection" content="telephone=no" />
 
           <link rel="canonical" href="https://parissalsacongress.com" />
 

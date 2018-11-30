@@ -1,15 +1,13 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Img from "gatsby-image";
 import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
-import { StatefulToolTip } from "react-portal-tooltip"
 
-import { PISC, PISC_TOWER, LocationMarket } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR, SNOW_COLOR, TERTIARY_COLOR, DARK, SANS_SERIF_FONTS } from '../utils/vars';
+import { SECONDARY_COLOR, PRIMARY_COLOR } from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';
@@ -319,6 +317,10 @@ const Lineup = ({ i18n, data }) => (
           imageData: data.imageLoic.childImageSharp.fluid,
         },
         {
+          caption: 'DJ Ajad',
+          imageData: data.imageDjAjad.childImageSharp.fluid,
+        },
+        {
           caption: 'DJ Phil',
           imageData: data.imagePhil.childImageSharp.fluid,
         },
@@ -527,6 +529,9 @@ export const lineupQuery = graphql`
       ...lineupImage
     }
     imageMadj: file(relativePath: {eq: "DJs/mambo/Madj.jpg"}) {
+      ...lineupImage
+    }
+    imageDjAjad: file(relativePath: {eq: "DJs/mambo/DjAjad.jpg"}) {
       ...lineupImage
     }
     imageDj69: file(relativePath: {eq: "DJs/mambo/Dj69.jpg"}) {
