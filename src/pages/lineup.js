@@ -229,7 +229,7 @@ const Lineup = ({ i18n, data }) => (
         },
       ]} />
 
-      <GridList expanded buttonText='Cuba' dataList={[
+      <GridList expanded buttonText='Cubana' dataList={[
         {
           caption: 'Alberto Valdes',
           imageData: data.imageAlberto.childImageSharp.fluid,
@@ -319,10 +319,14 @@ const Lineup = ({ i18n, data }) => (
         },
       ]} />
 
-      <GridList expanded buttonText='Cuba' dataList={[
+      <GridList expanded buttonText='Cubana' dataList={[
         {
           caption: 'DJ Didi',
           imageData: data.imageDJdidi.childImageSharp.fluid,
+        },
+        {
+          caption: 'Dj Teo d\'Oro',
+          imageData: data.imageDjTeo.childImageSharp.fluid,
         },
       ]} />
 
@@ -492,6 +496,9 @@ export const lineupQuery = graphql`
       ...lineupImage
     }
     imageDJdidi: file(relativePath: {eq: "DJs/cuba/Didi.jpg"}) {
+      ...lineupImage
+    }
+    imageDjTeo: file(relativePath: {eq: "DJs/cuba/DjTeo.jpg"}) {
       ...lineupImage
     }
     imageLatinoBoy: file(relativePath: {eq: "DJs/bachata/LatinoBoy.jpg"}) {
