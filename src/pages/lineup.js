@@ -227,6 +227,15 @@ const Lineup = ({ i18n, data }) => (
           imageData: data.imageJoseDiazNerea.childImageSharp.fluid,
           highlight: true,
         },
+        {
+          caption: 'Maria Chiara',
+          imageData: data.imageMariaChiara.childImageSharp.fluid,
+        },
+        {
+          caption: 'Michael & Darya',
+          imageData: data.imageMichaelDarya.childImageSharp.fluid,
+          new: true,
+        },
       ]} />
 
       <GridList expanded buttonText='Cubana' dataList={[
@@ -439,6 +448,12 @@ export const lineupQuery = graphql`
       ...lineupImage
     }
     imageJoseDiazNerea: file(relativePath: {eq: "artists/mambo/JoseDiaz&Nerea.jpg"}) {
+      ...lineupImage
+    }
+    imageMariaChiara: file(relativePath: {eq: "artists/mambo/MariaChiara.jpg"}) {
+      ...lineupImage
+    }
+    imageMichaelDarya: file(relativePath: {eq: "artists/mambo/Michael&Darya.jpg"}) {
       ...lineupImage
     }
     imageAlegriaDC: file(relativePath: {eq: "artists/mambo/AlegriaDC.jpg"}) {
