@@ -121,7 +121,7 @@ const secondaryBtn = css`
 `
 
 
-const SevenSpiritPage = ({ i18n, data }) => (
+const SevenSpiritsPage = ({ i18n, data }) => (
   <Layout>
     <Helmet
       meta={[
@@ -138,7 +138,7 @@ const SevenSpiritPage = ({ i18n, data }) => (
       <div className={banner}>
         <div className={bannerInner}>
           <h1>
-            <Trans>Thursday Preparty Seven Spirit</Trans>
+            <Trans>Thursday Preparty Seven Spirits</Trans>
           </h1>
           <p>
             <Trans>7spirit_text</Trans>
@@ -146,7 +146,7 @@ const SevenSpiritPage = ({ i18n, data }) => (
           <a href="https://goo.gl/maps/44LgDuUQD8T2" target="_blank" rel="noopener noreferrer" className={locationLink}>
             <LocationMarket className={locationMaker} />
             &nbsp;
-            Seven Spirit <br />
+            Seven Spirits <br />
             7, rue de sainte Hélène <br />
             75013 Paris M•Porte d’italie/Maison blanche
           </a>
@@ -158,15 +158,15 @@ const SevenSpiritPage = ({ i18n, data }) => (
           </span>
         </div>
       </div>
-      <Img fluid={data.image7spirit00.childImageSharp.fluid} className={cover} />
+      <Img fluid={data.image7spirits00.childImageSharp.fluid} className={cover} />
     </header>
   </Layout>
 );
 
-export default withI18n()(SevenSpiritPage);
+export default withI18n()(SevenSpiritsPage);
 
-export const SevenSpiritImage = graphql`
-  fragment SevenSpiritImage on File {
+export const SevenSpiritsImage = graphql`
+  fragment SevenSpiritsImage on File {
     childImageSharp {
       fluid(maxWidth: 2000) {
         ...GatsbyImageSharpFluid
@@ -178,8 +178,8 @@ export const SevenSpiritImage = graphql`
 
 export const SevenSpiritQuery = graphql`
   query {
-    image7spirit00: file(relativePath: {eq: "preparties/7spirit/7spirit00.jpg"}) {
-      ...SevenSpiritImage
+    image7spirits00: file(relativePath: {eq: "preparties/7spirits/7spirits00.jpg"}) {
+      ...SevenSpiritsImage
     }
 
 
