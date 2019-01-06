@@ -11,6 +11,7 @@ import {
   SECONDARY_COLOR,
   PRIMARY_COLOR,
   TERTIARY_COLOR,
+  QUINARY_COLOR,
   GREEN_LIGHT,
   DARK,
 } from '../utils/vars';
@@ -108,6 +109,11 @@ const warn = css`
   color: ${SECONDARY_COLOR};
 `;
 
+const levels = css`
+  font-size: .8rem;
+  font-weight: 600;
+`;
+
 
 const Table = css`
   border: solid thin;
@@ -116,6 +122,7 @@ const Table = css`
     text-align: left;
     font-weight: 600;
     padding-bottom:  0.8rem;
+    overflow: hidden;
   }
   th {
     border: solid thin;
@@ -133,15 +140,9 @@ const Table = css`
     vertical-align: middle;
   }
 
-  // .${secondaryBtn} {
-  //   display: block;
-  //   width: 100%;
-
-  //   @media (min-width: 768px) {
-  //     display: inline-block;
-  //     width: initial;
-  //   }
-  // }
+  .${levels} {
+    float: right;
+  }
 `;
 
 const highlight = css`
@@ -149,7 +150,7 @@ const highlight = css`
 `;
 
 const getOut = css`
-  background-color: ${rgba(SECONDARY_COLOR, .6)};
+  background-color: ${rgba(QUINARY_COLOR, 0.6)};
 `;
 
 const mapSection = css`
@@ -210,7 +211,9 @@ const WorkshopsPage = ({ i18n, data }) => (
       <p className={warn}>
         <Trans>Workshops_warn</Trans>
       </p>
-
+      <p className={levels}>
+        *<Trans>Workshops_levels</Trans>
+      </p>
       <FridaySchedule />
       <SaturdaySchedule />
       <SundaySchedule />
@@ -225,6 +228,9 @@ const FridaySchedule = withI18n()(({ i18n }) => (
     <table className={Table}>
       <caption>
         <Trans>Friday's schedule</Trans>
+        <span className={levels}>
+          *<Trans>Workshops_levels</Trans>
+        </span>
       </caption>
       <thead>
         <tr className={highlight}>
@@ -289,6 +295,9 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
     <table className={Table}>
       <caption>
         <Trans>Saturday's schedule</Trans>
+        <span className={levels}>
+          *<Trans>Workshops_levels</Trans>
+        </span>
       </caption>
       <thead>
         <tr className={highlight}>
@@ -371,6 +380,9 @@ const SundaySchedule = withI18n()(({ i18n }) => (
     <table className={Table}>
       <caption>
         <Trans>Sunday's schedule</Trans>
+        <span className={levels}>
+          *<Trans>Workshops_levels</Trans>
+        </span>
       </caption>
       <thead>
         <tr className={highlight}>
