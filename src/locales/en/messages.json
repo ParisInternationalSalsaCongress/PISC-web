@@ -2,6 +2,7 @@
   "/": "/",
   "/venue": "/venue",
   "/lineup": "/lineup",
+  "/workshops": "/workshops",
   "/16-april": "/16-april",
   "/17-april": "/17-april",
   "/18-april": "/18-april",
@@ -31,6 +32,15 @@
   "Tuesday 16th april": "Tuesday 16th april",
   "Wednesday 17th april": "Wednesday 17th april",
   "Thursday 18th april": "Thursday 18th april",
+  "Friday's schedule": "Friday's schedule",
+  "Saturday's schedule": "Saturday's schedule",
+  "Sunday's schedule": "Sunday's schedule",
+  "Time": "Time",
+  "PERFORMANCE REHEARSAL": "PERFORMANCE REHEARSAL",
+  "LUNCH BREAK": "LUNCH BREAK",
+  "Friday": "Friday",
+  "Saturday": "Saturday",
+  "Sunday": "Sunday",
   "buy your pass": "Buy your Pass",
   "book your room": "Book your room in the Hyatt",
   "address": "The address",
@@ -59,6 +69,10 @@
   "Hyat_page_text_2": "Hyatt Regency is one of the most prestigious venues in Paris, right in the heart of the capital, only a few minutes away from the Arc de Triomphe and legendary Champs-Elysées! It is also connected to the Palais des Congrès, one of the biggest entertainment spaces in Paris.",
   "Hyat_page_text_3": "An incredible dance floor awaits you… More than 3,000 square meters of dance floor divided into four atmospheres: Mambo, Cuban, Bachata and Kizomba!",
   "Hyat_page_text_4": "Welcome to Paris, welcome to the PISC.",
-  "Hyat_page_book_btn": "Book your room in the HYATT"
-
+  "Hyat_page_book_btn": "Book your room in the HYATT",
+  "Workshops_headline": "Artists are a big source of inspiration",
+  "Workshops_levels": "(1) All Levels   /  (2) Intermediate   /   (3) Inter - Advanced   /  PW Partner Work",
+  "Workshops_textI": "We learn with them a lot, their talents in action feed our knowledge and our creativity.",
+  "Workshops_textII": "We selected for you some of the best international artists. Salsa On1 / On2, Cuban, Bachata and Kizomba.",
+  "Workshops_warn": "Modifications may be brought to the program"
 }
