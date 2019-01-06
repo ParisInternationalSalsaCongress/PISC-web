@@ -19,7 +19,8 @@ export const GREEN_LIGHT = '#35CC35Cf';
 
 export const BODY_BG_COLOR = '';
 
-export const FOOTER_BG = '#3e734c';
+// export const FOOTER_BG = '#3e734c';
+export const FOOTER_BG = QUINARY_COLOR;
 
 export const TEXT_COLOR = DARK;
 
