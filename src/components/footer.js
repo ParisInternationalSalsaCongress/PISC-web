@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { css } from 'emotion';
 import { Trans, withI18n } from '@lingui/react';
-
+import { rgba } from 'polished';
 import {
   Facebook,
   FacebookGroup,
@@ -20,7 +20,7 @@ import { FOOTER_BG, DARK } from '../utils/vars';
 
 
 const footerStyle = css`
-  background-color: ${FOOTER_BG};
+  background-color: ${rgba(FOOTER_BG, .8)};
   padding: 1.45rem 1.0875rem;
   position: relative;
 `;

@@ -76,10 +76,6 @@ const title = css`
   font-weight: 500;
 `;
 
-const subTitle = css`
-  color: ${PRIMARY_COLOR};
-  font-weight: 500;
-`;
 
 const secondaryBtn = css`
   display: inline-block;
@@ -146,11 +142,11 @@ const Table = css`
 `;
 
 const highlight = css`
-  background-color: ${rgba(PRIMARY_COLOR, .6)};
+  background-color: ${rgba(PRIMARY_COLOR, 0.5)};
 `;
 
 const getOut = css`
-  background-color: ${rgba(QUINARY_COLOR, 0.6)};
+  background-color: ${rgba(QUINARY_COLOR, 0.4)};
 `;
 
 const mapSection = css`
@@ -251,17 +247,17 @@ const FridaySchedule = withI18n()(({ i18n }) => (
       <tbody>
         <tr>
           <td>14:00 15:00</td>
-          <td>Leon Rose Project, PW on1 (3)</td>
+          <td>Leon Rose Project, PW On1 (3)</td>
           <td>Yamulee, PW On2 (3)</td>
           <td>Georges & Laura, Kizomba (2)</td>
           <td />
         </tr>
         <tr>
           <td>15:10 16:10</td>
-          <td>Alegria, PW on2 (2)</td>
+          <td>Alegria, PW On2 (2)</td>
           <td>Griselle Ponse, Ladies Styling On2 (1)</td>
-          <td>Elegua, Cuban (2)</td>
-          <td>Marco & Sarah, Bachata (2)</td>
+          <td>Elegua, Salsa Cubana (2)</td>
+          <td>Marco & Sara, Bachata (2)</td>
         </tr>
         <tr>
           <td>16:20 17:20</td>
@@ -272,8 +268,8 @@ const FridaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>17:30 18:30</td>
-          <td>Latin Passion Group, PW (2)</td>
-          <td>Mambo King & Maria Chiarra, Shines on2 (1)</td>
+          <td>Latin Passion Group, PW On2 (2)</td>
+          <td>Mambo King & Maria Chiarra, Shines On2 (1)</td>
           <td />
           <td>Alicia Velasco, Ladies Styling On2 (3)</td>
         </tr>
@@ -318,9 +314,9 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
       <tbody>
         <tr>
           <td>10:30 11:30</td>
-          <td>Marco & Sarah, Bachata (3)</td>
-          <td>Rodriogo & Bersy, Shines On2 (3)</td>
-          <td>Adiran & Anita, PW On1 (2)</td>
+          <td>Marco & Sara, Bachata (3)</td>
+          <td>Rodrigo & Bersy, Shines On2 (3)</td>
+          <td>Adrian & Anita, PW On1 (2)</td>
           <td>Karel Flores, Ladies Styling On2 (3)</td>
         </tr>
         <tr>
@@ -339,7 +335,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
         <tr>
           <td>14:00 15:00</td>
           <td>José & Nerea, PW On2 (3)</td>
-          <td>Eddie Torres Jr. Shines On2 (1)</td>
+          <td>Eddie Torres Jr, Shines On2 (1)</td>
           <td>Nuno & Nagyla, Kizomba (2)</td>
           <td>Adrian & Anita, Shines On1 (1)</td>
         </tr>
@@ -347,7 +343,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           <td>15:10 16:10</td>
           <td>Mouaze & Sonia, Chachacha (1)</td>
           <td>Alberto Valdes, Afro Cubano (1)</td>
-          <td>Tala & Edita, PW On2 (2)</td>
+          <td>Talal & Edita, PW On2 (2)</td>
           <td>Jessica Quiles, Ladies Styling On2 (3)</td>
         </tr>
         <tr>
@@ -355,13 +351,13 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           <td>Shelina's Team, Shines On2 (2)</td>
           <td>Eddie Torres, PW On2 (2)</td>
           <td>Goupo Alafia, Pachanga (1)</td>
-          <td>Yusimi Afro Cubano (3)</td>
+          <td>Yusimi, Afro Cubano (3)</td>
         </tr>
         <tr>
           <td>17:30 18:30</td>
           <td>Griselle Ponce, Ladies Styling On2 (1)</td>
           <td>Karen & Ricardo, Shines On1 (1)</td>
-          <td>Pedrito & Guisy, Rumba cubana (1)</td>
+          <td>Pedrito & Guisy, Rumba Cubana (1)</td>
           <td>Korke & Judith, Bachata (3)</td>
         </tr>
         <tr className={getOut}>
@@ -403,16 +399,16 @@ const SundaySchedule = withI18n()(({ i18n }) => (
       <tbody>
         <tr>
           <td>10:30 11:30</td>
-          <td>Shelina'a Team, PW On2 (2))</td>
+          <td>Shelina's Team, PW On2 (2)</td>
           <td>Aberto Valdes, Salsa Cubana (2)</td>
           <td>Jessica Quiles, Ladies Styling On2 (2)</td>
-          <td>Marco & Sarah, Bachata (2)</td>
+          <td>Marco & Sara, Bachata (2)</td>
         </tr>
         <tr>
           <td>11:40 12:40</td>
           <td>Terry & Cecile, PW On2 (3)</td>
           <td>Eddie Torres, Shines On2 (1)</td>
-          <td>Alicia Velasco, Ladies styling (2)</td>
+          <td>Alicia Velasco, Ladies Styling (2)</td>
           <td>Adrian & Anita, PW On1 (3)</td>
         </tr>
         <tr className={getOut}>
@@ -423,10 +419,10 @@ const SundaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>14:00 15:00</td>
-          <td>Rodriogo & Bersy, PW On2 (3)</td>
+          <td>Rodrigo & Bersy, PW On2 (3)</td>
           <td>Latin Passion Group, Shines On2 (2)</td>
           <td>Nuno & Nagyla, Kizomba (2)</td>
-          <td>Pedrito & Guisy, Salsa cubana (2)</td>
+          <td>Pedrito & Guisy, Salsa Cubana (2)</td>
         </tr>
         <tr>
           <td>15:10 16:10</td>
@@ -440,7 +436,7 @@ const SundaySchedule = withI18n()(({ i18n }) => (
           <td>Mouaze & Sonia, Chachacha PW (1)</td>
           <td>Yamulee, Shines On2 (3)</td>
           <td>Alegria, PW On2 (2)</td>
-          <td>Yusimi Afro Cubano (1)</td>
+          <td>Yusimi, Afro Cubano (1)</td>
         </tr>
         <tr>
           <td>17:30 18:30</td>

@@ -260,7 +260,7 @@ const Lineup = ({ i18n, data }) => (
 
       <GridList expanded buttonText='Bachata' dataList={[
         {
-          caption: 'Marco & Sarah',
+          caption: 'Marco & Sara',
           imageData: data.imageMarcoSarah.childImageSharp.fluid,
         },
         {

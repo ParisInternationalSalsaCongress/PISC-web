@@ -35,7 +35,7 @@ const banner = css`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: ${rgba(DARK, .18)};
+  background-color: ${rgba(DARK, .5)};
   z-index: 1;
   padding: 0.45rem 1.0875rem 3.45rem;
   padding-top: 30vh;
