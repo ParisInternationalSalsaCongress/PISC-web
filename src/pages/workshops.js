@@ -6,7 +6,6 @@ import Helmet from 'react-helmet';
 import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
 
-
 import {
   SECONDARY_COLOR,
   PRIMARY_COLOR,
@@ -66,7 +65,6 @@ const banner = css`
 `;
 
 const TableWrapper = css`
-  overflow: auto;
   margin: 1rem 0;
 `;
 
@@ -75,7 +73,6 @@ const title = css`
   text-align: center;
   font-weight: 500;
 `;
-
 
 const secondaryBtn = css`
   display: inline-block;
@@ -106,34 +103,37 @@ const warn = css`
 `;
 
 const levels = css`
-  font-size: .8rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 500;
 `;
-
 
 const Table = css`
   border: solid thin;
   border-collapse: collapse;
   caption {
     text-align: left;
-    font-weight: 600;
-    padding-bottom:  0.8rem;
+    font-weight: 500;
+    padding-bottom: 0.4rem;
     overflow: hidden;
   }
   th {
     border: solid thin;
-    padding: 0.6rem 1.4rem;
-    white-space: nowrap;
-    font-weight: normal;
+    padding: 0.6rem 0.8rem;
+    font-weight: 600;
     text-align: center;
     vertical-align: middle;
+    @media (min-width: 768px) {
+      padding: 0.6rem 1.4rem;
+    }
   }
   td {
     border: solid thin;
-    padding: 1rem 1.4rem;
-    white-space: nowrap;
+    padding: 1rem 0.8rem;
     text-align: center;
     vertical-align: middle;
+    @media (min-width: 768px) {
+      padding: 1rem 1.4rem;
+    }
   }
 
   .${levels} {
@@ -156,11 +156,24 @@ const mapSection = css`
     align-items: center;
   }
 `;
-const mapSection_Map = css`
+
+const showFromTablet = css`
   @media (min-width: 768px) {
-    width: 80%;
+    display: block;
   }
 `;
+
+const blockText = css`
+  display: block;
+`;
+
+const blockTextInlineDesktop = css`
+  display: block;
+  @media (min-width: 1024px) {
+    display: inline;
+  }
+`;
+
 const mapSection_Text = css`
   @media (min-width: 768px) {
     margin-left: 2rem;
@@ -207,9 +220,9 @@ const WorkshopsPage = ({ i18n, data }) => (
       <p className={warn}>
         <Trans>Workshops_warn</Trans>
       </p>
-      <p className={levels}>
+      {/* <p className={levels}>
         *<Trans>Workshops_levels</Trans>
-      </p>
+      </p> */}
       <FridaySchedule />
       <SaturdaySchedule />
       <SundaySchedule />
@@ -223,59 +236,136 @@ const FridaySchedule = withI18n()(({ i18n }) => (
   <div className={TableWrapper}>
     <table className={Table}>
       <caption>
-        <Trans>Friday's schedule</Trans>
+        <span
+          className={css`
+            display: none;
+          `}
+        >
+          <Trans>Friday's schedule</Trans>
+        </span>
+
         <span className={levels}>
           *<Trans>Workshops_levels</Trans>
         </span>
       </caption>
       <thead>
         <tr className={highlight}>
-          <th rowSpan="2">
-            <Trans>Time</Trans>
-          </th>
-          <th colSpan="4">
+          <th colSpan="3">
             <Trans>Friday</Trans>
           </th>
         </tr>
         <tr>
-          <th>LEFT ROOM</th>
-          <th>CENTRAL ROOM</th>
-          <th>RIGHT ROOM</th>
-          <th>ARC EN CIEL ROOM</th>
+          <th><Trans>Time</Trans></th>
+          <th>Workshop</th>
+          <th>Room</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>14:00 15:00</td>
-          <td>Leon Rose Project, PW On1 (3)</td>
-          <td>Yamulee, PW On2 (3)</td>
-          <td>Georges & Laura, Kizomba (2)</td>
-          <td />
+          <td rowSpan="4">
+            14:00 <span className={blockText}>- </span>
+            15:00
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Leon Rose Project,</span>{' '}
+            PW On1 (3)
+          </td>
+          <td>LEFT ROOM</td>
         </tr>
         <tr>
-          <td>15:10 16:10</td>
-          <td>Alegria, PW On2 (2)</td>
-          <td>Griselle Ponse, Ladies Styling On2 (1)</td>
-          <td>Elegua, Salsa Cubana (2)</td>
-          <td>Marco & Sara, Bachata (2)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Yamulee,</span> PW On2 (3)
+          </td>
+          <td>CENTRAL ROOM</td>
         </tr>
         <tr>
-          <td>16:20 17:20</td>
-          <td />
-          <td>Terry & Cecile, PW On2 (3)</td>
-          <td>Ernesto & Denisse, Shines On2 (3)</td>
-          <td />
+          <td>
+            <span className={blockTextInlineDesktop}>Georges & Laura,</span>{' '}
+            Kizomba (2)
+          </td>
+          <td>RIGHT ROOM</td>
         </tr>
         <tr>
-          <td>17:30 18:30</td>
-          <td>Latin Passion Group, PW On2 (2)</td>
-          <td>Mambo King & Maria Chiarra, Shines On2 (1)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Angelo Rito,</span> Shines
+            on2 (2)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+        <tr>
+          <td rowSpan="4">
+            15:10 <span className={blockText}>- </span>
+            16:10
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Alegria,</span> PW On2 (2)
+          </td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Griselle Ponse,</span>{' '}
+            Ladies Styling On2 (1)
+          </td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Elegua,</span> Salsa Cubana
+            (2)
+          </td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Marco & Sara,</span> Bachata (2)</td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+        <tr>
+          <td rowSpan="4">
+            16:20 <span className={blockText}>- </span>
+            17:20
+          </td>
+          <td><span className={blockTextInlineDesktop}>Shelina's Team,</span> Shines On2 (2)</td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Terry & Cecile,</span> PW On2 (3)</td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Ernesto & Denisse,</span> Shines On2 (3)</td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
           <td />
-          <td>Alicia Velasco, Ladies Styling On2 (3)</td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+        <tr>
+          <td rowSpan="4">
+            17:30 <span className={blockText}>- </span>
+            18:30
+          </td>
+          <td><span className={blockTextInlineDesktop}>Latin Passion Group,</span> PW On2 (2)</td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Mambo King & Maria Chiarra,</span> Shines On2 (1)</td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td />
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Alicia Velasco,</span> Ladies Styling On2 (3)</td>
+          <td>ARC EN CIEL ROOM</td>
         </tr>
         <tr className={getOut}>
-          <td>18:40 19:40</td>
-          <td colSpan="4">
+          <td>
+            18:40 <span className={blockText}>- </span>
+            19:40
+          </td>
+          <td colSpan="2">
             <Trans>PERFORMANCE REHEARSAL</Trans>
           </td>
         </tr>
@@ -283,86 +373,249 @@ const FridaySchedule = withI18n()(({ i18n }) => (
     </table>
   </div>
 ));
-
-
 
 const SaturdaySchedule = withI18n()(({ i18n }) => (
   <div className={TableWrapper}>
     <table className={Table}>
       <caption>
-        <Trans>Saturday's schedule</Trans>
+        <span
+          className={css`
+            display: none;
+          `}
+        >
+          <Trans>Saturday's schedule</Trans>
+        </span>
         <span className={levels}>
           *<Trans>Workshops_levels</Trans>
         </span>
       </caption>
       <thead>
         <tr className={highlight}>
-          <th rowSpan="2">
-            <Trans>Time</Trans>
-          </th>
-          <th colSpan="4">
+          <th colSpan="3">
             <Trans>Saturday</Trans>
           </th>
         </tr>
         <tr>
-          <th>LEFT ROOM</th>
-          <th>CENTRAL ROOM</th>
-          <th>RIGHT ROOM</th>
-          <th>ARC EN CIEL ROOM</th>
+          <th><Trans>Time</Trans></th>
+          <th>Workshop</th>
+          <th>Room</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>10:30 11:30</td>
-          <td>Marco & Sara, Bachata (3)</td>
-          <td>Rodrigo & Bersy, Shines On2 (3)</td>
-          <td>Adrian & Anita, PW On1 (2)</td>
-          <td>Karel Flores, Ladies Styling On2 (3)</td>
+          <td rowSpan="4">
+            10:30 <span className={blockText}>- </span>
+            11:30
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Marco & Sara,</span>{' '}
+            Bachata (3)
+          </td>
+          <td>LEFT ROOM</td>
         </tr>
         <tr>
-          <td>11:40 12:40</td>
-          <td>Karen & Ricardo, PW On1 (3)</td>
-          <td>Adolfo & Lorenita LSD, Shines On2 (3)</td>
-          <td>Korke & Judith, Bachata (3)</td>
-          <td>Terry & Cecile, PW On2 (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Rodrigo & Bersy,</span>{' '}
+            Shines On2 (3)
+          </td>
+          <td>CENTRAL ROOM</td>
         </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Adrian & Anita,</span> PW
+            On1 (2)
+          </td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Karel Flores,</span> Ladies
+            Styling On2 (3)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+
+        <tr>
+          <td rowSpan="4">
+            11:40 <span className={blockText}>- </span>
+            12:40
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Karen & Ricardo,</span> PW
+            On1 (3)
+          </td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>
+              Adolfo & Lorenita LSD,
+            </span>{' '}
+            Shines On2 (3)
+          </td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Korke & Judith,</span>{' '}
+            Bachata (3)
+          </td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Terry & Cecile,</span> PW
+            On2 (3)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+
         <tr className={getOut}>
-          <td>12:40 14:00</td>
-          <td colSpan="4">
+          <td>
+            12:40 <span className={blockText}>- </span>
+            14:00
+          </td>
+          <td colSpan="2">
             <Trans>LUNCH BREAK</Trans>
           </td>
         </tr>
         <tr>
-          <td>14:00 15:00</td>
-          <td>José & Nerea, PW On2 (3)</td>
-          <td>Eddie Torres Jr, Shines On2 (1)</td>
-          <td>Nuno & Nagyla, Kizomba (2)</td>
-          <td>Adrian & Anita, Shines On1 (1)</td>
+          <td rowSpan="4">
+            14:00 <span className={blockText}>- </span>
+            15:00
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>José & Nerea,</span> PW On2
+            (3)
+          </td>
+          <td>LEFT ROOM</td>
         </tr>
         <tr>
-          <td>15:10 16:10</td>
-          <td>Mouaze & Sonia, Chachacha (1)</td>
-          <td>Alberto Valdes, Afro Cubano (1)</td>
-          <td>Talal & Edita, PW On2 (2)</td>
-          <td>Jessica Quiles, Ladies Styling On2 (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Eddie Torres Jr,</span>{' '}
+            Shines On2 (1)
+          </td>
+          <td>CENTRAL ROOM</td>
         </tr>
         <tr>
-          <td>16:20 17:20</td>
-          <td>Shelina's Team, Shines On2 (2)</td>
-          <td>Eddie Torres, PW On2 (2)</td>
-          <td>Goupo Alafia, Pachanga (1)</td>
-          <td>Yusimi, Afro Cubano (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Nuno & Nagyla,</span>{' '}
+            Kizomba (2)
+          </td>
+          <td>RIGHT ROOM</td>
         </tr>
         <tr>
-          <td>17:30 18:30</td>
-          <td>Griselle Ponce, Ladies Styling On2 (1)</td>
-          <td>Karen & Ricardo, Shines On1 (1)</td>
-          <td>Pedrito & Guisy, Rumba Cubana (1)</td>
-          <td>Korke & Judith, Bachata (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Adrian & Anita,</span>{' '}
+            Shines On1 (1)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
         </tr>
+
+        <tr>
+          <td rowSpan="4">
+            15:10 <span className={blockText}>- </span>
+            16:10
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Mouaze & Sonia,</span>{' '}
+            Chachacha (1)
+          </td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Alberto Valdes,</span> Afro
+            Cubano (1)
+          </td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Talal & Edita,</span> PW
+            On2 (2)
+          </td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Jessica Quiles,</span>{' '}
+            Ladies Styling On2 (3)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+        <tr>
+          <td rowSpan="4">
+            16:20 <span className={blockText}>- </span>
+            17:20
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Alegria,</span> PW On2 (2)
+          </td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>
+              Mambo King & Maria Chiara,
+            </span>{' '}
+            PW On2 (2)
+          </td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Goupo Alafia,</span>{' '}
+            Pachanga (1)
+          </td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Yusimi,</span> Afro Cubano
+            (3)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+        <tr>
+          <td rowSpan="4">
+            17:30 <span className={blockText}>- </span>
+            18:30
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Griselle Ponce,</span>{' '}
+            Ladies Styling On2 (1)
+          </td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Karen & Ricardo,</span>{' '}
+            Shines On1 (1)
+          </td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Pedrito & Guisy,</span>{' '}
+            Rumba Cubana (1)
+          </td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Korke & Judith,</span>{' '}
+            Bachata (3)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+
         <tr className={getOut}>
-          <td>18:40 19:40</td>
-          <td colSpan="4">
+          <td>
+            18:40 <span className={blockText}>- </span>
+            19:40
+          </td>
+          <td colSpan="2">
             <Trans>PERFORMANCE REHEARSAL</Trans>
           </td>
         </tr>
@@ -370,84 +623,217 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
     </table>
   </div>
 ));
+
 
 const SundaySchedule = withI18n()(({ i18n }) => (
   <div className={TableWrapper}>
     <table className={Table}>
       <caption>
-        <Trans>Sunday's schedule</Trans>
+        <span
+          className={css`
+            display: none;
+          `}
+        >
+          <Trans>Sunday's schedule</Trans>
+        </span>
         <span className={levels}>
           *<Trans>Workshops_levels</Trans>
         </span>
       </caption>
       <thead>
         <tr className={highlight}>
-          <th rowSpan="2">
-            <Trans>Time</Trans>
-          </th>
-          <th colSpan="4">
+          <th colSpan="3">
             <Trans>Sunday</Trans>
           </th>
         </tr>
         <tr>
-          <th>LEFT ROOM</th>
-          <th>CENTRAL ROOM</th>
-          <th>RIGHT ROOM</th>
-          <th>ARC EN CIEL ROOM</th>
+          <th><Trans>Time</Trans></th>
+          <th>Workshop</th>
+          <th>Room</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>10:30 11:30</td>
-          <td>Shelina's Team, PW On2 (2)</td>
-          <td>Aberto Valdes, Salsa Cubana (2)</td>
-          <td>Jessica Quiles, Ladies Styling On2 (2)</td>
-          <td>Marco & Sara, Bachata (2)</td>
+          <td rowSpan="4">
+            10:30 <span className={blockText}>- </span>
+            11:30
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Shelina's Team,</span> PW
+            On2 (2)
+          </td>
+          <td>LEFT ROOM</td>
         </tr>
         <tr>
-          <td>11:40 12:40</td>
-          <td>Terry & Cecile, PW On2 (3)</td>
-          <td>Eddie Torres, Shines On2 (1)</td>
-          <td>Alicia Velasco, Ladies Styling (2)</td>
-          <td>Adrian & Anita, PW On1 (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Aberto Valdes,</span> Salsa
+            Cubana (2)
+          </td>
+          <td>CENTRAL ROOM</td>
         </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Angelo Rito,</span> Shines
+            on2 (3)
+          </td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Marco & Sara,</span>{' '}
+            Bachata (2)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+        <tr>
+          <td rowSpan="4">
+            11:40 <span className={blockText}>- </span>
+            12:40
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Terry & Cecile,</span> PW
+            On2 (3)
+          </td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>
+              Mambo King & Maria Chiara,
+            </span>{' '}
+            Shines On2 (1)
+          </td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Alicia Velasco,</span>{' '}
+            Ladies Styling (2)
+          </td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td>
+            <span className={blockTextInlineDesktop}>Adrian & Anita,</span> PW
+            On1 (3)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+
         <tr className={getOut}>
-          <td>12:40 14:00</td>
-          <td colSpan="4">
+          <td>
+            12:40 <span className={blockText}>- </span>
+            14:00
+          </td>
+          <td colSpan="2">
             <Trans>LUNCH BREAK</Trans>
           </td>
         </tr>
         <tr>
-          <td>14:00 15:00</td>
-          <td>Rodrigo & Bersy, PW On2 (3)</td>
-          <td>Latin Passion Group, Shines On2 (2)</td>
-          <td>Nuno & Nagyla, Kizomba (2)</td>
-          <td>Pedrito & Guisy, Salsa Cubana (2)</td>
+          <td rowSpan="4">
+            14:00 <span className={blockText}>- </span>
+            15:00
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>Rodrigo & Bersy,</span> PW
+            On2 (3)
+          </td>
+          <td>LEFT ROOM</td>
         </tr>
         <tr>
-          <td>15:10 16:10</td>
-          <td>José & Nerea, Shines On2 (3)</td>
-          <td>Eddie Torres Jr, PW On2 (2)</td>
-          <td>Alberto Valdes, Afro Cubano (1)</td>
-          <td>Ernesto & Denisse, PW On2 (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Latin Passion Group,</span>{' '}
+            Shines On2 (2)
+          </td>
+          <td>CENTRAL ROOM</td>
         </tr>
         <tr>
-          <td>16:20 17:20</td>
-          <td>Mouaze & Sonia, Chachacha PW (1)</td>
-          <td>Yamulee, Shines On2 (3)</td>
-          <td>Alegria, PW On2 (2)</td>
-          <td>Yusimi, Afro Cubano (1)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Nuno & Nagyla,</span>{' '}
+            Kizomba (2)
+          </td>
+          <td>RIGHT ROOM</td>
         </tr>
         <tr>
-          <td>17:30 18:30</td>
-          <td>Groupo Alafia, Pachanga (1)</td>
-          <td>Pedrito & Guisy, Afro Cubana (3)</td>
-          <td>Georges & Laura, Kizomba (1)</td>
-          <td>Adolfo & Lorenita LSD, PW On2 (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Pedrito & Guisy,</span>{' '}
+            Salsa Cubana (2)
+          </td>
+          <td>ARC EN CIEL ROOM</td>
         </tr>
+        <tr>
+          <td rowSpan="4">
+            15:10 <span className={blockText}>- </span>
+            16:10
+          </td>
+          <td>
+            <span className={blockTextInlineDesktop}>José & Nerea,</span> Shines
+            On2 (3)
+          </td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Eddie Torres Jr,</span> PW On2 (2)</td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Alberto Valdes,</span> Afro Cubano (1)</td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Ernesto & Denisse,</span> PW On2 (3)</td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+
+        <tr>
+          <td rowSpan="4">
+            16:20 <span className={blockText}>- </span>
+            17:20
+          </td>
+          <td><span className={blockTextInlineDesktop}>Mouaze & Sonia,</span> Chachacha PW (1)</td>
+          <td>LEFT ROOM</td>
+        </tr>
+
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Yamulee,</span> Shines On2 (3)</td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Jessica Quiles,</span> Ladies Styling On2 (2)</td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Yusimi,</span> Afro Cubano (1)</td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+
+        <tr>
+          <td rowSpan="4">
+            17:30 <span className={blockText}>- </span>
+            18:30
+          </td>
+          <td><span className={blockTextInlineDesktop}>Groupo Alafia,</span> Pachanga (1)</td>
+          <td>LEFT ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Pedrito & Guisy,</span> Afro Cubana - PALO CONGO (3)</td>
+          <td>CENTRAL ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Georges & Laura,</span> Kizomba (1)</td>
+          <td>RIGHT ROOM</td>
+        </tr>
+        <tr>
+          <td><span className={blockTextInlineDesktop}>Adolfo & Lorenita LSD,</span> PW On2 (3)</td>
+          <td>ARC EN CIEL ROOM</td>
+        </tr>
+
         <tr className={getOut}>
-          <td>18:40 19:40</td>
-          <td colSpan="4">
+          <td>
+            18:40 <span className={blockText}>- </span>
+            19:40
+          </td>
+          <td colSpan="2">
             <Trans>PERFORMANCE REHEARSAL</Trans>
           </td>
         </tr>
@@ -456,7 +842,6 @@ const SundaySchedule = withI18n()(({ i18n }) => (
   </div>
 ));
 
-// withI18n()(NavBar)
 
 export const workshopsImage = graphql`
   fragment workshopsImage on File {
