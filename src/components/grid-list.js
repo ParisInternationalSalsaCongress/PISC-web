@@ -15,11 +15,11 @@ const GridPics = css`
   display: grid;
   margin: 0 auto;
 
-  grid-column-gap: .45rem;
-  grid-row-gap: .45rem;
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.5rem;
   grid-auto-flow: dense;
   margin-bottom: 1.45rem;
-  @media (min-width: 768px) {
+  @media (min-width: 560px) {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: minmax(300px, auto);
@@ -66,7 +66,10 @@ const GridItem = css`
 
 
 const Highlight = css`
-  grid-column-end: span 2;
+  @media (min-width: 768px) {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+  }
 `;
 
 
@@ -80,9 +83,22 @@ const FigureImg = css`
   min-height: 300px;
   max-height: 300px;
   height: fit-content;
-  @media (min-width: 1024px) {
-    // max-height: 250px;
+`;
+
+const FigureImgHightlight = css`
+  height: fit-content;
+  min-height: 600px;
+  max-height: 600px;
+  @media (min-width: 768px) {
+    min-height: calc(1200px + 0.5rem);
+    max-height: calc(1200px + 0.5rem);
   }
+`;
+
+const FigureImgWithoutCaption = css`
+  min-height: 600px;
+  max-height: 600px;
+  height: fit-content;
 `;
 
 const FigureCaption = css`
@@ -151,26 +167,34 @@ class GridList extends Component {
 
 }
 
-const GridListItem = ({item}) => (
-  <li className={css`${GridItem} ${item.highlight && Highlight}`}>
+const GridListItem = ({ item }) => (
+  <li
+    className={css`
+      ${GridItem} ${item.highlight && Highlight};
+    `}
+  >
     <figure className={Figure}>
-      {
-        item.imageData && (
-          <Img fluid={item.imageData} className={FigureImg} />
-        )
-      }
+      {item.imageData &&
+        !item.highlight && (
+          <Img
+            fluid={item.imageData}
+            className={item.hideCaption ? FigureImgWithoutCaption : FigureImg}
+          />
+        )}
+      {item.imageData &&
+        item.highlight && (
+          <Img
+            fluid={item.imageData}
+          className={FigureImgHightlight}
+          />
+        )}
 
-      {
-        item.caption && (
-          <figcaption className={FigureCaption}>
-            {item.caption}
-          </figcaption>
-        )
-      }
-
+      {item.caption &&
+        !item.hideCaption && (
+          <figcaption className={FigureCaption}>{item.caption}</figcaption>
+        )}
     </figure>
   </li>
-
 );
 
 
