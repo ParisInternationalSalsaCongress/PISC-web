@@ -4,7 +4,7 @@ import { css } from 'emotion';
 import { rgba, lighten } from 'polished';
 import { withI18n } from '@lingui/react';
 
-import { SECONDARY_COLOR, QUINARY_COLOR } from '../utils/vars';
+import { SECONDARY_COLOR, QUINARY_COLOR, TERTIARY_COLOR } from '../utils/vars';
 
 
 
@@ -101,6 +101,17 @@ const FigureImgWithoutCaption = css`
   height: fit-content;
 `;
 
+const FigureImgPlaceHolder = css`
+  min-height: 600px;
+  max-height: 600px;
+  height: fit-content;
+  background-color: ${rgba(TERTIARY_COLOR, 0.8)};
+`;
+
+const isFigureCaptionPlaceholder = css`
+  color: red;
+`;
+
 const FigureCaption = css`
   position: absolute;
   left: 0;
@@ -112,9 +123,14 @@ const FigureCaption = css`
   width: 100%;
   padding: .8rem;
   text-align: center;
-  // background-color: ${rgba(QUINARY_COLOR, .6)};
+  // background-color: ${rgba(QUINARY_COLOR, 0.6)};
   text-shadow: 2px 2px 4px ${QUINARY_COLOR}, 0px 0px 2px ${QUINARY_COLOR}, 1px 1px 3px ${QUINARY_COLOR};
+  &.${isFigureCaptionPlaceholder} {
+    bottom: 50%;
+  }
 `;
+
+
 
 
 class GridList extends Component {
@@ -183,15 +199,12 @@ const GridListItem = ({ item }) => (
         )}
       {item.imageData &&
         item.highlight && (
-          <Img
-            fluid={item.imageData}
-          className={FigureImgHightlight}
-          />
+          <Img fluid={item.imageData} className={FigureImgHightlight} />
         )}
-
+      {!item.imageData && <div className={FigureImgPlaceHolder} />}
       {item.caption &&
         !item.hideCaption && (
-          <figcaption className={FigureCaption}>{item.caption}</figcaption>
+        <figcaption className={`${FigureCaption} ${!item.imageData && isFigureCaptionPlaceholder }`}>{item.caption}</figcaption>
         )}
     </figure>
   </li>
