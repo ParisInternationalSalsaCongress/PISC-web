@@ -129,7 +129,7 @@ const Lineup = ({ i18n, data }) => (
           {
             caption: 'Eddie Torres "Mambo King" & Eddie Torres Jr',
             imageData: data.imageTorres.childImageSharp.fluid,
-            highlight: true,
+            // highlight: true,
             hideCaption: true,
           },
           {
@@ -150,20 +150,24 @@ const Lineup = ({ i18n, data }) => (
           {
             caption: 'Talal & Edyta',
             imageData: data.imageTalalEdyta.childImageSharp.fluid,
-            highlight: true,
+            // highlight: true,
             hideCaption: true,
           },
           {
             caption: 'Adolfo Indacochea and his Latin Soul Dancers',
             imageData: data.imageAdolfoLD.childImageSharp.fluid,
             new: true,
-            highlight: true,
+            // highlight: true,
             hideCaption: true,
           },
           {
             caption: "Shelina 's Team",
             imageData: data.imageShelinaTeam.childImageSharp.fluid,
             hideCaption: true,
+          },
+          {
+            caption: 'Alegria',
+            // imageData: data.imageAlegriaDC.childImageSharp.fluid,
           },
           {
             caption: 'Aude M.',
@@ -183,7 +187,7 @@ const Lineup = ({ i18n, data }) => (
           {
             caption: 'Léon Rose project',
             imageData: data.imageLeonRoseProject.childImageSharp.fluid,
-            highlight: true,
+            // highlight: true,
             hideCaption: true,
           },
           {
@@ -194,7 +198,7 @@ const Lineup = ({ i18n, data }) => (
           {
             caption: 'Angelo Rito',
             imageData: data.imageAngeloRito.childImageSharp.fluid,
-            highlight: true,
+            // highlight: true,
             hideCaption: true,
           },
           {
@@ -216,7 +220,7 @@ const Lineup = ({ i18n, data }) => (
             caption: 'Jessica Quiles',
             imageData: data.imageJessica.childImageSharp.fluid,
             new: true,
-            highlight: true,
+            // highlight: true,
             hideCaption: true,
           },
           {
@@ -227,10 +231,10 @@ const Lineup = ({ i18n, data }) => (
           },
           {
             caption: 'Ernesto & Denisse',
-            imageData: data.imageErnestoDenisse.childImageSharp.fluid,
-            highlight: true,
+            // imageData: data.imageErnestoDenisse.childImageSharp.fluid,
+            // highlight: true,
             new: true,
-            hideCaption: true,
+            // hideCaption: true,
           },
           {
             caption: 'Alicia Velasco',
@@ -245,17 +249,13 @@ const Lineup = ({ i18n, data }) => (
           },
           {
             caption: 'Michael & Darya',
-            imageData: data.imageMichaelDarya.childImageSharp.fluid,
+            // imageData: data.imageMichaelDarya.childImageSharp.fluid,
             new: true,
-            hideCaption: true,
+            // hideCaption: true,
           },
           {
             caption: 'Maria Chiara',
-            imageData: data.imageMariaChiara.childImageSharp.fluid,
-          },
-          {
-            caption: 'Alegria',
-            imageData: data.imageAlegriaDC.childImageSharp.fluid,
+            // imageData: data.imageMariaChiara.childImageSharp.fluid,
           },
         ]}
       />
@@ -271,16 +271,16 @@ const Lineup = ({ i18n, data }) => (
           },
           {
             caption: 'Pedrito y Giusy',
-            imageData: data.imagePedrito.childImageSharp.fluid,
+            // imageData: data.imagePedrito.childImageSharp.fluid,
           },
           {
             caption: 'Yusimi Moya Rodriguez',
-            imageData: data.imageYusimiMoyaRodriguez.childImageSharp.fluid,
+            // imageData: data.imageYusimiMoyaRodriguez.childImageSharp.fluid,
             new: true,
           },
           {
             caption: 'Elegua',
-            imageData: data.imageElenaThierry.childImageSharp.fluid,
+            // imageData: data.imageElenaThierry.childImageSharp.fluid,
           },
         ]}
       />
