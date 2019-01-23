@@ -19,16 +19,22 @@ const GridPics = css`
   grid-row-gap: 0.5rem;
   grid-auto-flow: dense;
   margin-bottom: 1.45rem;
+  grid-auto-rows: minmax(300px, auto);
   @media (min-width: 560px) {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: minmax(300px, auto);
+    // grid-auto-rows: auto;
   }
 
   li {
     margin: 0;
     padding: 0;
   }
+`;
+
+const columns = css`
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-rows: auto;
 `;
 
 const BtnSection = css`
@@ -76,6 +82,8 @@ const Highlight = css`
 
 const Figure = css`
   position: relative;
+  height: 100%;
+  width: 100%;
 `;
 
 
@@ -86,25 +94,26 @@ const FigureImg = css`
 `;
 
 const FigureImgHightlight = css`
-  height: fit-content;
-  min-height: 600px;
-  max-height: 600px;
-  @media (min-width: 768px) {
-    min-height: calc(1200px + 0.5rem);
-    max-height: calc(1200px + 0.5rem);
-  }
+  // height: fit-content;
+  // min-height: 600px;
+  // max-height: 600px;
+  // @media (min-width: 768px) {
+  //   min-height: calc(1200px + 0.5rem);
+  //   max-height: calc(1200px + 0.5rem);
+  // }
 `;
 
 const FigureImgWithoutCaption = css`
-  min-height: 600px;
-  max-height: 600px;
-  height: fit-content;
+  // min-height: 600px;
+  // max-height: 600px;
+  // height: fit-content;
 `;
 
 const FigureImgPlaceHolder = css`
-  min-height: 600px;
-  max-height: 600px;
-  height: fit-content;
+  // min-height: 300px;
+  // max-height: 300px;
+  height: 100%;
+  width: 100%;
   background-color: ${rgba(TERTIARY_COLOR, 0.8)};
 `;
 
@@ -117,16 +126,17 @@ const FigureCaption = css`
   left: 0;
   bottom: 0;
   font-size: 2rem;
-  line-height: .8;
+  line-height: 1;
   color: white;
   font-weight: 500;
   width: 100%;
-  padding: .8rem;
+  padding: 0.8rem;
   text-align: center;
-  // background-color: ${rgba(QUINARY_COLOR, 0.6)};
-  text-shadow: 2px 2px 4px ${QUINARY_COLOR}, 0px 0px 2px ${QUINARY_COLOR}, 1px 1px 3px ${QUINARY_COLOR};
+  text-shadow: 2px 2px 4px ${QUINARY_COLOR}, 0px 0px 2px ${QUINARY_COLOR},
+    1px 1px 3px ${QUINARY_COLOR};
   &.${isFigureCaptionPlaceholder} {
     bottom: 50%;
+    transform: translateY(50%);
   }
 `;
 
@@ -151,7 +161,7 @@ class GridList extends Component {
 
   render() {
 
-    const { i18n, buttonText, dataList } = this.props;
+    const { i18n, buttonText, dataList, column } = this.props;
 
     return(
       <section>
@@ -165,7 +175,7 @@ class GridList extends Component {
 
         {
           this.state.expanded && (
-            <ul className={GridPics}>
+            <ul className={`${GridPics} ${column && columns}`}>
               {
                 dataList.map((item, index) => (
                   <GridListItem key={index} item={item} />

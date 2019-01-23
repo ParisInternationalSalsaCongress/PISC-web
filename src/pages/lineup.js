@@ -231,10 +231,10 @@ const Lineup = ({ i18n, data }) => (
           },
           {
             caption: 'Ernesto & Denisse',
-            // imageData: data.imageErnestoDenisse.childImageSharp.fluid,
+            imageData: data.imageErnestoDenisse.childImageSharp.fluid,
             // highlight: true,
             new: true,
-            // hideCaption: true,
+            hideCaption: true,
           },
           {
             caption: 'Alicia Velasco',
@@ -249,9 +249,9 @@ const Lineup = ({ i18n, data }) => (
           },
           {
             caption: 'Michael & Darya',
-            // imageData: data.imageMichaelDarya.childImageSharp.fluid,
+            imageData: data.imageMichaelDarya.childImageSharp.fluid,
             new: true,
-            // hideCaption: true,
+            hideCaption: true,
           },
           {
             caption: 'Maria Chiara',
@@ -324,46 +324,58 @@ const Lineup = ({ i18n, data }) => (
       <GridList
         expanded
         buttonText="Mambo"
+        column
         dataList={[
           {
             caption: 'DJ Gabriel',
             imageData: data.imageGabriel.childImageSharp.fluid,
-          },
-          {
-            caption: 'DJ Mulato',
-            imageData: data.imageMulato.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
             caption: 'DJ Cycy',
             imageData: data.imageCycy.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'DJ Mulato',
+            imageData: data.imageMulato.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
             caption: 'DJ Loic',
             imageData: data.imageLoic.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
             caption: 'DJ Ajad',
             imageData: data.imageDjAjad.childImageSharp.fluid,
-          },
-          {
-            caption: 'DJ Phil',
-            imageData: data.imagePhil.childImageSharp.fluid,
-          },
-          {
-            caption: 'DJ Madj',
-            imageData: data.imageMadj.childImageSharp.fluid,
-          },
-          {
-            caption: 'DJ 69',
-            imageData: data.imageDj69.childImageSharp.fluid,
-          },
-          {
-            caption: 'DJ Asmadi',
-            imageData: data.imageAsmadi.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
             caption: 'DJ Vincent',
             imageData: data.imageVincent.childImageSharp.fluid,
+            hideCaption: true,
+          },
+
+          {
+            caption: 'DJ Phil',
+            imageData: data.imagePhil.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'DJ Madj',
+            imageData: data.imageMadj.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'DJ 69',
+            imageData: data.imageDj69.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'DJ Asmadi',
+            imageData: data.imageAsmadi.childImageSharp.fluid,
+            hideCaption: true,
           },
         ]}
       />
@@ -371,14 +383,17 @@ const Lineup = ({ i18n, data }) => (
       <GridList
         expanded
         buttonText="Cubana"
+        column
         dataList={[
           {
             caption: 'DJ Didi',
             imageData: data.imageDJdidi.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
             caption: "Dj Teo d'Oro",
             imageData: data.imageDjTeo.childImageSharp.fluid,
+            hideCaption: true,
           },
         ]}
       />
@@ -386,14 +401,17 @@ const Lineup = ({ i18n, data }) => (
       <GridList
         expanded
         buttonText="Bachata"
+        column
         dataList={[
           {
             caption: 'DJ Latino Boy',
             imageData: data.imageLatinoBoy.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
             caption: 'DJ El Hombre',
             imageData: data.imageElHombre.childImageSharp.fluid,
+            hideCaption: true,
           },
         ]}
       />
@@ -401,15 +419,18 @@ const Lineup = ({ i18n, data }) => (
       <GridList
         expanded
         buttonText="Kizomba"
+        column
         dataList={[
           {
             caption: 'DJ Hugo Boss',
             imageData: data.imageDJHugoBoss.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
             caption: 'DJ Madiss',
             imageData: data.imageDJMadiss.childImageSharp.fluid,
             new: true,
+            hideCaption: true,
           },
         ]}
       />
