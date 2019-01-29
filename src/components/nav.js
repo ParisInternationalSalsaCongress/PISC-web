@@ -38,6 +38,7 @@ const navStyle = css`
   // padding: 0px 1.0875rem;
   background-color: ${rgba(PRIMARY_COLOR, 0.8)};
   border-bottom: 1px solid ${PRIMARY_COLOR};
+  filter: drop-shadow(0px 2px 5px);
 `;
 
 const navLinkNew = css`
@@ -196,6 +197,9 @@ const NavBar = ({ i18n }) => (
       </Link>
       <Link to={i18n.t`/venue`} className={subNavListLink}>
         <Trans>the venue</Trans>
+      </Link>
+      <Link to={i18n.t`/show`} className={subNavListLink}>
+        <Trans>Show</Trans>
       </Link>
       <Link to={i18n.t`/workshops`} className={subNavListLink}>
         <Trans>Workshops</Trans>
