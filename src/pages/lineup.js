@@ -167,7 +167,8 @@ const Lineup = ({ i18n, data }) => (
           },
           {
             caption: 'Alegria',
-            // imageData: data.imageAlegriaDC.childImageSharp.fluid,
+            imageData: data.imageAlegriaDC.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
             caption: 'Aude M.',
@@ -248,6 +249,11 @@ const Lineup = ({ i18n, data }) => (
             hideCaption: true,
           },
           {
+            caption: 'Mouaze & Sonia',
+            imageData: data.imageMouazeSonia.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
             caption: 'Michael & Darya',
             imageData: data.imageMichaelDarya.childImageSharp.fluid,
             new: true,
@@ -255,7 +261,8 @@ const Lineup = ({ i18n, data }) => (
           },
           {
             caption: 'Maria Chiara',
-            // imageData: data.imageMariaChiara.childImageSharp.fluid,
+            imageData: data.imageMariaChiara.childImageSharp.fluid,
+            hideCaption: true,
           },
         ]}
       />
@@ -280,7 +287,8 @@ const Lineup = ({ i18n, data }) => (
           },
           {
             caption: 'Elegua',
-            // imageData: data.imageElenaThierry.childImageSharp.fluid,
+            imageData: data.imageElenaThierry.childImageSharp.fluid,
+            hideCaption: true,
           },
         ]}
       />
@@ -332,18 +340,13 @@ const Lineup = ({ i18n, data }) => (
             hideCaption: true,
           },
           {
-            caption: 'DJ Cycy',
-            imageData: data.imageCycy.childImageSharp.fluid,
-            hideCaption: true,
-          },
-          {
             caption: 'DJ Mulato',
             imageData: data.imageMulato.childImageSharp.fluid,
             hideCaption: true,
           },
           {
-            caption: 'DJ Loic',
-            imageData: data.imageLoic.childImageSharp.fluid,
+            caption: 'DJ Cycy',
+            imageData: data.imageCycy.childImageSharp.fluid,
             hideCaption: true,
           },
           {
@@ -352,19 +355,8 @@ const Lineup = ({ i18n, data }) => (
             hideCaption: true,
           },
           {
-            caption: 'DJ Vincent',
-            imageData: data.imageVincent.childImageSharp.fluid,
-            hideCaption: true,
-          },
-
-          {
-            caption: 'DJ Phil',
-            imageData: data.imagePhil.childImageSharp.fluid,
-            hideCaption: true,
-          },
-          {
-            caption: 'DJ Madj',
-            imageData: data.imageMadj.childImageSharp.fluid,
+            caption: 'DJ Loic',
+            imageData: data.imageLoic.childImageSharp.fluid,
             hideCaption: true,
           },
           {
@@ -373,8 +365,23 @@ const Lineup = ({ i18n, data }) => (
             hideCaption: true,
           },
           {
+            caption: 'DJ Vincent',
+            imageData: data.imageVincent.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
             caption: 'DJ Asmadi',
             imageData: data.imageAsmadi.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'DJ Phil',
+            imageData: data.imagePhil.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'DJ Madj',
+            imageData: data.imageMadj.childImageSharp.fluid,
             hideCaption: true,
           },
         ]}
@@ -531,6 +538,9 @@ export const lineupQuery = graphql`
              ...lineupImage
            }
            imageAlegriaDC: file(relativePath: { eq: "artists/mambo/AlegriaDC.jpg" }) {
+             ...lineupImage
+           }
+           imageMouazeSonia: file(relativePath: { eq: "artists/mambo/Mouaze&Sonia.jpg" }) {
              ...lineupImage
            }
            imageKarelFlores: file(relativePath: { eq: "artists/mambo/KarelFlores.jpg" }) {

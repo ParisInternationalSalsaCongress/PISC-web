@@ -38,6 +38,7 @@ const navStyle = css`
   // padding: 0px 1.0875rem;
   background-color: ${rgba(PRIMARY_COLOR, 0.8)};
   border-bottom: 1px solid ${PRIMARY_COLOR};
+  filter: drop-shadow(0px 2px 5px);
 `;
 
 const navLinkNew = css`

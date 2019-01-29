@@ -70,18 +70,19 @@ const title = css`
 
 const piscLogo = css`
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 50%;
   fill: white;
   width: 80vw;
   height: auto;
-  max-width: 800px;
+  max-width: 450px;
+  max-height: 380px;
   transform: translateX(-50%);
-  filter: drop-shadow(4px 4px 8px ${PRIMARY_COLOR});
+  // filter: drop-shadow(2px 2px 4px ${PRIMARY_COLOR});
   @media (orientation: landscape) {
     width: auto;
     height: 70vh;
-    top: 20vh;
+    // top: 20vh;
   }
 `;
 
@@ -101,6 +102,7 @@ const videoPlayerWrapper = css`
   position: relative;
   padding-top: 56.25%;
   margin: 1.45rem 0 3.45rem;
+  overflow: hidden;
 `
 const videoPlayer = css`
   position: absolute;
@@ -111,38 +113,33 @@ const videoPlayer = css`
 
 
 const IndexPage = ({ i18n, data }) => (
-
-
   <Layout>
     <Helmet
       meta={[
         { name: 'description', content: i18n.t`Pisc_page_text_1` },
         {
-          property: "og:title",
-          content: i18n.t`og_title`
+          property: 'og:title',
+          content: i18n.t`og_title`,
         },
         {
-          name: "keywords",
+          name: 'keywords',
           content:
-            "Salsa, bachata, kizomba, mambo, salsa congress, salsa festival"
-        }
+            'Salsa, bachata, kizomba, mambo, salsa congress, salsa festival',
+        },
       ]}
     >
       <html lang={i18n.language} />
-      <title>
-        {i18n.t`4th edition`}
-      </title>
+      <title>{i18n.t`4th edition`}</title>
     </Helmet>
     <header className={header}>
       <NavBar />
-      <Img fluid={data.imageOne.childImageSharp.fluid} className={cover} />
+      <Img fluid={data.imageZero.childImageSharp.fluid} className={cover} />
       <PISC className={piscLogo} />
     </header>
-    <div
-      className={container}
-    >
+    <div className={container}>
       <h1 className={title}>
-        <Trans>Pisc_page_title_1</Trans><br />
+        <Trans>Pisc_page_title_1</Trans>
+        <br />
         <Trans>Pisc_page_title_2</Trans>
       </h1>
       <p>
@@ -156,15 +153,15 @@ const IndexPage = ({ i18n, data }) => (
       </p>
       <div className={videoPlayerWrapper}>
         <ReactPlayer
-          url='https://www.youtube.com/watch?v=b99YXIYY070'
+          url="https://www.youtube.com/watch?v=b99YXIYY070"
           controls
           className={videoPlayer}
-          width='100%'
-          height='100%'
+          width="100%"
+          height="100%"
           config={{
             youtube: {
-              playerVars: { showinfo: 0, modestbranding: 1 }
-            }
+              playerVars: { showinfo: 0, modestbranding: 1 },
+            },
           }}
         />
       </div>
@@ -192,9 +189,7 @@ const IndexPage = ({ i18n, data }) => (
           <Trans>buy your pass</Trans>
         </a>
       </div>
-
     </div>
-
   </Layout>
 );
 
@@ -213,16 +208,13 @@ fragment fluidImage on File {
 
 export const pageQuery = graphql`
   query {
-    imageOne: file(relativePath: {eq: "cover/yamulee_bg.jpg"}) {
+    imageZero: file(relativePath: { eq: "cover/pisc-2019-cover.jpeg" }) {
       ...fluidImage
     }
-    imageTwo: file(relativePath: {eq: "cover/showroom_bg.jpg"}) {
+    imageOne: file(relativePath: { eq: "cover/yamulee_bg.jpg" }) {
       ...fluidImage
     }
-
-
   }
-
 `;
 
 
