@@ -208,7 +208,7 @@ fragment fluidImage on File {
 
 export const pageQuery = graphql`
   query {
-    imageZero: file(relativePath: { eq: "cover/pisc-2019-cover.jpeg" }) {
+    imageZero: file(relativePath: { eq: "cover/pisc-2019-cover.jpg" }) {
       ...fluidImage
     }
     imageOne: file(relativePath: { eq: "cover/yamulee_bg.jpg" }) {
