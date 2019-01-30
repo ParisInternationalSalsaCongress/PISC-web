@@ -33,8 +33,8 @@ const cover = css`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  height: 100vh;
+  height: 50%;
+  height: 50vh;
   z-index: -1;
 `;
 
@@ -278,11 +278,13 @@ const Lineup = ({ i18n, data }) => (
           },
           {
             caption: 'Pedrito y Giusy',
-            // imageData: data.imagePedrito.childImageSharp.fluid,
+            imageData: data.imagePedrito.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
             caption: 'Yusimi Moya Rodriguez',
-            // imageData: data.imageYusimiMoyaRodriguez.childImageSharp.fluid,
+            imageData: data.imageYusimiMoyaRodriguez.childImageSharp.fluid,
+            hideCaption: true,
             new: true,
           },
           {
@@ -479,7 +481,7 @@ export const lineupImage = graphql`
 
 export const lineupQuery = graphql`
          query {
-           imageBG: file(relativePath: { eq: "cover/rodrigo_bersy_bg.jpg" }) {
+           imageBG: file(relativePath: { eq: "cover/lineup-cover.jpg" }) {
              childImageSharp {
                fluid(maxWidth: 2000) {
                  ...GatsbyImageSharpFluid
