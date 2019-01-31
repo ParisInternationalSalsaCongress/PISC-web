@@ -165,13 +165,18 @@ class GridList extends Component {
 
     return(
       <section>
-        <button
-          onClick={this.handleExpanded}
-          className={BtnSection}
-          title={this.state.expanded ? i18n.t`see less` : i18n.t`see more`}
-        >
-          {buttonText} {this.state.expanded ? '-' : '+'}
-        </button>
+
+        {
+          buttonText && (
+            <button
+              onClick={this.handleExpanded}
+              className={BtnSection}
+              title={this.state.expanded ? i18n.t`see less` : i18n.t`see more`}
+            >
+              {buttonText} {this.state.expanded ? '-' : '+'}
+            </button>
+          )
+        }
 
         {
           this.state.expanded && (

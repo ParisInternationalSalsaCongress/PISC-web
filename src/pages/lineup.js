@@ -448,15 +448,38 @@ const Lineup = ({ i18n, data }) => (
 
       <GridList
         expanded
-        buttonText="Video"
+        buttonText="  "
+        column
         dataList={[
+          {
+            caption: 'Pablo Montero',
+            imageData: data.imagePablo.childImageSharp.fluid,
+            hideCaption: true,
+          },
           {
             caption: 'Steve Starmambo',
             imageData: data.imageSteveStarmambo.childImageSharp.fluid,
+            hideCaption: true,
           },
           {
-            caption: 'Marty DPone',
-            imageData: data.imageMartyDPone.childImageSharp.fluid,
+            caption: 'Valentin',
+            imageData: data.imageValentin.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'Luka',
+            imageData: data.imageLuka.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'Alfil',
+            imageData: data.imageAlfil.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'Pascale',
+            imageData: data.imagePascale.childImageSharp.fluid,
+            hideCaption: true,
           },
         ]}
       />
@@ -638,11 +661,24 @@ export const lineupQuery = graphql`
            imageVincent: file(relativePath: { eq: "DJs/mambo/Vincent.jpg" }) {
              ...lineupImage
            }
-           imageSteveStarmambo: file(relativePath: { eq: "multimedia/video/SteveStarmambo.jpg" }) {
+           imagePablo: file(relativePath: { eq: "multimedia/Pablo.jpg" }) {
              ...lineupImage
            }
-           imageMartyDPone: file(relativePath: { eq: "multimedia/video/MartyDPone.jpg" }) {
+           imageSteveStarmambo: file(relativePath: { eq: "multimedia/Steve.jpg" }) {
              ...lineupImage
            }
+           imageValentin: file(relativePath: { eq: "multimedia/Valentin.jpg" }) {
+             ...lineupImage
+           }
+           imageLuka: file(relativePath: { eq: "multimedia/Luka.jpg" }) {
+             ...lineupImage
+           }
+           imageAlfil: file(relativePath: { eq: "multimedia/Alfil.jpg" }) {
+             ...lineupImage
+           }
+           imagePascale: file(relativePath: { eq: "multimedia/Pascale.jpg" }) {
+             ...lineupImage
+           }
+
          }
        `;
