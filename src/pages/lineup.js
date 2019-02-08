@@ -203,7 +203,7 @@ const Lineup = ({ i18n, data }) => (
             hideCaption: true,
           },
           {
-            caption: 'Mitsue & Monica',
+            caption: 'Mitsue & Monika',
             imageData: data.imageMitsueMonica.childImageSharp.fluid,
             hideCaption: true,
           },

@@ -269,7 +269,7 @@ const BootcampSchedule = withI18n()(({ i18n }) => (
         <tr>
           <td>
             13:00 <span className={blockText}>- </span>
-            17:00
+            16:00
           </td>
           <td>Bootcamp</td>
           <td>Bootcamp</td>
@@ -277,14 +277,13 @@ const BootcampSchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>
-            17:00 <span className={blockText}>- </span>
-            18:00
+            16:00 <span className={blockText}>- </span>
+            17:00
           </td>
           <td>Bootcamp</td>
           <td />
           <td />
         </tr>
-
         <tr className={getOut}>
           <td>
             18:40 <span className={blockText}>- </span>

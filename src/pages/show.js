@@ -323,7 +323,7 @@ const ShowSchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>Marco & Sara</td>
-          <td>Mitusué & Monica</td>
+          <td>Monika</td>
           <td>Sonia</td>
         </tr>
         <tr>
@@ -332,23 +332,28 @@ const ShowSchedule = withI18n()(({ i18n }) => (
           <td>Talal & Edyta</td>
         </tr>
         <tr>
-          <td>Nuno & Nagila</td>
+          <td>Mitsue & Monika</td>
           <td>Pedrito & Guisy</td>
           <td>Terry & Cecile</td>
         </tr>
         <tr>
-          <td>Rodrigo & Bersy</td>
+          <td>Nuno & Nagila</td>
           <td>Rodrigo & Bersy</td>
           <td>Yamulee</td>
+        </tr>
+        <tr>
+          <td>Rodrigo & Bersy</td>
+          <td>Yamulee</td>
+          <td>Yusimi</td>
         </tr>
         <tr>
           <td>Shelina's Team</td>
-          <td>Yamulee</td>
           <td>Yusimi</td>
+          <td />
         </tr>
         <tr>
           <td>Terry & Cecile</td>
-          <td>Yusimi</td>
+          <td />
           <td />
         </tr>
       </tbody>
