@@ -9,7 +9,7 @@ import ReactPlayer from 'react-player'
 
 import { PISC } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR } from '../utils/vars';
+import { SECONDARY_COLOR, PRIMARY_COLOR, SNOW_COLOR } from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';
@@ -26,6 +26,7 @@ const container = css`
   padding: 0px 1.0875rem 3.45rem;
   padding-top: 0;
   position: relative;
+  background-color: ${SNOW_COLOR};
 `;
 
 const cover = css`
