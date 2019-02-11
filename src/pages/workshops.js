@@ -360,7 +360,7 @@ const FridaySchedule = withI18n()(({ i18n }) => (
           <td><span className={blockTextInlineDesktop}>Alicia Velasco,</span> Ladies Styling On2 (3)</td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
-        <tr className={getOut}>
+        {/* <tr className={getOut}>
           <td>
             18:40 <span className={blockText}>- </span>
             19:40
@@ -368,7 +368,7 @@ const FridaySchedule = withI18n()(({ i18n }) => (
           <td colSpan="2">
             <Trans>PERFORMANCE REHEARSAL</Trans>
           </td>
-        </tr>
+        </tr> */}
       </tbody>
     </table>
   </div>
@@ -610,7 +610,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           <td>ARC EN CIEL ROOM</td>
         </tr>
 
-        <tr className={getOut}>
+        {/* <tr className={getOut}>
           <td>
             18:40 <span className={blockText}>- </span>
             19:40
@@ -618,7 +618,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           <td colSpan="2">
             <Trans>PERFORMANCE REHEARSAL</Trans>
           </td>
-        </tr>
+        </tr> */}
       </tbody>
     </table>
   </div>
@@ -828,7 +828,7 @@ const SundaySchedule = withI18n()(({ i18n }) => (
           <td>ARC EN CIEL ROOM</td>
         </tr>
 
-        <tr className={getOut}>
+        {/* <tr className={getOut}>
           <td>
             18:40 <span className={blockText}>- </span>
             19:40
@@ -836,7 +836,7 @@ const SundaySchedule = withI18n()(({ i18n }) => (
           <td colSpan="2">
             <Trans>PERFORMANCE REHEARSAL</Trans>
           </td>
-        </tr>
+        </tr> */}
       </tbody>
     </table>
   </div>
