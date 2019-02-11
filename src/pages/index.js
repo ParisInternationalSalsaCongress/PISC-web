@@ -17,16 +17,18 @@ import NavBar from '../components/nav';
 const header = css`
   padding-top: 0;
   position: relative;
-  margin-bottom: 1.45rem;
 `;
 
 const container = css`
   margin: 0 auto;
   max-width: 960px;
-  padding: 0px 1.0875rem 3.45rem;
+  padding: 0px 1.0875rem;
   padding-top: 0;
   position: relative;
   background-color: ${SNOW_COLOR};
+  &:last-of-type {
+    padding-bottom: 3.45rem;
+  }
 `;
 
 const cover = css`
@@ -66,6 +68,7 @@ const title = css`
   color: ${PRIMARY_COLOR};
   text-align: center;
   font-weight: 500;
+  margin-top: 1.45rem;
 `;
 
 
@@ -152,20 +155,22 @@ const IndexPage = ({ i18n, data }) => (
       <p>
         <Trans>Pisc_page_text_3</Trans>
       </p>
-      <div className={videoPlayerWrapper}>
-        <ReactPlayer
-          url="https://www.youtube.com/watch?v=b99YXIYY070"
-          controls
-          className={videoPlayer}
-          width="100%"
-          height="100%"
-          config={{
-            youtube: {
-              playerVars: { showinfo: 0, modestbranding: 1 },
-            },
-          }}
-        />
-      </div>
+    </div>
+    <div className={videoPlayerWrapper}>
+      <ReactPlayer
+        url="https://www.youtube.com/watch?v=b99YXIYY070"
+        controls
+        className={videoPlayer}
+        width="100%"
+        height="100%"
+        config={{
+          youtube: {
+            playerVars: { showinfo: 0, modestbranding: 1 },
+          },
+        }}
+      />
+    </div>
+    <div className={container}>
       <blockquote className={title}>
         <Trans>Pisc_page_quote</Trans>
       </blockquote>

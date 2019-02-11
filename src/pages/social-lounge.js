@@ -41,8 +41,8 @@ const cover = css`
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
-  height: 80vh;
+  height: 70%;
+  height: 70vh;
   z-index: -1;
 `;
 
@@ -197,38 +197,31 @@ let styleTooltips = {
   },
 };
 
-const BootcampPage = ({ i18n, data }) => (
+const SocialLounge = ({ i18n, data }) => (
   <Layout>
     <Helmet meta={[{ name: 'description', content: i18n.t`Workshops_textII` }]}>
       <html lang={i18n.language} />
-      <title>{'Bootcamp Karel Flores'}</title>
+      <title>{'Social Lounge'}</title>
     </Helmet>
     <header className={header}>
       <NavBar />
       <div className={banner}>
-        <h1>Bootcamp</h1>
+        <h1>Social Lounge</h1>
       </div>
       <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
     </header>
     <div className={container}>
-      {/* <p>
-
-        <Trans>Workshops_textI</Trans>
-        <br />
-        <Trans>Workshops_textII</Trans>
-      </p>
-      */}
       <p className={warn}>
         <Trans>Workshops_warn</Trans>
       </p>
-      <BootcampSchedule />
+      <SocialLoungeSchedule />
     </div>
   </Layout>
 );
 
-export default withI18n()(BootcampPage);
+export default withI18n()(SocialLounge);
 
-const BootcampSchedule = withI18n()(({ i18n }) => (
+const SocialLoungeSchedule = withI18n()(({ i18n }) => (
   <div className={TableWrapper}>
     <table className={Table}>
       <caption>
@@ -246,20 +239,15 @@ const BootcampSchedule = withI18n()(({ i18n }) => (
       </caption>
       <thead>
         <tr className={highlight}>
-          <th colSpan="4">
-            <Trans>Bootcamp Karel Flores</Trans>
+          <th colSpan="3">
+            <Trans>Social Lounge</Trans>
           </th>
         </tr>
         <tr>
-          <th colSpan="4">PONT-NEUF ROOM</th>
+          <th colSpan="3">PONT-NEUF ROOM</th>
         </tr>
         <tr className={highlight}>
-          <th>
-            <Trans>Time</Trans>
-          </th>
-          <th>
-            <Trans>Friday</Trans>
-          </th>
+          <th />
           <th>
             <Trans>Saturday</Trans>
           </th>
@@ -271,29 +259,24 @@ const BootcampSchedule = withI18n()(({ i18n }) => (
       <tbody>
         <tr>
           <td>
-            13:00 <span className={blockText}>- </span>
-            16:00
+            16:30 <span className={blockText}>- </span>
+            20:00
           </td>
-          <td>Bootcamp</td>
-          <td>Bootcamp</td>
-          <td>Bootcamp</td>
+          <td>70% Salsa 20% Bachata 10% Kizomba</td>
+          <td>70% Salsa 20% Bachata 10% Kizomba</td>
         </tr>
-        <tr>
-          <td>
-            16:00 <span className={blockText}>- </span>
-            17:00
-          </td>
-          <td>Bootcamp</td>
-          <td className={getOut} />
-          <td className={getOut} />
+        <tr className={highlight}>
+          <td>DJ</td>
+          <td>Dj Asmadi & Dj 69</td>
+          <td>Dj Loïc & Dj Vincent</td>
         </tr>
       </tbody>
     </table>
   </div>
 ));
 
-export const boocampImage = graphql`
-  fragment boocampImage on File {
+export const SocialLoungeImage = graphql`
+  fragment socialLoungeImage on File {
     childImageSharp {
       fluid(maxWidth: 2000) {
         ...GatsbyImageSharpFluid
@@ -302,10 +285,10 @@ export const boocampImage = graphql`
   }
 `;
 
-export const boocampQuery = graphql`
+export const SocialLoungeImageQuery = graphql`
   query {
-    image00: file(relativePath: { eq: "bootcamp/group-perf.jpg" }) {
-      ...boocampImage
+    image00: file(relativePath: { eq: "cover/hyat-lounge.jpg" }) {
+      ...socialLoungeImage
     }
   }
 `;
