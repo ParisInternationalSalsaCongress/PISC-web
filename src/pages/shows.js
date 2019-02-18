@@ -201,12 +201,12 @@ const ShowPage = ({ i18n, data }) => (
   <Layout>
     <Helmet>
       <html lang={i18n.language} />
-      <title>{'Show'}</title>
+      <title>{'Shows'}</title>
     </Helmet>
     <header className={header}>
       <NavBar />
       <div className={banner}>
-        <h1>Show</h1>
+        <h1>Shows</h1>
       </div>
       <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
     </header>
@@ -247,7 +247,7 @@ const ShowSchedule = withI18n()(({ i18n }) => (
       <thead>
         <tr className={highlight}>
           <th colSpan="3">
-            <Trans>SHOW (Alphabetical Order)</Trans>
+            <Trans>SHOWS (Alphabetical Order)</Trans>
           </th>
         </tr>
         <tr>
@@ -274,7 +274,7 @@ const ShowSchedule = withI18n()(({ i18n }) => (
         <tr>
           <td>Alicia Velasco</td>
           <td>Adrian & Anita</td>
-          <td>Alicia Velasco</td>
+          <td>Alicia Velasco y su mambo rock</td>
         </tr>
         <tr>
           <td>Aude M</td>
