@@ -52,7 +52,7 @@ const navLinkNew = css`
   outline: 0;
   min-height: 80px;
   color: ${SNOW_COLOR};
-  transition: .300s ease-in-out;
+  transition: 0.3s ease-in-out;
   font-family: ${SANS_SERIF_FONTS};
   font-size: 1.3rem;
   text-decoration: none;
@@ -60,12 +60,12 @@ const navLinkNew = css`
   position: relative;
   cursor: pointer;
 
-  &:hover  {
+  &:hover {
     background-color: ${darken(0.08, PRIMARY_COLOR)};
   }
 
   @media (min-width: 768px) {
-   flex-direction: row;
+    flex-direction: row;
   }
 `;
 
@@ -93,6 +93,7 @@ const subNavListNew = css`
   width: 100%;
   background-color: ${rgba(PRIMARY_COLOR, 0.8)};
   transition: 0.3s ease-in-out;
+  box-shadow: inset 0px 0px 6px ${darken(0.1, PRIMARY_COLOR)};
 `;
 
 const subNavListLink = css`
@@ -126,6 +127,17 @@ const secondaryBtn = css`
   }
 `;
 
+const navLinkFirst = css`
+  margin-left: auto;
+`;
+
+const navLinkLast = css`
+  border-left: none;
+  @media (min-width: 768px) {
+    margin-right: 1rem;
+  }
+`;
+
 const isTablet = css`
   display: none;
   @media (min-width: 768px) {
@@ -156,13 +168,20 @@ class SubNav extends Component {
   };
 
   render() {
-    const { children, btnText, btnSubText } = this.props;
+    const { children, btnText, btnSubText, cssStyle } = this.props;
 
     return (
       <div
-        className={css`
-          position: relative;
-        `}
+        css={[
+          css`
+            position: relative;
+            border: 1px solid ${darken(0.08, PRIMARY_COLOR)};
+            border-top: none;
+            border-bottom: none;
+            box-shadow: inset 0px 0px 6px ${darken(0.1, PRIMARY_COLOR)};
+          `,
+          cssStyle,
+        ]}
       >
         <button
           css={[navLinkNew, this.state.expanded ? navLinkNewIsExpanded : null]}
@@ -183,34 +202,78 @@ const NavBar = ({ i18n }) => (
       <PISC_TOWER className={PiscLogo} />
     </Link>
 
-    <SubNav btnText={i18n.t`preparties`} btnSubText={i18n.t`preparties_date`}>
-      <Link to={i18n.t`/16-april`} activeClassName={navLinkNewActive} className={subNavListLink}>
+    <SubNav
+      btnText={i18n.t`preparties`}
+      cssStyle={navLinkFirst}
+      btnSubText={i18n.t`preparties_date`}
+    >
+      <Link
+        to={i18n.t`/16-april`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
         <Trans>Tuesday 16th april</Trans>
       </Link>
-      <Link to={i18n.t`/17-april`} activeClassName={navLinkNewActive} className={subNavListLink}>
+      <Link
+        to={i18n.t`/17-april`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
         <Trans>Wednesday 17th april</Trans>
       </Link>
-      <Link to={i18n.t`/18-april`} activeClassName={navLinkNewActive} className={subNavListLink}>
+      <Link
+        to={i18n.t`/18-april`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
         <Trans>Thursday 18th april</Trans>
       </Link>
     </SubNav>
-    <SubNav btnText={i18n.t`congress`} btnSubText={i18n.t`congress_date`}>
-      <Link to={i18n.t`/lineup`} activeClassName={navLinkNewActive} className={subNavListLink}>
+    <SubNav
+      btnText={i18n.t`congress`}
+      cssStyle={navLinkLast}
+      btnSubText={i18n.t`congress_date`}
+    >
+      <Link
+        to={i18n.t`/lineup`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
         <Trans>lineup</Trans>
       </Link>
-      <Link to={i18n.t`/venue`} activeClassName={navLinkNewActive} className={subNavListLink}>
+      <Link
+        to={i18n.t`/venue`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
         <Trans>the venue</Trans>
       </Link>
-      <Link to={i18n.t`/shows`} activeClassName={navLinkNewActive} className={subNavListLink}>
+      <Link
+        to={i18n.t`/shows`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
         <Trans>Shows</Trans>
       </Link>
-      <Link to={i18n.t`/social-lounge`} activeClassName={navLinkNewActive} className={subNavListLink}>
+      <Link
+        to={i18n.t`/social-lounge`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
         <Trans>Social Lounge</Trans>
       </Link>
-      <Link to={i18n.t`/workshops`} activeClassName={navLinkNewActive} className={subNavListLink}>
+      <Link
+        to={i18n.t`/workshops`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
         <Trans>Workshops</Trans>
       </Link>
-      <Link to={i18n.t`/bootcamp`} activeClassName={navLinkNewActive} className={subNavListLink}>
+      <Link
+        to={i18n.t`/bootcamp`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
         <Trans>Bootcamp</Trans>
       </Link>
     </SubNav>
