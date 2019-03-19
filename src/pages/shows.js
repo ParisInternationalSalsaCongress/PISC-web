@@ -274,8 +274,8 @@ const ShowSchedule = withI18n()(({ i18n }) => (
       <tbody>
         <tr>
           <td>Alegria</td>
-          <td>Adolfo</td>
-          <td>Adolfo</td>
+          <td>Adolfo & The Latin Soul Dancers</td>
+          <td>Adolfo & The Latin Soul Dancers</td>
         </tr>
         <tr>
           <td>Alicia Velasco</td>
@@ -283,85 +283,81 @@ const ShowSchedule = withI18n()(({ i18n }) => (
           <td>Alicia Velasco y su mambo rock</td>
         </tr>
         <tr>
-          <td>Aude M</td>
+          <td>Ernesto & Denisse</td>
           <td>Alberto Valdes</td>
           <td>Angelo Rito</td>
         </tr>
         <tr>
-          <td>Ernesto & Denisse</td>
-          <td>Eddie Torres Junior</td>
-          <td>Eddie Torres Junior</td>
-        </tr>
-        <tr>
           <td>José & Nerea</td>
-          <td>Griselle</td>
-          <td>Ernesto & Denisse</td>
+          <td>Eddie Torres Junior</td>
+          <td>Aude Mambo</td>
         </tr>
         <tr>
           <td>Karel Flores</td>
-          <td>Groupo Alafia</td>
-          <td>Groupo Alafia</td>
+          <td>Griselle</td>
+          <td>Eddie Torres Junior</td>
         </tr>
         <tr>
           <td>Karen & Ricardo</td>
-          <td>Jessica Quiles</td>
-          <td>Jessica Quiles</td>
+          <td>Groupo Alafia</td>
+          <td>Ernesto & Denisse</td>
         </tr>
         <tr>
           <td>Korke & Judith</td>
-          <td>Karen & Ricardo</td>
-          <td>José & Neréa</td>
+          <td>Jessica Quiles</td>
+          <td>Groupo Alafia</td>
         </tr>
         <tr>
           <td>Latin Passion Group</td>
-          <td>Korke & JUdith</td>
-          <td>Mambo King</td>
+          <td>Karen & Ricardo</td>
+          <td>Jessica Quiles</td>
         </tr>
         <tr>
           <td>Leon Rose Project</td>
+          <td>Korke & JUdith</td>
+          <td>José & Neréa</td>
+        </tr>
+        <tr>
+          <td>Marco & Sara</td>
           <td>Latin Passion Group</td>
-          <td>Marco & Sara</td>
+          <td>Mambo King</td>
         </tr>
         <tr>
           <td>Mambo King</td>
           <td>Mambo King</td>
-          <td>Pedrito & Guisy</td>
+          <td>Marco & Sara</td>
         </tr>
         <tr>
-          <td>Marco & Sara</td>
+          <td>Michael & Darya</td>
           <td>Monika</td>
-          <td>Salsabor</td>
-        </tr>
-        <tr>
-          <td>Michael</td>
-          <td>Nuno & Nagila</td>
-          <td>Talal & Edyta</td>
+          <td>Pedrito & Guisy</td>
         </tr>
         <tr>
           <td>Mitsue & Monika</td>
-          <td>Pedrito & Guisy</td>
-          <td>Terry & Cecile</td>
+          <td>Nuno & Nagila</td>
+          <td>Salsabor</td>
         </tr>
         <tr>
           <td>Nuno & Nagila</td>
-          <td>Rodrigo & Bersy</td>
-          <td>Yamulee</td>
+          <td>Pedrito & Guisy</td>
+          <td>Talal & Edyta</td>
         </tr>
         <tr>
           <td>Rodrigo & Bersy</td>
-          <td>Yamulee</td>
-          <td>Yusimi</td>
+          <td>Rodrigo & Bersy</td>
+          <td>Terry & Cecile</td>
         </tr>
         <tr>
           <td>Shelina's Team</td>
-          <td>Yusimi</td>
-          <td />
+          <td>Yamulee</td>
+          <td>Yamulee</td>
         </tr>
         <tr>
           <td>Terry & Cecile</td>
-          <td />
-          <td />
+          <td>Yusimi</td>
+          <td>Yusimi</td>
         </tr>
+
       </tbody>
     </table>
   </div>

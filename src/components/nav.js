@@ -281,7 +281,7 @@ const NavBar = ({ i18n }) => (
       className={navLinkNew}
       activeClassName={navLinkNewActive}
     >
-      {'After'}
+      {'After Party'}
     </Link>
 
     <a
