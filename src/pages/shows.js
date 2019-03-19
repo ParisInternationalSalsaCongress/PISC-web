@@ -211,13 +211,19 @@ const ShowPage = ({ i18n, data }) => (
       <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
     </header>
     <div className={container}>
-      {/* <p>
-
-        <Trans>Workshops_textI</Trans>
+      <p>
+        <Trans>show_text_I</Trans>
         <br />
-        <Trans>Workshops_textII</Trans>
+        <strong>
+          <Trans>show_text_II</Trans>
+        </strong>{' '}
+        <Trans>show_text_&</Trans>{' '}
+        <strong>
+          <Trans>show_text_III</Trans>
+        </strong>{' '}
+        <Trans>show_text_IV</Trans>
       </p>
-      */}
+
       <p className={warn}>
         <Trans>Workshops_warn</Trans>
       </p>
@@ -324,7 +330,7 @@ const ShowSchedule = withI18n()(({ i18n }) => (
         <tr>
           <td>Marco & Sara</td>
           <td>Monika</td>
-          <td>Sonia</td>
+          <td>Salsabor</td>
         </tr>
         <tr>
           <td>Michael</td>
