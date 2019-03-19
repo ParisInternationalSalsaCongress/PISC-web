@@ -58,89 +58,75 @@ const title = css`
   font-weight: 500;
 `;
 
-const AguaPage = ({ i18n, data }) => (
+const BakidoSocialPage = ({ i18n, data }) => (
   <Layout>
-    <Helmet
-      meta={[
-        {
-          name: 'description',
-          content: i18n.t`agua_slogan` + ' ' + i18n.t`agua_text_I`,
-        },
-      ]}
-    >
+    <Helmet meta={[{ name: 'description', content: i18n.t`bakido_text_I` }]}>
       <html lang={i18n.language} />
-      <title>{i18n.t`preparty Agua`}</title>
+      <title>{i18n.t`after Bakido Social`}</title>
     </Helmet>
     <header className={header}>
       <NavBar />
       <div className={prepartiesBanner}>
-        <Img fluid={data.image01.childImageSharp.fluid} />
+        <Img fluid={data.imageBakido00.childImageSharp.fluid} />
       </div>
     </header>
     <div className={container}>
       <h1 className={title}>
-        <Trans>Tuesday Preparty Agua</Trans>
+        <Trans>Monday After party Bakido Social</Trans>
       </h1>
       <p>
-        <Trans>agua_slogan</Trans>
+        <Trans>bakido_text_I</Trans>
       </p>
       <p>
-        <Trans>agua_text_I</Trans>
+        <Trans>bakido_text_II</Trans>
       </p>
       <p>
-        <Trans>agua_text_II</Trans>
+        <Trans>bakido_text_III</Trans>
       </p>
       <p>
-        <Trans>agua_text_III</Trans>
+        <span>
+          <Trans>Enter</Trans>: 12euros.
+        </span>
+        <br />
+        {/* <span>17h / minuit</span> */}
       </p>
       <p>
-        <Trans>agua_text_IV</Trans>
+        <Trans>bakido_text_IV</Trans>
       </p>
       <p>
-        <Trans>agua_text_V</Trans>
+        <Trans>bakido_text_V</Trans>
       </p>
       <p>
-        <Trans>agua_text_VI</Trans>
+        <Trans>bakido_text_VI</Trans>
       </p>
 
       <a
-        href="https://goo.gl/maps/bRTXyHga8hK2"
+        href="https://goo.gl/maps/44LgDuUQD8T2"
         target="_blank"
         rel="noopener noreferrer"
         className={locationLink}
       >
         <LocationMarket className={locationMaker} />
-        &nbsp;
-        <Trans>Boat</Trans> Concorde Atlantique. <br />
-        <Trans>Facing</Trans> 23 Quai Anatole France,
-        <br />
-        75007 Paris <br />
-        Metro Assemblée Nationale, line 12
+        &nbsp; Salle Colonne <br />
+        94, boulevard Auguste Blanqui <br />
+        75013 Paris <br />
+        Métro Glacière, ligne 6
       </a>
-      <p>
-        <span>
-          <Trans>Enter</Trans>: 12euros
-        </span>
-        <br />
-        <span>21h / 2h</span>
-      </p>
-      <p>
-        <Trans>agua_text_VII</Trans>
-      </p>
-      <p>
-        <Trans>retrieve your pass</Trans>
-      </p>
+
     </div>
-    <div>
-      <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
-    </div>
+    {/* <div>
+      <Img
+        fluid={data.image7spirits00.childImageSharp.fluid}
+        className={cover}
+      />
+    </div> */}
   </Layout>
 );
 
-export default withI18n()(AguaPage);
+export default withI18n()(BakidoSocialPage);
 
-export const AguaImage = graphql`
-  fragment AguaImage on File {
+export const BakidoSocialImage = graphql`
+  fragment BakidoSocialImage on File {
     childImageSharp {
       fluid(maxWidth: 2000) {
         ...GatsbyImageSharpFluid
@@ -149,18 +135,13 @@ export const AguaImage = graphql`
   }
 `;
 
-export const AguaQuery = graphql`
+export const BakidoSocialQuery = graphql`
   query {
-    image00: file(relativePath: { eq: "preparties/agua/agua00.jpg" }) {
-      ...AguaImage
-    }
-    image01: file(
-      relativePath: { eq: "preparties/agua/agua-Preparty-Tuesday.jpg" }
+    imageBakido00: file(
+      relativePath: { eq: "after/bakido.jpg" }
     ) {
-      ...AguaImage
+      ...BakidoSocialImage
     }
-    image02: file(relativePath: { eq: "preparties/agua/agua02.jpg" }) {
-      ...AguaImage
-    }
+
   }
 `;

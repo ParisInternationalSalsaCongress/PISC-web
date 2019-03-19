@@ -4,11 +4,11 @@ import Img from 'gatsby-image';
 import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
-import { rgba, lighten, tint } from 'polished';
+import { tint } from 'polished';
 
 import { LocationMarket } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR , SNOW_COLOR, DARK } from '../utils/vars';
+import { SECONDARY_COLOR, PRIMARY_COLOR } from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';
@@ -40,12 +40,14 @@ const locationMaker = css`
   height: 14px;
   fill: currentColor;
 `;
+
 const locationLink = css`
   color: ${SECONDARY_COLOR};
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s ease-in;
-  align-self: flex-start;
+  display: inline-block;
+  margin: 0.45rem 1rem 1.45rem;
   &:hover {
     color: ${tint(0.1, SECONDARY_COLOR)};
   }
@@ -80,16 +82,15 @@ const SalsoundPage = ({ i18n, data }) => (
         <Trans>Wednesday Preparty Sal'sound</Trans>
       </h1>
       <p>
-        <Trans>sal'sound_text_1</Trans> <br />
+        <Trans>sal'sound_text_1</Trans>
+      </p>
+      <p>
         <Trans>sal'sound_text_2</Trans>
       </p>
       <p>
-        <span>
-          <Trans>Enter</Trans>: 12euros
-        </span>
-        <br />
-        <span>21h / 3h</span>
+        <Trans>sal'sound_text_3</Trans>
       </p>
+
       <a
         href="https://goo.gl/maps/K1dL2qk9XGz"
         target="_blank"
@@ -97,11 +98,23 @@ const SalsoundPage = ({ i18n, data }) => (
         className={locationLink}
       >
         <LocationMarket className={locationMaker} />
-        &nbsp; intensive danse <br />
+        &nbsp; Intensive Danse <br />
         105, rue de tolbiac
         <br />
-        75013 Paris M•Olympiades
+        75013 Paris <br />
+        Metro Olympiades, line 14
       </a>
+      <p>
+        <span>
+          <Trans>Enter</Trans>: 12euros. &nbsp;
+          <Trans>Credit card</Trans>
+        </span>
+        <br />
+        <span>21h / 3h</span>
+      </p>
+      <p>
+        <Trans>retrieve your pass</Trans>
+      </p>
     </div>
     <div>
       <Img
@@ -127,7 +140,9 @@ export const SalsoundImage = graphql`
 export const SalsoundQuery = graphql`
   query {
     imageSalsound00: file(
-      relativePath: { eq: "preparties/salsound/salsound-Preparty-Wednesday.jpg" }
+      relativePath: {
+        eq: "preparties/salsound/salsound-Preparty-Wednesday.jpg"
+      }
     ) {
       ...SalsoundImage
     }

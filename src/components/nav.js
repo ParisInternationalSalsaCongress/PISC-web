@@ -34,7 +34,6 @@ const navStyle = css`
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  // padding: 0px 1.0875rem;
   background-color: ${rgba(PRIMARY_COLOR, 0.8)};
   border-bottom: 1px solid ${PRIMARY_COLOR};
   filter: drop-shadow(0px 2px 5px);
@@ -48,7 +47,7 @@ const navLinkNew = css`
   border: none;
   background-color: transparent;
   margin: 0;
-  padding: 0px 1.0875rem;
+  padding: 0px 0.675rem;
   outline: 0;
   min-height: 80px;
   color: ${SNOW_COLOR};
@@ -59,6 +58,7 @@ const navLinkNew = css`
   text-align: center;
   position: relative;
   cursor: pointer;
+  flex-grow: 1;
 
   &:hover {
     background-color: ${darken(0.08, PRIMARY_COLOR)};
@@ -66,6 +66,8 @@ const navLinkNew = css`
 
   @media (min-width: 768px) {
     flex-direction: row;
+    flex-grow: 0;
+    padding: 0px 1.0875rem;
   }
 `;
 
@@ -117,7 +119,7 @@ const secondaryBtn = css`
   background-color: ${SECONDARY_COLOR};
   font-size: 1.3rem;
   padding: 0.8rem;
-  margin-right: 1.3rem;
+  margin: 0 1.3rem;
   border-radius: 4px;
   text-decoration: none;
   text-align: center;
@@ -229,11 +231,7 @@ const NavBar = ({ i18n }) => (
         <Trans>Thursday 18th april</Trans>
       </Link>
     </SubNav>
-    <SubNav
-      btnText={i18n.t`congress`}
-      cssStyle={navLinkLast}
-      btnSubText={i18n.t`congress_date`}
-    >
+    <SubNav btnText={i18n.t`congress`} btnSubText={i18n.t`congress_date`}>
       <Link
         to={i18n.t`/lineup`}
         activeClassName={navLinkNewActive}
@@ -277,6 +275,14 @@ const NavBar = ({ i18n }) => (
         <Trans>Bootcamp</Trans>
       </Link>
     </SubNav>
+
+    <Link
+      to={i18n.t`/after`}
+      className={navLinkNew}
+      activeClassName={navLinkNewActive}
+    >
+      {'After'}
+    </Link>
 
     <a
       className={css`

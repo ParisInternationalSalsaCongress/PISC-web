@@ -36,33 +36,35 @@ const caption = css`
   margin: 0.45rem 0 1.45rem;
 `;
 
-const cover = css`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  height: 70vh;
-  z-index: -1;
-`;
-
+// const cover = css`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 70%;
+//   height: 70vh;
+//   z-index: -1;
+// `;
 const banner = css`
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: ${rgba(TERTIARY_COLOR, 0.4)};
-  color: ${SECONDARY_COLOR};
-  z-index: 1;
-  padding: 1rem 0;
-  h1 {
-    margin: 0;
-    text-align: center;
-  }
+  padding-top: 80px;
 `;
+// const banner = css`
+//   position: absolute;
+//   top: 80px;
+//   left: 0;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: ${rgba(TERTIARY_COLOR, 0.4)};
+//   color: ${SECONDARY_COLOR};
+//   z-index: 1;
+//   padding: 1rem 0;
+//   h1 {
+//     margin: 0;
+//     text-align: center;
+//   }
+// `;
 
 const TableWrapper = css`
   margin: 1rem 0;
@@ -206,9 +208,8 @@ const SocialLounge = ({ i18n, data }) => (
     <header className={header}>
       <NavBar />
       <div className={banner}>
-        <h1>Social Lounge</h1>
+        <Img fluid={data.image00.childImageSharp.fluid} />
       </div>
-      <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
     </header>
     <div className={container}>
       <p className={warn}>
@@ -287,7 +288,7 @@ export const SocialLoungeImage = graphql`
 
 export const SocialLoungeImageQuery = graphql`
   query {
-    image00: file(relativePath: { eq: "cover/hyat-lounge.jpg" }) {
+    image00: file(relativePath: { eq: "cover/socials.jpg" }) {
       ...socialLoungeImage
     }
   }
