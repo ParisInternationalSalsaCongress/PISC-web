@@ -201,7 +201,7 @@ let styleTooltips = {
 
 const SocialLounge = ({ i18n, data }) => (
   <Layout>
-    <Helmet meta={[{ name: 'description', content: i18n.t`Workshops_textII` }]}>
+    <Helmet meta={[{ name: 'description', content: i18n.t`social_text_I` }]}>
       <html lang={i18n.language} />
       <title>{'Social Lounge'}</title>
     </Helmet>
@@ -212,6 +212,13 @@ const SocialLounge = ({ i18n, data }) => (
       </div>
     </header>
     <div className={container}>
+      <p>
+        <Trans>social_text_I</Trans> <br />
+        <Trans>social_text_I-</Trans>
+      </p>
+      <p>
+        <Trans>social_text_II</Trans>
+      </p>
       <p className={warn}>
         <Trans>Workshops_warn</Trans>
       </p>
@@ -268,8 +275,8 @@ const SocialLoungeSchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr className={highlight}>
           <td>DJ</td>
-          <td>Dj Asmadi & Dj 69</td>
-          <td>Dj Loïc & Dj Vincent</td>
+          <td>Dj Phil & Dj Madj</td>
+          <td>Dj Asmadi & Dj Valéry</td>
         </tr>
       </tbody>
     </table>
