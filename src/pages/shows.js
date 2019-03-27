@@ -4,14 +4,13 @@ import Img from 'gatsby-image';
 import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
-import { rgba, lighten } from 'polished';
+import { rgba, lighten, tint } from 'polished';
 
 import {
   SECONDARY_COLOR,
   PRIMARY_COLOR,
   TERTIARY_COLOR,
   QUINARY_COLOR,
-  GREEN_LIGHT,
   DARK,
 } from '../utils/vars';
 
@@ -147,17 +146,10 @@ const highlight = css`
   background-color: ${rgba(PRIMARY_COLOR, 0.5)};
 `;
 
-const getOut = css`
-  background-color: ${rgba(QUINARY_COLOR, 0.4)};
+const pastel = css`
+  background-color: ${rgba(tint(0.79, PRIMARY_COLOR), 0.6)};
 `;
 
-const mapSection = css`
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-`;
 
 const showFromTablet = css`
   @media (min-width: 768px) {
@@ -274,87 +266,87 @@ const ShowSchedule = withI18n()(({ i18n }) => (
       <tbody>
         <tr>
           <td>Alegria</td>
-          <td>Adolfo & The Latin Soul Dancers</td>
+          <td className={pastel}>Adolfo & The Latin Soul Dancers</td>
           <td>Adolfo & The Latin Soul Dancers</td>
         </tr>
         <tr>
-          <td>Alicia Velasco</td>
+          <td className={pastel}>Alicia Velasco</td>
           <td>Adrian & Anita</td>
-          <td>Alicia Velasco y su mambo rock</td>
+          <td className={pastel}>Alicia Velasco y su mambo rock</td>
         </tr>
         <tr>
           <td>Ernesto & Denisse</td>
-          <td>Alberto Valdes</td>
+          <td className={pastel}>Alberto Valdes</td>
           <td>Angelo Rito</td>
         </tr>
         <tr>
-          <td>José & Nerea</td>
+          <td className={pastel}>José & Nerea</td>
           <td>Eddie Torres Junior</td>
-          <td>Aude Mambo</td>
+          <td className={pastel}>Aude Mambo</td>
         </tr>
         <tr>
           <td>Karel Flores</td>
-          <td>Griselle</td>
+          <td className={pastel}>Griselle</td>
           <td>Eddie Torres Junior</td>
         </tr>
         <tr>
-          <td>Karen & Ricardo</td>
+          <td className={pastel}>Karen & Ricardo</td>
           <td>Groupo Alafia</td>
-          <td>Ernesto & Denisse</td>
+          <td className={pastel}>Ernesto & Denisse</td>
         </tr>
         <tr>
           <td>Korke & Judith</td>
-          <td>Jessica Quiles</td>
+          <td className={pastel}>Jessica Quiles</td>
           <td>Groupo Alafia</td>
         </tr>
         <tr>
-          <td>Latin Passion Group</td>
+          <td className={pastel}>Latin Passion Group</td>
           <td>Karen & Ricardo</td>
-          <td>Jessica Quiles</td>
+          <td className={pastel}>Jessica Quiles</td>
         </tr>
         <tr>
           <td>Leon Rose Project</td>
-          <td>Korke & JUdith</td>
+          <td className={pastel}>Korke & JUdith</td>
           <td>José & Neréa</td>
         </tr>
         <tr>
-          <td>Marco & Sara</td>
+          <td className={pastel}>Marco & Sara</td>
           <td>Latin Passion Group</td>
-          <td>Mambo King</td>
+          <td className={pastel}>Mambo King</td>
         </tr>
         <tr>
           <td>Mambo King</td>
-          <td>Mambo King</td>
+          <td className={pastel}>Mambo King</td>
           <td>Marco & Sara</td>
         </tr>
         <tr>
-          <td>Michael & Darya</td>
+          <td className={pastel}>Michael & Darya</td>
           <td>Monika</td>
-          <td>Pedrito & Guisy</td>
+          <td className={pastel}>Pedrito & Guisy</td>
         </tr>
         <tr>
           <td>Mitsue & Monika</td>
-          <td>Nuno & Nagila</td>
+          <td className={pastel}>Nuno & Nagila</td>
           <td>Salsabor</td>
         </tr>
         <tr>
-          <td>Nuno & Nagila</td>
+          <td className={pastel}>Nuno & Nagila</td>
           <td>Pedrito & Guisy</td>
-          <td>Talal & Edyta</td>
+          <td className={pastel}>Talal & Edyta</td>
         </tr>
         <tr>
           <td>Rodrigo & Bersy</td>
-          <td>Rodrigo & Bersy</td>
+          <td className={pastel}>Rodrigo & Bersy</td>
           <td>Terry & Cecile</td>
         </tr>
         <tr>
-          <td>Shelina's Team</td>
+          <td className={pastel}>Shelina's Team</td>
           <td>Yamulee</td>
-          <td>Yamulee</td>
+          <td className={pastel}>Yamulee</td>
         </tr>
         <tr>
           <td>Terry & Cecile</td>
-          <td>Yusimi</td>
+          <td className={pastel}>Yusimi</td>
           <td>Yusimi</td>
         </tr>
 
