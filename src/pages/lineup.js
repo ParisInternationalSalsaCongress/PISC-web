@@ -367,6 +367,16 @@ const Lineup = ({ i18n, data }) => (
             hideCaption: true,
           },
           {
+            caption: 'DJ El Clasico',
+            imageData: data.imageElClasico.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
+            caption: 'DJ Valerie',
+            imageData: data.imageValery.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
             caption: 'DJ Vincent',
             imageData: data.imageVincent.childImageSharp.fluid,
             hideCaption: true,
@@ -637,6 +647,12 @@ export const lineupQuery = graphql`
            imageMulato: file(relativePath: { eq: "DJs/mambo/Mulato.jpg" }) {
              ...lineupImage
            }
+           imageElClasico: file(relativePath: { eq: "DJs/mambo/ElClasico.jpg" }) {
+             ...lineupImage
+           }
+           imageValery: file(relativePath: { eq: "DJs/mambo/Valery.jpg" }) {
+             ...lineupImage
+           }
            imagePhil: file(relativePath: { eq: "DJs/mambo/Phil.jpg" }) {
              ...lineupImage
            }
@@ -679,6 +695,5 @@ export const lineupQuery = graphql`
            imagePascale: file(relativePath: { eq: "multimedia/Pascale.jpg" }) {
              ...lineupImage
            }
-
          }
        `;

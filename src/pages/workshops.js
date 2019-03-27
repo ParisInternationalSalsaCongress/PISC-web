@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
-import { rgba, lighten } from 'polished';
+import { rgba, lighten, tint } from 'polished';
 
 import {
   SECONDARY_COLOR,
@@ -145,6 +145,10 @@ const highlight = css`
   background-color: ${rgba(PRIMARY_COLOR, 0.5)};
 `;
 
+const pastel = css`
+  background-color: ${rgba(tint(0.79, PRIMARY_COLOR), 0.6)};
+`;
+
 const getOut = css`
   background-color: ${rgba(QUINARY_COLOR, 0.4)};
 `;
@@ -255,7 +259,9 @@ const FridaySchedule = withI18n()(({ i18n }) => (
           </th>
         </tr>
         <tr>
-          <th><Trans>Time</Trans></th>
+          <th>
+            <Trans>Time</Trans>
+          </th>
           <th>Workshop</th>
           <th>Room</th>
         </tr>
@@ -272,7 +278,7 @@ const FridaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>LEFT ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Yamulee,</span> PW On2 (3)
           </td>
@@ -285,7 +291,7 @@ const FridaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>RIGHT ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Angelo Rito,</span> Shines
             on2 (2)
@@ -293,7 +299,7 @@ const FridaySchedule = withI18n()(({ i18n }) => (
           <td>ARC EN CIEL ROOM</td>
         </tr>
         <tr>
-          <td rowSpan="4">
+          <td className={pastel} rowSpan="4">
             15:10 <span className={blockText}>- </span>
             16:10
           </td>
@@ -302,7 +308,7 @@ const FridaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>LEFT ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Griselle Ponse,</span>{' '}
             Ladies Styling On2 (1)
@@ -316,8 +322,11 @@ const FridaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>RIGHT ROOM</td>
         </tr>
-        <tr>
-          <td><span className={blockTextInlineDesktop}>Marco & Sara,</span> Bachata (2)</td>
+        <tr className={pastel}>
+          <td>
+            <span className={blockTextInlineDesktop}>Marco & Sara,</span>{' '}
+            Bachata (2)
+          </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
         <tr>
@@ -325,50 +334,67 @@ const FridaySchedule = withI18n()(({ i18n }) => (
             16:20 <span className={blockText}>- </span>
             17:20
           </td>
-          <td><span className={blockTextInlineDesktop}>Shelina's Team,</span> Shines On2 (2)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Shelina's Team,</span>{' '}
+            Shines On2 (2)
+          </td>
           <td>LEFT ROOM</td>
         </tr>
-        <tr>
-          <td><span className={blockTextInlineDesktop}>Terry & Cecile,</span> PW On2 (3)</td>
+        <tr className={pastel}>
+          <td>
+            <span className={blockTextInlineDesktop}>Terry & Cecile,</span> PW
+            On2 (3)
+          </td>
           <td>CENTRAL ROOM</td>
         </tr>
         <tr>
-          <td><span className={blockTextInlineDesktop}>Ernesto & Denisse,</span> Shines On2 (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Ernesto & Denisse,</span>{' '}
+            Shines On2 (3)
+          </td>
           <td>RIGHT ROOM</td>
         </tr>
-        <tr>
-          <td />
+        <tr className={pastel}>
+          <td>
+            <span className={blockTextInlineDesktop}>Mouaze & Sonia,</span>{' '}
+            Chachacha (1)
+          </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
         <tr>
-          <td rowSpan="4">
+          <td className={pastel} rowSpan="4">
             17:30 <span className={blockText}>- </span>
             18:30
           </td>
-          <td><span className={blockTextInlineDesktop}>Latin Passion Group,</span> PW On2 (2)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Latin Passion Group,</span>{' '}
+            PW On2 (2)
+          </td>
           <td>LEFT ROOM</td>
         </tr>
-        <tr>
-          <td><span className={blockTextInlineDesktop}>Mambo King & Maria Chiarra,</span> Shines On2 (1)</td>
+        <tr className={pastel}>
+          <td>
+            <span className={blockTextInlineDesktop}>
+              Mambo King & Maria Chiarra,
+            </span>{' '}
+            Shines On2 (1)
+          </td>
           <td>CENTRAL ROOM</td>
         </tr>
         <tr>
-          <td />
+          <td>
+            <span className={blockTextInlineDesktop}>Angelo Rito,</span> Shines
+            On2 (2)
+          </td>
           <td>RIGHT ROOM</td>
         </tr>
-        <tr>
-          <td><span className={blockTextInlineDesktop}>Alicia Velasco,</span> Ladies Styling On2 (3)</td>
+        <tr className={pastel}>
+          <td>
+            <span className={blockTextInlineDesktop}>Alicia Velasco,</span>{' '}
+            Ladies Styling On2 (3)
+          </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
-        {/* <tr className={getOut}>
-          <td>
-            18:40 <span className={blockText}>- </span>
-            19:40
-          </td>
-          <td colSpan="2">
-            <Trans>PERFORMANCE REHEARSAL</Trans>
-          </td>
-        </tr> */}
       </tbody>
     </table>
   </div>
@@ -396,13 +422,15 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           </th>
         </tr>
         <tr>
-          <th><Trans>Time</Trans></th>
+          <th>
+            <Trans>Time</Trans>
+          </th>
           <th>Workshop</th>
           <th>Room</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr className={pastel}>
           <td rowSpan="4">
             10:30 <span className={blockText}>- </span>
             11:30
@@ -420,7 +448,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Adrian & Anita,</span> PW
             On1 (2)
@@ -440,11 +468,11 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
             11:40 <span className={blockText}>- </span>
             12:40
           </td>
-          <td>
+          <td className={pastel}>
             <span className={blockTextInlineDesktop}>Karen & Ricardo,</span> PW
             On1 (3)
           </td>
-          <td>LEFT ROOM</td>
+          <td className={pastel}>LEFT ROOM</td>
         </tr>
         <tr>
           <td>
@@ -455,7 +483,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Korke & Judith,</span>{' '}
             Bachata (3)
@@ -484,11 +512,11 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
             14:00 <span className={blockText}>- </span>
             15:00
           </td>
-          <td>
+          <td className={pastel}>
             <span className={blockTextInlineDesktop}>José & Nerea,</span> PW On2
             (3)
           </td>
-          <td>LEFT ROOM</td>
+          <td className={pastel}>LEFT ROOM</td>
         </tr>
         <tr>
           <td>
@@ -497,7 +525,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Nuno & Nagyla,</span>{' '}
             Kizomba (2)
@@ -512,25 +540,25 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           <td>ARC EN CIEL ROOM</td>
         </tr>
 
-        <tr>
+        <tr className={pastel}>
           <td rowSpan="4">
             15:10 <span className={blockText}>- </span>
             16:10
           </td>
           <td>
             <span className={blockTextInlineDesktop}>Mouaze & Sonia,</span>{' '}
-            Chachacha (1)
+            Chachacha Shines (1)
           </td>
           <td>LEFT ROOM</td>
         </tr>
         <tr>
           <td>
             <span className={blockTextInlineDesktop}>Alberto Valdes,</span> Afro
-            Cubano (1)
+            Cubano - YORUBA (1)
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Talal & Edita,</span> PW
             On2 (2)
@@ -549,10 +577,10 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
             16:20 <span className={blockText}>- </span>
             17:20
           </td>
-          <td>
+          <td className={pastel}>
             <span className={blockTextInlineDesktop}>Alegria,</span> PW On2 (2)
           </td>
-          <td>LEFT ROOM</td>
+          <td className={pastel}>LEFT ROOM</td>
         </tr>
         <tr>
           <td>
@@ -563,7 +591,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Goupo Alafia,</span>{' '}
             Pachanga (1)
@@ -573,11 +601,11 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
         <tr>
           <td>
             <span className={blockTextInlineDesktop}>Yusimi,</span> Afro Cubano
-            (3)
+            - YORUBA (3)
           </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td rowSpan="4">
             17:30 <span className={blockText}>- </span>
             18:30
@@ -595,10 +623,10 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Pedrito & Guisy,</span>{' '}
-            Rumba Cubana (1)
+            Rumba Columbia (1)
           </td>
           <td>RIGHT ROOM</td>
         </tr>
@@ -609,21 +637,10 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
-
-        {/* <tr className={getOut}>
-          <td>
-            18:40 <span className={blockText}>- </span>
-            19:40
-          </td>
-          <td colSpan="2">
-            <Trans>PERFORMANCE REHEARSAL</Trans>
-          </td>
-        </tr> */}
       </tbody>
     </table>
   </div>
 ));
-
 
 const SundaySchedule = withI18n()(({ i18n }) => (
   <div className={TableWrapper}>
@@ -647,13 +664,15 @@ const SundaySchedule = withI18n()(({ i18n }) => (
           </th>
         </tr>
         <tr>
-          <th><Trans>Time</Trans></th>
+          <th>
+            <Trans>Time</Trans>
+          </th>
           <th>Workshop</th>
           <th>Room</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr className={pastel}>
           <td rowSpan="4">
             10:30 <span className={blockText}>- </span>
             11:30
@@ -666,15 +685,15 @@ const SundaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>
-            <span className={blockTextInlineDesktop}>Aberto Valdes,</span> Salsa
+            <span className={blockTextInlineDesktop}>Aberto Valdes,</span> Rumba
             Cubana (2)
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
-            <span className={blockTextInlineDesktop}>Angelo Rito,</span> Shines
-            on2 (3)
+            <span className={blockTextInlineDesktop}>Alicia Velasco,</span>{' '}
+            Ladies Styling (2)
           </td>
           <td>RIGHT ROOM</td>
         </tr>
@@ -690,11 +709,11 @@ const SundaySchedule = withI18n()(({ i18n }) => (
             11:40 <span className={blockText}>- </span>
             12:40
           </td>
-          <td>
+          <td className={pastel}>
             <span className={blockTextInlineDesktop}>Terry & Cecile,</span> PW
             On2 (3)
           </td>
-          <td>LEFT ROOM</td>
+          <td className={pastel}>LEFT ROOM</td>
         </tr>
         <tr>
           <td>
@@ -705,10 +724,10 @@ const SundaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
-            <span className={blockTextInlineDesktop}>Alicia Velasco,</span>{' '}
-            Ladies Styling (2)
+            <span className={blockTextInlineDesktop}>Enah & Pocahontas,</span>{' '}
+            Urban Kiz (3)
           </td>
           <td>RIGHT ROOM</td>
         </tr>
@@ -729,7 +748,7 @@ const SundaySchedule = withI18n()(({ i18n }) => (
             <Trans>LUNCH BREAK</Trans>
           </td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td rowSpan="4">
             14:00 <span className={blockText}>- </span>
             15:00
@@ -747,7 +766,7 @@ const SundaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
+        <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Nuno & Nagyla,</span>{' '}
             Kizomba (2)
@@ -766,44 +785,64 @@ const SundaySchedule = withI18n()(({ i18n }) => (
             15:10 <span className={blockText}>- </span>
             16:10
           </td>
-          <td>
+          <td className={pastel}>
             <span className={blockTextInlineDesktop}>José & Nerea,</span> Shines
             On2 (3)
           </td>
-          <td>LEFT ROOM</td>
+          <td className={pastel}>LEFT ROOM</td>
         </tr>
         <tr>
-          <td><span className={blockTextInlineDesktop}>Eddie Torres Jr,</span> PW On2 (2)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Eddie Torres Jr,</span> PW
+            On2 (2)
+          </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
-          <td><span className={blockTextInlineDesktop}>Alberto Valdes,</span> Afro Cubano (1)</td>
+        <tr className={pastel}>
+          <td>
+            <span className={blockTextInlineDesktop}>Alberto Valdes,</span> Afro
+            Cubano - ARARA (1)
+          </td>
           <td>RIGHT ROOM</td>
         </tr>
         <tr>
-          <td><span className={blockTextInlineDesktop}>Ernesto & Denisse,</span> PW On2 (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Ernesto & Denisse,</span>{' '}
+            PW On2 (3)
+          </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
 
-        <tr>
+        <tr className={pastel}>
           <td rowSpan="4">
             16:20 <span className={blockText}>- </span>
             17:20
           </td>
-          <td><span className={blockTextInlineDesktop}>Mouaze & Sonia,</span> Chachacha PW (1)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Salsabor,</span> PW On2 (1)
+          </td>
           <td>LEFT ROOM</td>
         </tr>
 
         <tr>
-          <td><span className={blockTextInlineDesktop}>Yamulee,</span> Shines On2 (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Yamulee,</span> Shines On2
+            (3)
+          </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
-          <td><span className={blockTextInlineDesktop}>Jessica Quiles,</span> Ladies Styling On2 (2)</td>
+        <tr className={pastel}>
+          <td>
+            <span className={blockTextInlineDesktop}>Jessica Quiles,</span>{' '}
+            Ladies Styling On2 (2)
+          </td>
           <td>RIGHT ROOM</td>
         </tr>
         <tr>
-          <td><span className={blockTextInlineDesktop}>Yusimi,</span> Afro Cubano (1)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Yusimi,</span> Afro Cubano
+            - CONGO Makuta y Yuka (1)
+          </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
 
@@ -812,19 +851,33 @@ const SundaySchedule = withI18n()(({ i18n }) => (
             17:30 <span className={blockText}>- </span>
             18:30
           </td>
-          <td><span className={blockTextInlineDesktop}>Groupo Alafia,</span> Pachanga (1)</td>
-          <td>LEFT ROOM</td>
+          <td className={pastel}>
+            <span className={blockTextInlineDesktop}>Groupo Alafia,</span>{' '}
+            Pachanga (1)
+          </td>
+          <td className={pastel}>LEFT ROOM</td>
         </tr>
         <tr>
-          <td><span className={blockTextInlineDesktop}>Pedrito & Guisy,</span> Afro Cubana - PALO CONGO (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>Pedrito & Guisy,</span>{' '}
+            Afro Cubana - CONGO PALO (3)
+          </td>
           <td>CENTRAL ROOM</td>
         </tr>
-        <tr>
-          <td><span className={blockTextInlineDesktop}>Georges & Laura,</span> Kizomba (1)</td>
+        <tr className={pastel}>
+          <td>
+            <span className={blockTextInlineDesktop}>Georges & Laura,</span>{' '}
+            Kizomba (1)
+          </td>
           <td>RIGHT ROOM</td>
         </tr>
         <tr>
-          <td><span className={blockTextInlineDesktop}>Adolfo & Lorenita LSD,</span> PW On2 (3)</td>
+          <td>
+            <span className={blockTextInlineDesktop}>
+              Adolfo & Lorenita LSD,
+            </span>{' '}
+            PW On2 (3)
+          </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
 
@@ -841,7 +894,6 @@ const SundaySchedule = withI18n()(({ i18n }) => (
     </table>
   </div>
 ));
-
 
 export const workshopsImage = graphql`
   fragment workshopsImage on File {
