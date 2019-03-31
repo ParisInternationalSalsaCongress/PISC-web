@@ -326,6 +326,11 @@ const Lineup = ({ i18n, data }) => (
             imageData: data.imageNunoNagyla.childImageSharp.fluid,
             hideCaption: true,
           },
+          {
+            caption: 'Enah & Pocahontas',
+            imageData: data.imageEnahPocahontas.childImageSharp.fluid,
+            hideCaption: true,
+          },
         ]}
       />
 
@@ -626,6 +631,9 @@ export const lineupQuery = graphql`
              ...lineupImage
            }
            imageNunoNagyla: file(relativePath: { eq: "artists/kizomba/Nuno&Nagyla.jpg" }) {
+             ...lineupImage
+           }
+           imageEnahPocahontas: file(relativePath: { eq: "artists/kizomba/Enah&Pocahontas.jpg" }) {
              ...lineupImage
            }
            imageDJHugoBoss: file(relativePath: { eq: "DJs/kizomba/HugoBoss.jpg" }) {
