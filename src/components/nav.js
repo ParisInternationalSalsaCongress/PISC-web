@@ -247,6 +247,13 @@ const NavBar = ({ i18n }) => (
         <Trans>the venue</Trans>
       </Link>
       <Link
+        to={i18n.t`/program`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
+        <Trans>Program</Trans>
+      </Link>
+      <Link
         to={i18n.t`/shows`}
         activeClassName={navLinkNewActive}
         className={subNavListLink}

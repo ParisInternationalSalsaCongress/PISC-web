@@ -396,6 +396,11 @@ const Lineup = ({ i18n, data }) => (
             imageData: data.imageMadj.childImageSharp.fluid,
             hideCaption: true,
           },
+          {
+            caption: 'DJ Oj',
+            imageData: data.imageOj.childImageSharp.fluid,
+            hideCaption: true,
+          },
         ]}
       />
 
@@ -656,10 +661,13 @@ export const lineupQuery = graphql`
            imagePhil: file(relativePath: { eq: "DJs/mambo/Phil.jpg" }) {
              ...lineupImage
            }
+           imageMadj: file(relativePath: { eq: "DJs/mambo/Madj.jpg" }) {
+             ...lineupImage
+           }
            imageCycy: file(relativePath: { eq: "DJs/mambo/Cycy.jpg" }) {
              ...lineupImage
            }
-           imageMadj: file(relativePath: { eq: "DJs/mambo/Madj.jpg" }) {
+           imageOj: file(relativePath: { eq: "DJs/mambo/DJ-Oj.jpg" }) {
              ...lineupImage
            }
            imageDjAjad: file(relativePath: { eq: "DJs/mambo/DjAjad.jpg" }) {
