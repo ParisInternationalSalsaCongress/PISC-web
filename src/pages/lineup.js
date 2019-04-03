@@ -487,6 +487,11 @@ const Lineup = ({ i18n, data }) => (
             hideCaption: true,
           },
           {
+            caption: 'Slimane',
+            imageData: data.imageSlimane.childImageSharp.fluid,
+            hideCaption: true,
+          },
+          {
             caption: 'Luka',
             imageData: data.imageLuka.childImageSharp.fluid,
             hideCaption: true,
@@ -700,6 +705,9 @@ export const lineupQuery = graphql`
              ...lineupImage
            }
            imageValentin: file(relativePath: { eq: "multimedia/Valentin.jpg" }) {
+             ...lineupImage
+           }
+           imageSlimane: file(relativePath: { eq: "multimedia/Slimane.jpg" }) {
              ...lineupImage
            }
            imageLuka: file(relativePath: { eq: "multimedia/Luka.jpg" }) {
