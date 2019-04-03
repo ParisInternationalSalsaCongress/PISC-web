@@ -61,6 +61,7 @@ const time = css`
 const title = css`
   color: ${PRIMARY_COLOR};
   font-weight: 500;
+  margin-bottom: 0;
 `;
 
 const spaceTop = css`
@@ -79,10 +80,20 @@ const ProgramPage = ({ i18n, data }) => (
         <Img fluid={data.imageProgram00.childImageSharp.fluid} />
       </div>
     </header>
-    <div className={container}>
+    <div className={`${container} ${spaceTop}`}>
       <h1 className={title}>
         <Trans>Friday, April 19th</Trans>
       </h1>
+    </div>
+    <div>
+      <Img fluid={data.imageProgram01.childImageSharp.fluid} />
+    </div>
+    <div className={`${container} ${spaceTop}`}>
+      <p>
+        <strong>Dress code</strong>: <Trans>program_text_I-slogan</Trans> <br />
+        <Trans>program_text_I</Trans>
+      </p>
+      <br />
       <p className={time}>
         <span>
           <Trans>1 PM - 6 AM</Trans>
@@ -135,19 +146,22 @@ const ProgramPage = ({ i18n, data }) => (
           <Trans>Party</Trans>
         </span>
       </p>
-      <br />
-      <p>
-        <strong>Dress code</strong>: <Trans>program_text_I-slogan</Trans> <br />
-        <Trans>program_text_I</Trans>
-      </p>
-    </div>
-    <div>
-      <Img fluid={data.imageProgram01.childImageSharp.fluid} />
     </div>
     <div className={`${container} ${spaceTop}`}>
       <h1 className={title}>
         <Trans>Saturday, April 20th</Trans>
       </h1>
+    </div>
+    <div>
+      <Img fluid={data.imageProgram02.childImageSharp.fluid} />
+    </div>
+    <div className={`${container} ${spaceTop}`}>
+      <p>
+        <strong>Dress code</strong>: <Trans>program_text_II-slogan</Trans>{' '}
+        <br />
+        <Trans>program_text_II</Trans>
+      </p>
+      <br />
       <p className={time}>
         <span>
           <Trans>10 AM - 6 AM</Trans>
@@ -220,20 +234,23 @@ const ProgramPage = ({ i18n, data }) => (
           <Trans>Party</Trans>
         </span>
       </p>
-      <br />
-      <p>
-        <strong>Dress code</strong>: <Trans>program_text_II-slogan</Trans>{' '}
-        <br />
-        <Trans>program_text_II</Trans>
-      </p>
     </div>
-    <div>
-      <Img fluid={data.imageProgram02.childImageSharp.fluid} />
-    </div>
+
     <div className={`${container} ${spaceTop}`}>
       <h1 className={title}>
         <Trans>Sunday, April 21st</Trans>
       </h1>
+    </div>
+    <div>
+      <Img fluid={data.imageProgram03.childImageSharp.fluid} />
+    </div>
+    <div className={`${container} ${spaceTop}`}>
+      <p>
+        <strong>Dress code</strong>: <Trans>program_text_III-slogan</Trans>{' '}
+        <br />
+        <Trans>program_text_III</Trans>
+      </p>
+      <br />
       <p className={time}>
         <span>
           <Trans>10 AM - 6 AM</Trans>
@@ -306,15 +323,6 @@ const ProgramPage = ({ i18n, data }) => (
           <Trans>Party</Trans>
         </span>
       </p>
-      <br />
-      <p>
-        <strong>Dress code</strong>: <Trans>program_text_III-slogan</Trans>{' '}
-        <br />
-        <Trans>program_text_III</Trans>
-      </p>
-    </div>
-    <div>
-      <Img fluid={data.imageProgram03.childImageSharp.fluid} />
     </div>
   </Layout>
 );
