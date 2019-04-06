@@ -101,7 +101,7 @@ const BakidoSocialPage = ({ i18n, data }) => (
       </p>
 
       <a
-        href="https://goo.gl/maps/44LgDuUQD8T2"
+        href="https://goo.gl/maps/1pAf8nZb7e32"
         target="_blank"
         rel="noopener noreferrer"
         className={locationLink}
@@ -112,14 +112,8 @@ const BakidoSocialPage = ({ i18n, data }) => (
         75013 Paris <br />
         Métro Glacière, ligne 6
       </a>
-
     </div>
-    {/* <div>
-      <Img
-        fluid={data.image7spirits00.childImageSharp.fluid}
-        className={cover}
-      />
-    </div> */}
+
   </Layout>
 );
 
