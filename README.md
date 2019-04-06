@@ -5,13 +5,12 @@
 
 ![](https://img.shields.io/github/last-commit/ParisInternationalSalsaCongress/PISC-web.svg?style=popout)
 
-![](https://img.shields.io/github/commit-activity/m/ParisInternationalSalsaCongress/PISC-web.svg?style=popout)
 
 ## Develop
 
 ```sh
 cd PISC-WEB
-gatsby develop
+yarn develop
 ```
 
 
