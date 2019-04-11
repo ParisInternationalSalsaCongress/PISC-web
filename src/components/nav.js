@@ -254,6 +254,13 @@ const NavBar = ({ i18n }) => (
         <Trans>Program</Trans>
       </Link>
       <Link
+        to={i18n.t`/dj-schedules`}
+        activeClassName={navLinkNewActive}
+        className={subNavListLink}
+      >
+        <Trans>DJ Schedules</Trans>
+      </Link>
+      <Link
         to={i18n.t`/shows`}
         activeClassName={navLinkNewActive}
         className={subNavListLink}
