@@ -173,9 +173,9 @@ const SocialLounge = ({ i18n, data }) => (
       <p>
         <Trans>social_text_II</Trans>
       </p>
-      <p className={warn}>
+      {/* <p className={warn}>
         <Trans>Workshops_warn</Trans>
-      </p>
+      </p> */}
       <SocialLoungeSchedule />
     </div>
   </Layout>

@@ -218,9 +218,9 @@ const BootcampPage = ({ i18n, data }) => (
         <Trans>Workshops_textII</Trans>
       </p>
       */}
-      <p className={warn}>
+      {/* <p className={warn}>
         <Trans>Workshops_warn</Trans>
-      </p>
+      </p> */}
       <BootcampSchedule />
     </div>
   </Layout>

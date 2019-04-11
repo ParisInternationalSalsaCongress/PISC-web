@@ -33,6 +33,21 @@ export const LocationMarket = ({
     </svg>
 );
 
+export const Download = ({
+  width = '20px',
+  height = '20px',
+  ...svgAttributes
+}) => (
+    <svg
+      width={width}
+      height={height}
+      {...svgAttributes}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20">
+      <path d="M10 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-.016 3.986A1 1 0 0 0 9 5v7.586l-2.293-2.293a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414L11 12.586V5a1 1 0 0 0-1.016-1.014zm-9 11A1 1 0 0 0 0 16v2c0 1.093.907 2 2 2h16c1.093 0 2-.907 2-2v-2a1 1 0 0 0-2 0v2H2v-2a1 1 0 0 0-1.016-1.014z" fill-rule="nonzero" />
+    </svg>
+);
+
 export const Facebook = ({
   width = '24px',
   height = '24px',
