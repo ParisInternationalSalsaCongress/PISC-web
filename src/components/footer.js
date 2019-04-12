@@ -81,7 +81,7 @@ const languageLink = css`
   }
 `;
 
-const Footer = ({ i18n}) => (
+const Footer = ({ i18n }) => (
   <footer className={footerStyle}>
     <MouazeProd className={`${PromoterIcon} ${PromoterMouaze}`} />
     <YoshiProd className={`${PromoterIcon} ${PromoterYoshy}`} />
@@ -89,7 +89,7 @@ const Footer = ({ i18n}) => (
       <section
         className={css`
           margin-bottom: 0.45rem;
-          margin-right: 3.0875rem
+          margin-right: 3.0875rem;
         `}
       >
         <h4
@@ -145,7 +145,7 @@ const Footer = ({ i18n}) => (
           {i18n.t`Contact us`}
         </h4>
         <a
-          href="mailto:pisc@mouaze.com"
+          href="mailto:contact@piscandlove.com"
           rel="noreferrer"
           target="_blank"
           className={socialBtn}
@@ -170,21 +170,22 @@ const Footer = ({ i18n}) => (
     >
       <div className={languageWrapper}>
         <WorldMap className={worldMap} />
-        {
-          i18n.language === 'en' ? (
-            <Link className={languageLink} to="/fr/">
-              <Trans>French</Trans>
-            </Link>
-          ) : (
-              <Link className={languageLink} to="/en/">
-                <Trans>English</Trans>
-              </Link>
-            )
-        }
+        {i18n.language === 'en' ? (
+          <Link className={languageLink} to="/fr/">
+            <Trans>French</Trans>
+          </Link>
+        ) : (
+          <Link className={languageLink} to="/en/">
+            <Trans>English</Trans>
+          </Link>
+        )}
       </div>
     </section>
     <section className={copyrightSection}>
-      <span>&copy; &nbsp;Paris International Salsa Congress {new Date().getFullYear()}</span>
+      <span>
+        &copy; &nbsp;Paris International Salsa Congress{' '}
+        {new Date().getFullYear()}
+      </span>
     </section>
   </footer>
 );
