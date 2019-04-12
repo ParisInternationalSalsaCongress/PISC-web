@@ -306,7 +306,7 @@ const ShowSchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>Leon Rose Project</td>
-          <td className={pastel}>Korke & JUdith</td>
+          <td className={pastel}>Korke & Judith</td>
           <td>José & Neréa</td>
         </tr>
         <tr>
