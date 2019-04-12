@@ -43,8 +43,8 @@ const cover = css`
   top: 0;
   left: 0;
   width: 100%;
-  height: 70%;
-  height: 70vh;
+  height: 55%;
+  height: 55vh;
   z-index: -1;
 `;
 
@@ -209,15 +209,15 @@ const DjSchedulesPage = ({ i18n, data }) => (
     </Helmet>
     <header className={header}>
       <NavBar />
-      <Img fluid={data.image00.childImageSharp.fluid} className={cover} />
+      <Img fluid={data.image01.childImageSharp.fluid} className={cover} />
     </header>
     <div className={container}>
       <h3 className={title}>
         <Trans>DJs MAMBO & BACHATA</Trans>
       </h3>
-      <p className={warn}>
+      {/* <p className={warn}>
         <Trans>Workshops_warn</Trans>
-      </p>
+      </p> */}
       <DJFridaysMamboBachataSchedule />
       <DJSaturdayMamboBachataSchedule />
       <DJSundayMamboBachataSchedule />

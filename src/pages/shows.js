@@ -216,9 +216,9 @@ const ShowPage = ({ i18n, data }) => (
         <Trans>show_text_IV</Trans>
       </p>
 
-      <p className={warn}>
+      {/* <p className={warn}>
         <Trans>Workshops_warn</Trans>
-      </p>
+      </p> */}
       <ShowSchedule />
     </div>
   </Layout>
@@ -306,7 +306,7 @@ const ShowSchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>Leon Rose Project</td>
-          <td className={pastel}>Korke & JUdith</td>
+          <td className={pastel}>Korke & Judith</td>
           <td>José & Neréa</td>
         </tr>
         <tr>

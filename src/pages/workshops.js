@@ -15,6 +15,10 @@ import {
   DARK,
 } from '../utils/vars';
 
+import WorkshopPdf from '../images/workshops/PISC-2019-Workshops.pdf';
+
+import { Download } from '../utils/svg';
+
 import Layout from '../components/layout';
 import NavBar from '../components/nav';
 
@@ -184,6 +188,30 @@ const mapSection_Text = css`
   }
 `;
 
+const DownloadParagraph = css`
+  font-size: 0.9rem;
+`;
+
+const DowloadLink = css`
+  color: ${DARK};
+  fill: ${DARK};
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease-in;
+  &:hover {
+    color: ${tint(0.1, SECONDARY_COLOR)};
+    fill: ${tint(0.1, SECONDARY_COLOR)};
+  }
+`;
+
+const DowloadIconLink = css`
+  fill: ${DARK};
+  transition: 0.3s ease-in;
+  &:hover {
+    fill: ${tint(0.1, SECONDARY_COLOR)};
+  }
+`;
+
 let styleTooltips = {
   style: {
     background: 'rgba(0,0,0,.8)',
@@ -221,12 +249,22 @@ const WorkshopsPage = ({ i18n, data }) => (
         <br />
         <Trans>Workshops_textII</Trans>
       </p>
-      <p className={warn}>
+      {/* <p className={warn}>
         <Trans>Workshops_warn</Trans>
-      </p>
-      {/* <p className={levels}>
-        *<Trans>Workshops_levels</Trans>
       </p> */}
+      <p className={DownloadParagraph}>
+        <a
+          href={WorkshopPdf}
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          className={DowloadLink}
+        >
+          <Download />
+          &nbsp; &nbsp;
+          <Trans>PISC 2019 Workshops</Trans>
+        </a>
+      </p>
       <FridaySchedule />
       <SaturdaySchedule />
       <SundaySchedule />

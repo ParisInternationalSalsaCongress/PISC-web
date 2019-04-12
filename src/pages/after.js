@@ -84,14 +84,15 @@ const BakidoSocialPage = ({ i18n, data }) => (
         <Trans>bakido_text_III</Trans>
       </p>
       <p>
-        <span>
-          <Trans>Enter</Trans>: 12euros.
-        </span>
-        <br />
-        {/* <span>17h / minuit</span> */}
+        <Trans>bakido_text_IV</Trans>
       </p>
       <p>
-        <Trans>bakido_text_IV</Trans>
+        <span>
+          <Trans>Enter</Trans>: 15euros (Workshop + <Trans>Party</Trans>) /
+          12euros (<Trans>Party</Trans>
+          ).
+        </span>
+        <br />
       </p>
       <p>
         <Trans>bakido_text_V</Trans>
@@ -113,7 +114,6 @@ const BakidoSocialPage = ({ i18n, data }) => (
         Métro Glacière, ligne 6
       </a>
     </div>
-
   </Layout>
 );
 
@@ -131,11 +131,8 @@ export const BakidoSocialImage = graphql`
 
 export const BakidoSocialQuery = graphql`
   query {
-    imageBakido00: file(
-      relativePath: { eq: "after/bakido.jpg" }
-    ) {
+    imageBakido00: file(relativePath: { eq: "after/bakido.jpg" }) {
       ...BakidoSocialImage
     }
-
   }
 `;
