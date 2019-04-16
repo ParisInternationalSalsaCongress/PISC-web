@@ -150,6 +150,9 @@ const pastel = css`
   background-color: ${rgba(tint(0.79, PRIMARY_COLOR), 0.6)};
 `;
 
+const getOut = css`
+  background-color: ${rgba(QUINARY_COLOR, 0.08)};
+`;
 
 const showFromTablet = css`
   @media (min-width: 768px) {
@@ -332,24 +335,28 @@ const ShowSchedule = withI18n()(({ i18n }) => (
         <tr>
           <td className={pastel}>Nuno & Nagila</td>
           <td>Pedrito & Guisy</td>
-          <td className={pastel}>Talal & Edyta</td>
+          <td className={pastel}>Terry & Cecile</td>
         </tr>
         <tr>
           <td>Rodrigo & Bersy</td>
           <td className={pastel}>Rodrigo & Bersy</td>
-          <td>Terry & Cecile</td>
+          <td>Yamulee</td>
         </tr>
         <tr>
           <td className={pastel}>Shelina's Team</td>
           <td>Yamulee</td>
-          <td className={pastel}>Yamulee</td>
+          <td className={pastel}>Yusimi</td>
         </tr>
         <tr>
-          <td>Terry & Cecile</td>
+          <td>Talal & Edyta</td>
           <td className={pastel}>Yusimi</td>
-          <td>Yusimi</td>
+          <td className={getOut} />
         </tr>
-
+        <tr>
+          <td className={pastel}>Terry & Cecile</td>
+          <td className={getOut} />
+          <td className={getOut} />
+        </tr>
       </tbody>
     </table>
   </div>
