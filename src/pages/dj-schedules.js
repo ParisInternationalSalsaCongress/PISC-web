@@ -601,7 +601,7 @@ const DJFridaysCubanaKizSchedule = withI18n()(({ i18n }) => (
             07:00
           </td>
           <td>Dj Teo d'Oro</td>
-          <td>DJ Madiss</td>
+          <td>DJ Hugo Boss</td>
         </tr>
       </tbody>
     </table>
