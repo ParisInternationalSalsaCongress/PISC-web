@@ -278,83 +278,83 @@ const ShowSchedule = withI18n()(({ i18n }) => (
           <td className={pastel}>Alicia Velasco y su mambo rock</td>
         </tr>
         <tr>
-          <td>Ernesto & Denisse</td>
-          <td className={pastel}>Alberto Valdes</td>
           <td>Angelo Rito</td>
+          <td className={pastel}>Alberto Valdes</td>
+          <td>Aude & Frantz</td>
         </tr>
         <tr>
-          <td className={pastel}>José & Nerea</td>
-          <td>Eddie Torres Junior</td>
-          <td className={pastel}>Aude Mambo</td>
+          <td className={pastel}>Ernesto & Denisse</td>
+          <td>Angelo Rito</td>
+          <td className={pastel}>Eddie Torres Junior</td>
         </tr>
         <tr>
-          <td>Karel Flores</td>
-          <td className={pastel}>Griselle</td>
-          <td>Eddie Torres Junior</td>
+          <td>José & Nerea</td>
+          <td className={pastel}>Eddie Torres Junior</td>
+          <td>Ernesto & Denisse</td>
         </tr>
         <tr>
           <td className={pastel}>Karen & Ricardo</td>
-          <td>Groupo Alafia</td>
-          <td className={pastel}>Ernesto & Denisse</td>
+          <td>Griselle</td>
+          <td className={pastel}>Groupo Alafia</td>
         </tr>
         <tr>
           <td>Korke & Judith</td>
-          <td className={pastel}>Jessica Quiles</td>
-          <td>Groupo Alafia</td>
+          <td className={pastel}>Groupo Alafia</td>
+          <td>Jessica Quiles</td>
         </tr>
         <tr>
           <td className={pastel}>Latin Passion Group</td>
-          <td>Karen & Ricardo</td>
-          <td className={pastel}>Jessica Quiles</td>
+          <td>Jessica Quiles</td>
+          <td className={pastel}>José & Neréa</td>
         </tr>
         <tr>
           <td>Leon Rose Project</td>
-          <td className={pastel}>Korke & Judith</td>
-          <td>José & Neréa</td>
+          <td className={pastel}>Karen & Ricardo</td>
+          <td>Karel Flores</td>
         </tr>
         <tr>
-          <td className={pastel}>Marco & Sara</td>
-          <td>Latin Passion Group</td>
+          <td className={pastel}>Mambo King</td>
+          <td>Korke & Judith</td>
           <td className={pastel}>Mambo King</td>
         </tr>
         <tr>
-          <td>Mambo King</td>
-          <td className={pastel}>Mambo King</td>
+          <td>Marco & Sara</td>
+          <td className={pastel}>Latin Passion Group</td>
           <td>Marco & Sara</td>
         </tr>
         <tr>
           <td className={pastel}>Michael & Darya</td>
-          <td>Monika</td>
+          <td>Mambo King</td>
           <td className={pastel}>Pedrito & Guisy</td>
         </tr>
         <tr>
           <td>Mitsue & Monika</td>
-          <td className={pastel}>Nuno & Nagila</td>
+          <td className={pastel}>Monica</td>
           <td>Salsabor</td>
         </tr>
         <tr>
-          <td className={pastel}>Nuno & Nagila</td>
-          <td>Pedrito & Guisy</td>
-          <td className={pastel}>Terry & Cecile</td>
-        </tr>
-        <tr>
-          <td>Rodrigo & Bersy</td>
           <td className={pastel}>Rodrigo & Bersy</td>
-          <td>Yamulee</td>
-        </tr>
-        <tr>
-          <td className={pastel}>Shelina's Team</td>
-          <td>Yamulee</td>
-          <td className={pastel}>Yusimi</td>
-        </tr>
-        <tr>
-          <td>Talal & Edyta</td>
-          <td className={pastel}>Yusimi</td>
-          <td className={getOut} />
-        </tr>
-        <tr>
+          <td>Nuno & Nagila</td>
           <td className={pastel}>Terry & Cecile</td>
+        </tr>
+        <tr>
+          <td>Shelina's Team</td>
+          <td className={pastel}>Pedrito & Guisy</td>
+          <td>Yamulee</td>
+        </tr>
+        <tr>
+          <td className={pastel}>Talal & Edyta</td>
+          <td>Rodrigo & Bersy</td>
+          <td className={pastel}>Yusimi</td>
+        </tr>
+        <tr>
+          <td>Terry & Cecile</td>
+          <td className={pastel}>Yamulee</td>
           <td className={getOut} />
+        </tr>
+        <tr>
+          <td className={getOut} />
+          <td>Yusimi</td>
           <td className={getOut} />
         </tr>
       </tbody>
