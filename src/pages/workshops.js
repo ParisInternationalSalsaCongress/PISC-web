@@ -252,7 +252,7 @@ const WorkshopsPage = ({ i18n, data }) => (
       {/* <p className={warn}>
         <Trans>Workshops_warn</Trans>
       </p> */}
-      <p className={DownloadParagraph}>
+      {/* <p className={DownloadParagraph}>
         <a
           href={WorkshopPdf}
           download
@@ -264,7 +264,7 @@ const WorkshopsPage = ({ i18n, data }) => (
           &nbsp; &nbsp;
           <Trans>PISC 2019 Workshops</Trans>
         </a>
-      </p>
+      </p> */}
       <FridaySchedule />
       <SaturdaySchedule />
       <SundaySchedule />
@@ -332,7 +332,7 @@ const FridaySchedule = withI18n()(({ i18n }) => (
         <tr className={pastel}>
           <td>
             <span className={blockTextInlineDesktop}>Angelo Rito,</span> Shines
-            on2 (2)
+            On2 (2)
           </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
@@ -380,8 +380,8 @@ const FridaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr className={pastel}>
           <td>
-            <span className={blockTextInlineDesktop}>Terry & Cecile,</span> PW
-            On2 (3)
+            <span className={blockTextInlineDesktop}>Georges & Laura,</span>{' '}
+            Kizomba (2)
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
@@ -558,8 +558,8 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>
-            <span className={blockTextInlineDesktop}>Eddie Torres Jr,</span>{' '}
-            Shines On2 (1)
+            <span className={blockTextInlineDesktop}>Karen & Ricardo</span>{' '}
+            Shines On1 (1)
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
@@ -616,7 +616,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
             17:20
           </td>
           <td className={pastel}>
-            <span className={blockTextInlineDesktop}>Alegria,</span> PW On2 (2)
+            <span className={blockTextInlineDesktop}>Shelina,</span> Ladies Styling On2 (2)
           </td>
           <td className={pastel}>LEFT ROOM</td>
         </tr>
@@ -649,15 +649,15 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
             18:30
           </td>
           <td>
-            <span className={blockTextInlineDesktop}>Griselle Ponce,</span>{' '}
-            Ladies Styling On2 (1)
+            <span className={blockTextInlineDesktop}>Alegria,</span>{' '}
+            PW On2 (1)
           </td>
           <td>LEFT ROOM</td>
         </tr>
         <tr>
           <td>
-            <span className={blockTextInlineDesktop}>Karen & Ricardo,</span>{' '}
-            Shines On1 (1)
+            <span className={blockTextInlineDesktop}>Karel Flores,</span>{' '}
+            Ladies Styling On2 (3)
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
@@ -831,7 +831,7 @@ const SundaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>
-            <span className={blockTextInlineDesktop}>Eddie Torres Jr,</span> PW
+            <span className={blockTextInlineDesktop}>Talal & Edita,</span> PW
             On2 (2)
           </td>
           <td>CENTRAL ROOM</td>
