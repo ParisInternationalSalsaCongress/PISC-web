@@ -342,7 +342,8 @@ const FridaySchedule = withI18n()(({ i18n }) => (
             16:10
           </td>
           <td>
-            <span className={blockTextInlineDesktop}>Alegria,</span> PW On2 (2)
+            <span className={blockTextInlineDesktop}>Shelina's Team,</span> PW
+            On2 (2)
           </td>
           <td>LEFT ROOM</td>
         </tr>
@@ -373,8 +374,8 @@ const FridaySchedule = withI18n()(({ i18n }) => (
             17:20
           </td>
           <td>
-            <span className={blockTextInlineDesktop}>Shelina's Team,</span>{' '}
-            Shines On2 (2)
+            <span className={blockTextInlineDesktop}>Alegria,</span> Shines On2
+            (2)
           </td>
           <td>LEFT ROOM</td>
         </tr>
@@ -572,8 +573,8 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>
-            <span className={blockTextInlineDesktop}>Adrian & Anita,</span>{' '}
-            Shines On1 (1)
+            <span className={blockTextInlineDesktop}>Pedrito & Guisy,</span>{' '}
+            Rumba Cubana (1)
           </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
@@ -638,8 +639,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>
-            <span className={blockTextInlineDesktop}>Yusimi,</span> Afro Cubano
-            - YORUBA (3)
+            <span className={blockTextInlineDesktop}>Adrian & Anita,</span> Shines On1 (1)
           </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
@@ -650,7 +650,7 @@ const SaturdaySchedule = withI18n()(({ i18n }) => (
           </td>
           <td>
             <span className={blockTextInlineDesktop}>Alegria,</span>{' '}
-            PW On2 (1)
+            PW On2 (2)
           </td>
           <td>LEFT ROOM</td>
         </tr>
@@ -878,8 +878,7 @@ const SundaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr>
           <td>
-            <span className={blockTextInlineDesktop}>Yusimi,</span> Afro Cubano
-            - CONGO Makuta y Yuka (1)
+            <span className={blockTextInlineDesktop}>Marco & Sara,</span> Bachata (2)
           </td>
           <td>ARC EN CIEL ROOM</td>
         </tr>
