@@ -192,6 +192,12 @@ const DownloadParagraph = css`
   font-size: 0.9rem;
 `;
 
+const lastupdate = css`
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: ${QUINARY_COLOR};
+`;
+
 const DowloadLink = css`
   color: ${DARK};
   fill: ${DARK};
@@ -252,7 +258,7 @@ const WorkshopsPage = ({ i18n, data }) => (
       {/* <p className={warn}>
         <Trans>Workshops_warn</Trans>
       </p> */}
-      {/* <p className={DownloadParagraph}>
+      <p className={DownloadParagraph}>
         <a
           href={WorkshopPdf}
           download
@@ -264,7 +270,11 @@ const WorkshopsPage = ({ i18n, data }) => (
           &nbsp; &nbsp;
           <Trans>PISC 2019 Workshops</Trans>
         </a>
-      </p> */}
+        &nbsp; &nbsp;
+        <i className={lastupdate}>
+          [<Trans>updated on</Trans> 18/04/2019]
+        </i>
+      </p>
       <FridaySchedule />
       <SaturdaySchedule />
       <SundaySchedule />
