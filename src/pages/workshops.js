@@ -359,8 +359,8 @@ const FridaySchedule = withI18n()(({ i18n }) => (
         </tr>
         <tr className={pastel}>
           <td>
-            <span className={blockTextInlineDesktop}>Griselle Ponse,</span>{' '}
-            Ladies Styling On2 (1)
+            <span className={blockTextInlineDesktop}>Terry & Cecile,</span>{' '}
+            PW On2 (3)
           </td>
           <td>CENTRAL ROOM</td>
         </tr>
