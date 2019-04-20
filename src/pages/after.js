@@ -27,8 +27,26 @@ const container = css`
   position: relative;
 `;
 
-const cover = css`
-  height: 30vh;
+const caption = css`
+  margin: 0.45rem 0 1.45rem;
+`;
+
+const mapSection = css`
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+const mapSection_Map = css`
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+`;
+const mapSection_Text = css`
+  @media (min-width: 768px) {
+    margin-left: 2rem;
+  }
 `;
 
 const prepartiesBanner = css`
@@ -94,25 +112,63 @@ const BakidoSocialPage = ({ i18n, data }) => (
         </span>
         <br />
       </p>
-      <p>
+      {/* <p>
         <Trans>bakido_text_V</Trans>
       </p>
       <p>
         <Trans>bakido_text_VI</Trans>
-      </p>
+      </p> */}
+
+      <Img
+        fluid={data.imageBakido01.childImageSharp.fluid}
+        className={caption}
+      />
 
       <a
-        href="https://goo.gl/maps/1pAf8nZb7e32"
+        href="https://goo.gl/maps/Vk2Fynn628oxs7z46"
         target="_blank"
         rel="noopener noreferrer"
         className={locationLink}
       >
         <LocationMarket className={locationMaker} />
-        &nbsp; Salle Colonne <br />
-        94, boulevard Auguste Blanqui <br />
+        &nbsp; Salle Intensive Danse <br />
+        44 Avenue d'Ivry <br />
         75013 Paris <br />
-        Métro Glacière, ligne 6
+        Métro Olympiade, ligne 14
       </a>
+
+      {/* <div className={mapSection}>
+        <div className={mapSection_Map}>
+          <a
+            href="https://goo.gl/maps/Vk2Fynn628oxs7z46"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={locationLink}
+          >
+            <Img
+              fluid={data.imageBakido01.childImageSharp.fluid}
+              className={caption}
+            />
+          </a>
+        </div>
+        <p className={mapSection_Text}>
+          <strong>
+            <Trans>Bakido Social</Trans>
+          </strong>{' '}
+          <br />
+          <a
+            href="https://goo.gl/maps/Vk2Fynn628oxs7z46"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={locationLink}
+          >
+            <LocationMarket className={locationMaker} />
+            3, place du général KOENIG 75017 Paris, France
+          </a>
+          <br />
+          RER - Métro Neuilly Porte Maillot
+        </p>
+      </div> */}
     </div>
   </Layout>
 );
@@ -132,6 +188,9 @@ export const BakidoSocialImage = graphql`
 export const BakidoSocialQuery = graphql`
   query {
     imageBakido00: file(relativePath: { eq: "after/bakido.jpg" }) {
+      ...BakidoSocialImage
+    }
+    imageBakido01: file(relativePath: { eq: "after/intensiveMap.jpg" }) {
       ...BakidoSocialImage
     }
   }
