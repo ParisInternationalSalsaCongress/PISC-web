@@ -16,6 +16,8 @@ export const SNOW_COLOR = QUATERNARY_COLOR;
 export const GREEN_COLOR = PRIMARY_COLOR;
 export const GREEN_LIGHT = '#35CC35Cf';
 
+export const VOYAGE_VOYAGE_COLOR = 'rgb(72, 157, 212)';
+
 
 export const BODY_BG_COLOR = '';
 
