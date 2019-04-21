@@ -9,7 +9,12 @@ import ReactPlayer from 'react-player'
 
 import { PISC } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR, SNOW_COLOR } from '../utils/vars';
+import {
+  SECONDARY_COLOR,
+  PRIMARY_COLOR,
+  SNOW_COLOR,
+  VOYAGE_VOYAGE_COLOR,
+} from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';
@@ -43,7 +48,7 @@ const cover = css`
 
 const secondaryBtn = css`
   color: white;
-  transition: .300s ease-in;
+  transition: .300s ease-in-out;
   background-color: ${SECONDARY_COLOR};
   font-size: 1.3rem;
   padding: .8rem;
@@ -54,8 +59,40 @@ const secondaryBtn = css`
   &:hover {
     background-color: ${lighten(.1, SECONDARY_COLOR)};
   }
-
 `
+const banner = css`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${rgba(VOYAGE_VOYAGE_COLOR, 0.9)};
+  color: ${SNOW_COLOR};
+  z-index: 5;
+  padding: 1rem 0;
+  transition: 0.3s ease-in-out;
+
+  a {
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 0.8;
+    color: inherit;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    // display: block;
+    // padding: 4px; 0;
+  }
+`;
+
+const blockTextInlineTablet = css`
+  display: block;
+  @media (min-width: 768px) {
+    display: inline;
+  }
+`;
 
 const isTablet = css`
   display: none;
@@ -139,6 +176,12 @@ const IndexPage = ({ i18n, data }) => (
       <NavBar />
       <Img fluid={data.imageZero.childImageSharp.fluid} className={cover} />
       <PISC className={piscLogo} />
+      <div className={banner}>
+        <a href="https://www.pisc.fr/">
+          Super Early Pass <span className={blockTextInlineTablet}>-</span> PISC
+          2020
+        </a>
+      </div>
     </header>
     <div className={container}>
       <h1 className={title}>
