@@ -4,11 +4,16 @@ import Img from 'gatsby-image';
 import { Trans, withI18n } from '@lingui/react';
 import Helmet from 'react-helmet';
 import { css } from 'emotion';
-import { tint } from 'polished';
+import { tint, rgba } from 'polished';
 
 import { LocationMarket } from '../utils/svg';
 
-import { SECONDARY_COLOR, PRIMARY_COLOR } from '../utils/vars';
+import {
+  SECONDARY_COLOR,
+  PRIMARY_COLOR,
+  SNOW_COLOR,
+  VOYAGE_VOYAGE_COLOR,
+} from '../utils/vars';
 
 import Layout from '../components/layout';
 import NavBar from '../components/nav';
@@ -48,9 +53,46 @@ const mapSection_Text = css`
     margin-left: 2rem;
   }
 `;
+const banner = css`
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${rgba(VOYAGE_VOYAGE_COLOR, 0.9)};
+  color: ${SNOW_COLOR};
+  z-index: 5;
+  padding: 1rem 0;
+  transition: 0.3s ease-in-out;
+
+  &:hover > a {
+    transform: scale(1.4);
+  }
+
+  a {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 0.8;
+    color: inherit;
+    text-align: center;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+`;
+
+const blockTextInlineTablet = css`
+  display: block;
+  @media (min-width: 768px) {
+    display: inline;
+  }
+`;
 
 const prepartiesBanner = css`
-  padding-top: 80px;
+  padding-top: ${80 + 56}px;
 `;
 
 const locationMaker = css`
@@ -86,6 +128,12 @@ const BakidoSocialPage = ({ i18n, data }) => (
       <NavBar />
       <div className={prepartiesBanner}>
         <Img fluid={data.imageBakido00.childImageSharp.fluid} />
+      </div>
+      <div className={banner}>
+        <a href="https://www.pisc.fr/">
+          Super Early Pass <span>-</span> PISC
+          2020
+        </a>
       </div>
     </header>
     <div className={container}>
