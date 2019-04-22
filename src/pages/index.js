@@ -82,8 +82,6 @@ const banner = css`
     text-align: center;
     font-weight: 500;
     text-decoration: none;
-    // display: block;
-    // padding: 4px; 0;
   }
 `;
 
